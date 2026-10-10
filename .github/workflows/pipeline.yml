@@ -1,0 +1,84 @@
+# Daily: learn from results -> find gaps -> ingest -> build gap-filler/site -> commit.
+# The commit to main makes Cloudflare Workers Builds deploy the site (wrangler.jsonc),
+# so no Cloudflare token is needed here.
+#
+# Repo variables (Settings -> Secrets and variables -> Actions -> Variables):
+#   BASE_URL   default https://upgrades.xkey.co.uk
+#   SITE_LIVE  leave unset while testing (noindex everywhere, no IndexNow); "true" to launch
+#   TOP_N      default 50;  GSC_SITE  e.g. sc-domain:xkey.co.uk (turns on the feedback loop)
+# Optional secrets: INDEXNOW_KEY, BRAVE_API_KEY, STACKEXCHANGE_KEY, GSC_CREDENTIALS
+name: pipeline
+
+on:
+  schedule:
+    - cron: "17 5 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pipeline
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    env:
+      BASE_URL: ${{ vars.BASE_URL || 'https://upgrades.xkey.co.uk' }}
+      TOP_N: ${{ vars.TOP_N || '50' }}
+      SITE_LIVE: ${{ vars.SITE_LIVE || 'false' }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      BRAVE_API_KEY: ${{ secrets.BRAVE_API_KEY }}
+      STACKEXCHANGE_KEY: ${{ secrets.STACKEXCHANGE_KEY }}
+      INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+      GSC_CREDENTIALS: ${{ secrets.GSC_CREDENTIALS }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - uses: actions/setup-go@v5
+        with: { go-version: "1.22" }
+      - run: pip install google-auth requests
+
+      - name: Tests
+        run: |
+          (cd opportunity-finder && python -m unittest discover -s tests -t .)
+          (cd gap-filler/ingest && go test ./...)
+          (cd gap-filler/compiler && python -m unittest test_compile)
+          (cd gap-filler/publish && python -m unittest test_indexnow)
+          (cd gap-filler/feedback && python -m unittest test_calibrate)
+
+      - name: Learn from Search Console and revenue
+        if: ${{ vars.GSC_SITE != '' }}
+        working-directory: gap-filler
+        run: |
+          REV=""; [ -f feedback/revenue.csv ] && REV="--revenue feedback/revenue.csv"
+          python feedback/calibrate.py --archive state/records.json --base-url "$BASE_URL" \
+            --gsc-site "${{ vars.GSC_SITE }}" $REV --out ../opportunity-finder/calibration.json
+
+      - name: Build site
+        working-directory: gap-filler
+        run: |
+          rm -rf site
+          bash run.sh "$TOP_N"
+          [ "$SITE_LIVE" = "true" ] && python publish/indexnow.py --site site --base-url "$BASE_URL" --write-key-only || true
+          cp -r ../opportunity-finder/output/. ../reports/ 2>/dev/null || true
+
+      - name: Commit (Cloudflare deploys on push)
+        run: |
+          git config user.name "pipeline-bot"
+          git config user.email "pipeline-bot@users.noreply.github.com"
+          git add -A gap-filler/site gap-filler/state reports opportunity-finder/calibration.json 2>/dev/null || true
+          git diff --cached --quiet && { echo "nothing changed"; exit 0; }
+          git commit -m "pipeline: daily build $(date -u +%F)"
+          git push
+
+      - name: Ping IndexNow
+        if: ${{ vars.SITE_LIVE == 'true' }}
+        working-directory: gap-filler
+        run: |
+          sleep 120   # give Cloudflare time to deploy the new pages and key file
+          python publish/indexnow.py --site site --base-url "$BASE_URL" --state state/indexnow.json
+          git add state/indexnow.json
+          git diff --cached --quiet || { git commit -m "pipeline: IndexNow state"; git push; }
