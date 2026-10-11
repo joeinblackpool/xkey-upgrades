@@ -1,18 +1,23 @@
-# Upgrade Notes (upgrades.xkey.co.uk)
+# Trending Niches (upgrades.xkey.co.uk)
 
-Finds developer-tool releases where searchers are poorly served (forums, thin pages) and publishes a useful upgrade guide for each one.
+Finds niches **early on the S-curve** (interest rising steadily for months, still small, not a news spike),
+tests each one with a handful of researched pages, and scales up only the ones Google rewards.
 
-- `opportunity-finder/`: scores new releases as value × demand spike × gap and writes a ranked list.
-- `gap-filler/`: fetches the releases (Go), builds the static site into `gap-filler/site/`, IndexNow, and the Search Console feedback loop.
-- `.github/workflows/pipeline.yml`: runs everything daily at 05:17 UTC and commits the new site and a ranked report to `reports/`.
-- `wrangler.jsonc`: an assets-only Cloudflare Worker, `xkey-upgrades`, on upgrades.xkey.co.uk. Every push to `main` deploys through Cloudflare Workers Builds, the same setup as the xkey Worker. It's separate from the xkey Worker and doesn't touch it.
+| Part | What it does |
+|---|---|
+| `finder/` | Daily. Gathers candidates (Google Trends UK+US, Wikipedia most-read, category seeds in `finder/seeds.json`), reads 68 weeks of Wikipedia views for each, labels the curve stage (early / takeoff / spike / seasonal / flat / mainstream), filters out people, media and news, and ranks. Writes `state/niches.json` and `reports/niches-DATE.csv`. |
+| `WRITING.md` | Brief for the scheduled Claude writer: research, write hub + 3 articles per new niche, scale winners. |
+| `content/` | The articles, Markdown with front matter, one folder per niche. |
+| `builder/` | Builds `site/` from `content/` (hubs, articles, sitemap, JSON-LD, noindex while hidden). |
+| `feedback/` | Test-then-scale: after 28 days a tested niche is a **winner** (300+ impressions or 10+ clicks in 28 days) or, after 56 days without that, **dropped**. Needs Search Console access (`GSC_SITE` variable + `GSC_CREDENTIALS` secret). |
+| `site.json` | `base_url` and `live`. While `live` is false every page is noindex and robots.txt blocks crawlers. |
 
-## Hidden until launch
-Every page is `noindex`, robots.txt blocks crawlers, and nothing is sent to IndexNow. To launch, set the Actions variable `SITE_LIVE` to `true`.
+Niche lifecycle: `candidate` → `testing` (writer publishes first pages) → `winner` (writer adds more pages) or `dropped`; `rejected` for unsuitable topics.
+
+Deploy: every push to `main` is deployed by Cloudflare Workers Builds (Worker `xkey-upgrades`).
 
 ## Tests
-    (cd opportunity-finder && python3 -m unittest discover -s tests -t .)
-    (cd gap-filler/ingest && go test ./...)
-    (cd gap-filler/compiler && python3 -m unittest test_compile)
-    (cd gap-filler/publish && python3 -m unittest test_indexnow)
-    (cd gap-filler/feedback && python3 -m unittest test_calibrate)
+    python3 -m unittest tests.test_finder
+    (cd builder && python3 -m unittest test_build)
+    (cd feedback && python3 -m unittest test_review)
+    (cd publish && python3 -m unittest test_indexnow)

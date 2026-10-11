@@ -1,0 +1,5 @@
+{
+  "_comment": "live=false: every page noindex and robots.txt blocks crawlers. Set live to true to let Google index the site (needed before niches can be tested in Search Console).",
+  "base_url": "https://upgrades.xkey.co.uk",
+  "live": false
+}

@@ -1,3 +1,2 @@
 __pycache__/
-opportunity-finder/output/
-gap-filler/records.json
+*.pyc

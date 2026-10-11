@@ -1,12 +1,11 @@
 {
-  // Upgrade Notes (upgrades.xkey.co.uk): static upgrade guides built by the daily pipeline.
-  // Push to main -> Cloudflare Workers Builds deploys (same setup as the xkey Worker).
-  // Assets-only Worker: no script, just serves gap-filler/site/. Separate from the xkey Worker.
+  // Trending Niches (upgrades.xkey.co.uk): static site built from content/ into site/.
+  // Push to main -> Cloudflare Workers Builds deploys. Assets-only Worker, separate from the xkey Worker.
   "name": "xkey-upgrades",
   "account_id": "9f3741410e758ffd3820f75f84af755b",
   "compatibility_date": "2026-09-01",
   "assets": {
-    "directory": "./gap-filler/site",
+    "directory": "./site",
     "not_found_handling": "404-page"
   },
   "routes": [

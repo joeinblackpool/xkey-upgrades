@@ -1,0 +1,16 @@
+{
+  "_comment": "Category seed articles (exact English Wikipedia titles). Each day a few are expanded: every topic they link to gets its growth curve checked, so rising sub-niches inside these categories are found early. Add or remove freely.",
+  "per_day": 4,
+  "categories": [
+    "Home appliance", "Consumer electronics", "Dietary supplement", "Skin care",
+    "Electric bicycle", "Heat pump", "Gardening", "Personal finance", "Weight loss",
+    "Pet food", "Home automation", "Outdoor recreation", "List of hobbies",
+    "Wearable technology", "Generative artificial intelligence", "Cosmetics",
+    "Coffee preparation", "Home improvement", "Camping", "Physical fitness",
+    "Fad diet", "Sustainable fashion", "Renewable energy", "Electric vehicle",
+    "Board game", "Plant-based diet", "Fermentation in food processing", "Baking",
+    "Do it yourself", "Houseplant", "Dog breed", "Sleep hygiene", "Hair care",
+    "Kitchen utensil", "Running", "Cycling", "Fishing", "Photography", "Drone racing",
+    "Online marketplace", "Side job", "Remote work", "Smart glasses", "Solar panel"
+  ]
+}

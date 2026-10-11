@@ -1,17 +1,14 @@
-# Daily: learn from results -> find gaps -> ingest -> build gap-filler/site -> commit.
-# Deploy: if the secret CLOUDFLARE_API_TOKEN is set, this workflow deploys with wrangler.
-# (Alternatively, importing the repo in Cloudflare Workers Builds deploys every push.)
+# Daily: review tested niches (Search Console) -> find early-stage niches -> rebuild site -> commit.
+# Every push to main is deployed by Cloudflare Workers Builds. Pages are written by a scheduled
+# Claude session following WRITING.md; this workflow only finds niches and rebuilds.
 #
-# Repo variables (Settings -> Secrets and variables -> Actions -> Variables):
-#   BASE_URL   default https://upgrades.xkey.co.uk
-#   SITE_LIVE  leave unset while testing (noindex everywhere, no IndexNow); "true" to launch
-#   TOP_N      default 50;  GSC_SITE  e.g. sc-domain:xkey.co.uk (turns on the feedback loop)
-# Optional secrets: INDEXNOW_KEY, BRAVE_API_KEY, STACKEXCHANGE_KEY, GSC_CREDENTIALS
+# Optional repo variable: GSC_SITE (e.g. sc-domain:xkey.co.uk) turns on the test-then-scale review.
+# Optional secrets: BRAVE_API_KEY (search-results gap score), GSC_CREDENTIALS, INDEXNOW_KEY.
 name: pipeline
 
 on:
   schedule:
-    - cron: "17 5 * * *"
+    - cron: "17 4 * * *"
   workflow_dispatch:
 
 permissions:
@@ -24,70 +21,55 @@ concurrency:
 jobs:
   run:
     runs-on: ubuntu-latest
+    timeout-minutes: 40
     env:
-      BASE_URL: ${{ vars.BASE_URL || 'https://upgrades.xkey.co.uk' }}
-      TOP_N: ${{ vars.TOP_N || '50' }}
-      SITE_LIVE: ${{ vars.SITE_LIVE || 'false' }}
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       BRAVE_API_KEY: ${{ secrets.BRAVE_API_KEY }}
-      STACKEXCHANGE_KEY: ${{ secrets.STACKEXCHANGE_KEY }}
-      INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
       GSC_CREDENTIALS: ${{ secrets.GSC_CREDENTIALS }}
+      INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
-      - uses: actions/setup-go@v5
-        with: { go-version: "1.22" }
-      - run: pip install google-auth requests
 
       - name: Tests
         run: |
-          (cd opportunity-finder && python -m unittest discover -s tests -t .)
-          (cd gap-filler/ingest && go test ./...)
-          (cd gap-filler/compiler && python -m unittest test_compile)
-          (cd gap-filler/publish && python -m unittest test_indexnow)
-          (cd gap-filler/feedback && python -m unittest test_calibrate)
+          python -m unittest tests.test_finder
+          (cd builder && python -m unittest test_build)
+          (cd feedback && python -m unittest test_review)
+          (cd publish && python -m unittest test_indexnow)
 
-      - name: Learn from Search Console and revenue
+      - name: Review tested niches
         if: ${{ vars.GSC_SITE != '' }}
-        working-directory: gap-filler
         run: |
+          pip install google-auth requests
           REV=""; [ -f feedback/revenue.csv ] && REV="--revenue feedback/revenue.csv"
-          python feedback/calibrate.py --archive state/records.json --base-url "$BASE_URL" \
-            --gsc-site "${{ vars.GSC_SITE }}" $REV --out ../opportunity-finder/calibration.json
+          python feedback/review.py --niches state/niches.json --base-url "$(python -c 'import json;print(json.load(open("site.json"))["base_url"])')" \
+            --gsc-site "${{ vars.GSC_SITE }}" $REV
+
+      - name: Find early-stage niches
+        run: python -m finder.run --state state --reports reports
 
       - name: Build site
-        working-directory: gap-filler
-        run: |
-          rm -rf site
-          bash run.sh "$TOP_N"
-          [ "$SITE_LIVE" = "true" ] && python publish/indexnow.py --site site --base-url "$BASE_URL" --write-key-only || true
-          mkdir -p ../reports && cp ../opportunity-finder/output/opportunities-*.csv ../reports/
+        run: python builder/build.py
 
       - name: Commit (Cloudflare deploys on push)
         run: |
           git config user.name "pipeline-bot"
           git config user.email "pipeline-bot@users.noreply.github.com"
-          for p in gap-filler/site gap-filler/state reports opportunity-finder/calibration.json; do
-            if [ -e "$p" ]; then git add -A "$p"; fi
-          done
+          git add -A state reports site
           git diff --cached --quiet && { echo "nothing changed"; exit 0; }
-          git commit -m "pipeline: daily build $(date -u +%F)"
+          git commit -m "pipeline: niches $(date -u +%F)"
+          git pull --rebase
           git push
 
-      - name: Deploy to Cloudflare
-        env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-        run: |
-          if [ -z "$CLOUDFLARE_API_TOKEN" ]; then echo "no CLOUDFLARE_API_TOKEN secret; skipping deploy"; exit 0; fi
-          npx -y wrangler@4 deploy
-
       - name: Ping IndexNow
-        if: ${{ vars.SITE_LIVE == 'true' }}
-        working-directory: gap-filler
         run: |
-          sleep 120   # give Cloudflare time to deploy the new pages and key file
-          python publish/indexnow.py --site site --base-url "$BASE_URL" --state state/indexnow.json
+          LIVE=$(python -c 'import json;print(json.load(open("site.json")).get("live", False))')
+          if [ "$LIVE" != "True" ] || [ -z "$INDEXNOW_KEY" ]; then echo "site hidden or no key; skipping"; exit 0; fi
+          BASE=$(python -c 'import json;print(json.load(open("site.json"))["base_url"])')
+          python publish/indexnow.py --site site --base-url "$BASE" --write-key-only
+          git add site && git commit -m "pipeline: IndexNow key" && git push || true
+          sleep 120
+          python publish/indexnow.py --site site --base-url "$BASE" --state state/indexnow.json
           git add state/indexnow.json
           git diff --cached --quiet || { git commit -m "pipeline: IndexNow state"; git push; }
