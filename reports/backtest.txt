@@ -1,0 +1,9 @@
+topic                as of       stage      score   views/wk   x12w   xYoY  peak
+Labubu               2025-03-01  declining    0.0       9165   1.04      -  spring-summer 2025
+Dubai chocolate      2024-11-15  no-data        0          0      0      -  Dec 2024 - Jan 2025
+Prime Hydration      2022-11-01  tiny         0.0         52   1.53      -  Jan 2023 (UK)
+Stanley (brand)      2023-10-01  no-data        0          0      0      -  Dec 2023 - Jan 2024
+Pickleball           2022-03-01  flat         0.0      20708   1.13   1.47  2022-2023
+Crumbl Cookies       2022-02-01  no-data        0          0      0      -  2022
+Air fryer            2025-06-01  spike        0.0       1278   1.97   2.25  control: mature
+Halloween costume    2025-09-15  spike        0.0       1563   3.54   1.47  control: seasonal
