@@ -129,7 +129,7 @@ MEDIA_EVENT = re.compile(r"\b(film|movie|television|tv series|episode|season \d|
                          r"video game|soundtrack|franchise|comic|manga|anime|horror|fictional|character|"
                          r"election\w*|referendum|storm|hurricane|earthquake|attack|"
                          r"shooting|murder|death of|disappearance|war|battle|match|final|tournament|"
-                         r"championship|cup|grand prix|olympic|festival|award|ceremony|football club|"
+                         r"championship|cup|grand prix|olympic|games|multi-sport|festival|award|ceremony|football club|"
                          r"\bfc\b|team|league|wikipedia|list of)\b", re.I)
 ACADEMIC = re.compile(r"\b(philosoph\w*|history of|ancient|empire|dynasty|century|mathemat\w*|theorem|"
                       r"linguistic\w*|grammar|concept|theory|academic|journal|research literature|"
