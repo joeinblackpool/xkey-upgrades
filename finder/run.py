@@ -95,7 +95,7 @@ def due(pool, today, max_check):
 def check(pool, titles, today, log, checkpoint=None):
     new = [t for t in titles if "kind" not in pool[t]]
     try:
-        info = sources.wiki_info(new)
+        info = sources.wiki_info(new, log)
     except RuntimeError as ex:
         log(f"info: {ex}")
         info = {}
@@ -207,7 +207,13 @@ def main(argv=None):
     ap.add_argument("--max-check", type=int, default=int(os.environ.get("MAX_CHECK", 1500)))
     ap.add_argument("--top", type=int, default=40)
     a = ap.parse_args(argv)
-    log = lambda m: print(m, file=sys.stderr, flush=True)  # noqa: E731
+    os.makedirs(a.reports, exist_ok=True)
+    logf = open(os.path.join(a.reports, "finder-log.txt"), "w", encoding="utf-8")
+
+    def log(m):
+        print(m, file=sys.stderr, flush=True)
+        logf.write(str(m) + "\n")
+        logf.flush()
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
     pool = load(os.path.join(a.state, "candidates.json"), {})
@@ -215,7 +221,16 @@ def main(argv=None):
     gather(pool, today, seeds, log)
     todo = due(pool, today, a.max_check)
     log(f"pool {len(pool)}, checking {len(todo)}")
+    if todo:
+        try:
+            probe = sources.wiki_info(todo[:3], log)
+            log(f"info probe: {probe}")
+        except Exception as ex:
+            log(f"info probe failed: {ex!r}")
+    import collections
     check(pool, todo, today, log, lambda: save(os.path.join(a.state, "candidates.json"), pool))
+    log(f"kinds {collections.Counter(v.get('kind') for v in pool.values())}")
+    log(f"stages {collections.Counter(v.get('curve', {}).get('stage') for v in pool.values() if 'curve' in v)}")
     ranked = rank(pool, a.top)
     enrich(pool, ranked, log)
     ranked = rank(pool, a.top)

@@ -78,14 +78,18 @@ def wiki_links(title, limit=1500):
     return out[:limit]
 
 
-def wiki_info(titles):
-    """Description, article length and disambiguation flag for up to 50 titles per request."""
+def wiki_info(titles, log=print):
+    """Description, article length and disambiguation flag, 50 titles per request."""
     out = {}
     for i in range(0, len(titles), 50):
         chunk = titles[i:i + 50]
-        data = get_json(WIKI_API, {"action": "query", "prop": "info|description|pageprops",
-                                   "ppprop": "disambiguation", "titles": "|".join(chunk),
-                                   "format": "json", "redirects": 1})
+        try:
+            data = get_json(WIKI_API, {"action": "query", "prop": "info|description|pageprops",
+                                       "ppprop": "disambiguation", "titles": "|".join(chunk),
+                                       "format": "json", "redirects": 1, "formatversion": 1})
+        except RuntimeError as e:
+            log(f"info chunk {i}: {e}")
+            continue
         q = data.get("query", {})
         back = {}
         for m in q.get("normalized", []) + q.get("redirects", []):

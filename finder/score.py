@@ -82,11 +82,15 @@ def curve(daily, baseline=None):
     if len(w) < 30:
         m["new_article"] = True
     # Same 16 weeks last year: if it rose just as much then, it is seasonal, not a new trend.
+    # Anything that comes back every year is out: it must have risen as much at this time last
+    # year, OR be no higher than a year ago. Real early niches are well above last year's level.
     seasonal = None
     if len(w) >= 68:
         ly_growth, _ = _fit(w[-68:-52])
-        seasonal = ly_growth >= 0.7 * growth and growth > 0
+        yoy = recent / (_mean(w[-56:-52]) or 1)
         m["last_year_growth_wk"] = round(ly_growth, 4)
+        m["x_yoy"] = round(yoy, 2)
+        seasonal = growth > 0 and (ly_growth >= 0.5 * growth or yoy < 1.5)
     peak_i = last16.index(max(last16))
     fading = peak_i < 14 and w[-1] < 0.6 * max(last16)
 
