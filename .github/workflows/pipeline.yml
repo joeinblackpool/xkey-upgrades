@@ -63,13 +63,15 @@ jobs:
           rm -rf site
           bash run.sh "$TOP_N"
           [ "$SITE_LIVE" = "true" ] && python publish/indexnow.py --site site --base-url "$BASE_URL" --write-key-only || true
-          cp -r ../opportunity-finder/output/. ../reports/ 2>/dev/null || true
+          mkdir -p ../reports && cp ../opportunity-finder/output/opportunities-*.csv ../reports/
 
       - name: Commit (Cloudflare deploys on push)
         run: |
           git config user.name "pipeline-bot"
           git config user.email "pipeline-bot@users.noreply.github.com"
-          git add -A gap-filler/site gap-filler/state reports opportunity-finder/calibration.json 2>/dev/null || true
+          for p in gap-filler/site gap-filler/state reports opportunity-finder/calibration.json; do
+            if [ -e "$p" ]; then git add -A "$p"; fi
+          done
           git diff --cached --quiet && { echo "nothing changed"; exit 0; }
           git commit -m "pipeline: daily build $(date -u +%F)"
           git push

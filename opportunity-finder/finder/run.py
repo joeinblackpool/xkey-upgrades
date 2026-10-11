@@ -20,6 +20,21 @@ def major_version(tag):
     return m.group(1) if m else tag
 
 
+def package_label(tag):
+    """Monorepo tags name the package: 'expo-maps@58.0.8' -> 'expo-maps', 'langchain-core==1.6' -> 'langchain-core'."""
+    m = re.match(r"^(@?[A-Za-z][\w./-]*?)(?:@|==|-v?)\d", tag)
+    return m.group(1) if m else ""
+
+
+def dedupe(rows):
+    """One row per search query: keep the highest-scoring release for it."""
+    best = {}
+    for r in rows:
+        if r["query"] not in best or r["opportunity"] > best[r["query"]]["opportunity"]:
+            best[r["query"]] = r
+    return list(best.values())
+
+
 def load_calibration(path):
     """Per-project multipliers learned from real clicks/revenue (gap-filler/feedback/calibrate.py)."""
     if not os.path.exists(path):
@@ -36,7 +51,9 @@ def scan_project(p, days, use_serp, calibration=None):
     rows = []
     for r in rels:
         ver = major_version(r["tag"])
-        query = f"{p['name']} {ver} breaking changes"
+        label = package_label(r["tag"])
+        subject = label if label else p["name"]
+        query = f"{subject} {ver} breaking changes"
         demand = score.demand_score(so["recent"], so["baseline"], hn["points"], len(r["breaking_lines"]))
         serp = sources.serp_urls(query) if use_serp else None
         if serp is not None:
@@ -83,6 +100,7 @@ def main(argv=None):
             rows += scan_project(p, a.days, use_serp, calibration)
         except Exception as e:  # one bad source shouldn't sink the scan
             errors.append(f"{p['name']}: {e}")
+    rows = dedupe(rows)
     rows.sort(key=lambda r: r["opportunity"], reverse=True)
 
     os.makedirs(a.out, exist_ok=True)

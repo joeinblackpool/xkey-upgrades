@@ -44,5 +44,18 @@ class RunTest(unittest.TestCase):
             self.assertAlmostEqual(row2["opportunity"], round(row["opportunity"] * 2, 1), places=0)
 
 
+class LabelTest(unittest.TestCase):
+    def test_package_label(self):
+        self.assertEqual(run.package_label("expo-maps@58.0.8"), "expo-maps")
+        self.assertEqual(run.package_label("langchain-core==1.6.9"), "langchain-core")
+        self.assertEqual(run.package_label("@scope/pkg@1.2.0"), "@scope/pkg")
+        self.assertEqual(run.package_label("v15.1.0"), "")
+        self.assertEqual(run.package_label("15.1.0"), "")
+
+    def test_dedupe_keeps_best(self):
+        rows = [{"query": "a", "opportunity": 1}, {"query": "a", "opportunity": 5}, {"query": "b", "opportunity": 2}]
+        self.assertEqual(sorted(r["opportunity"] for r in run.dedupe(rows)), [2, 5])
+
+
 if __name__ == "__main__":
     unittest.main()
