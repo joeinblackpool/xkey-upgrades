@@ -30,8 +30,9 @@ class ScoreTest(unittest.TestCase):
         self.assertEqual(score.opportunity(1.0, 1.0, 0.0), 0.0)
 
     def test_proxy_gap(self):
-        self.assertEqual(score.gap_from_proxy(0, 0), 0.0)
-        self.assertEqual(score.gap_from_proxy(100, 40), 0.6)
+        self.assertEqual(score.gap_from_proxy(0, 0), 0.3)
+        self.assertEqual(score.gap_from_proxy(100, 40), 0.5)
+        self.assertEqual(score.gap_from_proxy(10, 10), 0.8)
 
 
 if __name__ == "__main__":

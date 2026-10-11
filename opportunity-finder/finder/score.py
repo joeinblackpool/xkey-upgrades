@@ -50,10 +50,12 @@ def gap_from_serp(results, version_hint=""):
 
 
 def gap_from_proxy(recent, unanswered):
-    """No search API: use the unanswered-question rate as a weaker stand-in for the gap."""
+    """No search API: the unanswered-question rate is a weak stand-in for the gap, so it is
+    kept to a 0.3-0.8 band and never claims a certain gap (or rules one out) on its own."""
     if recent == 0:
-        return 0.0
-    return round(min(1.0, unanswered / recent * 1.5), 3)
+        return 0.3
+    rate = min(1.0, unanswered / recent)
+    return round(0.3 + 0.5 * rate, 3)
 
 
 def opportunity(value, demand, gap):
