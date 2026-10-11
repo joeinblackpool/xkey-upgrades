@@ -115,16 +115,24 @@ def curve(daily, baseline=None):
 PERSON = re.compile(r"\b(born|died|actor|actress|singer|rapper|songwriter|footballer|cricketer|"
                     r"basketball|baseball|player|politician|musician|comedian|presenter|youtuber|"
                     r"streamer|wrestler|boxer|model|journalist|businessman|businesswoman|athlete|"
-                    r"golfer|tennis|coach|manager|criminal|influencer|dj|drummer|guitarist|band)\b", re.I)
+                    r"golfer|tennis|coach|manager|criminal|influencer|dj|drummer|guitarist|band|writer|author|"
+                    r"poet|novelist|playwright|painter|artist|sculptor|philosopher|scientist|physicist|"
+                    r"chemist|economist|historian|inventor|engineer|entrepreneur|killer|murderer|"
+                    r"terrorist|dictator|monarch|king|queen|prince|princess|emperor|president|"
+                    r"prime minister|general|soldier|officer|activist|director|producer|chef|"
+                    r"personality|socialite|billionaire)\b|\(born |\(\d{3,4}\s*[–-]\s*\d{3,4}\)", re.I)
 MEDIA_EVENT = re.compile(r"\b(film|movie|television|tv series|episode|season \d|album|song|novel|"
-                         r"video game|soundtrack|election|referendum|storm|hurricane|earthquake|attack|"
+                         r"video game|soundtrack|franchise|comic|manga|anime|horror|fictional|character|"
+                         r"election\w*|referendum|storm|hurricane|earthquake|attack|"
                          r"shooting|murder|death of|disappearance|war|battle|match|final|tournament|"
                          r"championship|cup|grand prix|olympic|festival|award|ceremony|football club|"
                          r"\bfc\b|team|league|wikipedia|list of)\b", re.I)
 ACADEMIC = re.compile(r"\b(philosoph\w*|history of|ancient|empire|dynasty|century|mathemat\w*|theorem|"
                       r"linguistic\w*|grammar|concept|theory|academic|journal|research literature|"
                       r"overview|topical guide|religio\w*|mytholog\w*|deity|god|goddess|saint|"
-                      r"legal case|court case|treaty|law of)\b", re.I)
+                      r"legal case|court case|treaty|law of|econom\w*|ideolog\w*|subculture|"
+                      r"politic\w*|social\w*|sociolog\w*|psycholog\w* concept|term|entity|system|"
+                      r"movement|doctrine|school of thought|genre|art form|literary)\b", re.I)
 PLACE_ORG = re.compile(r"\b(city|town|village|county|country|state|province|capital|river|mountain|"
                        r"political party|university|school|newspaper|government|agency|ministry)\b", re.I)
 COMMERCIAL = re.compile(r"\b(product|brand|device|app|application|software|platform|service|tool|"
@@ -135,7 +143,7 @@ COMMERCIAL = re.compile(r"\b(product|brand|device|app|application|software|platf
                         r"material|fabric|plant|breed|pet|garden|home|heating|insulation|solar|battery|"
                         r"energy|insurance|mortgage|loan|investment|tax|benefit|course|qualification|"
                         r"certification|job|career|holiday|travel|destination|fashion|style|trend|"
-                        r"subscription|marketplace|retailer|toy|furniture|tea|coffee|wine|beer)\b", re.I)
+                        r"subscription|marketplace|retailer|toy|furniture|tea|coffee|wine|beer|extension|gear|equipment|accessory|kit|machine|paddle|racket)\b", re.I)
 
 
 def classify(term, description, page_type="", length=0):
@@ -154,7 +162,7 @@ def classify(term, description, page_type="", length=0):
         return "place-org", 0.0
     if COMMERCIAL.search(text):
         return "commercial", round(1.4 * broad, 2)
-    return "other", round(0.5 * broad, 2)
+    return "other", round(0.3 * broad, 2)
 
 
 def score(m, value, gap=None, hn=None, calibration=1.0):

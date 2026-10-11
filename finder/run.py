@@ -72,7 +72,7 @@ def gather(pool, today, seeds, log):
         log(f"wiki top: {e}")
     cats = seeds.get("categories", [])
     if cats:
-        n = seeds.get("per_day", 8)
+        n = len(cats) if os.environ.get("BOOTSTRAP") == "1" else seeds.get("per_day", 8)
         start = (date.today().toordinal() * n) % len(cats)
         for cat in (cats + cats)[start:start + n]:
             try:
