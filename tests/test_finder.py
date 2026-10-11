@@ -89,3 +89,23 @@ class RunTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class ExtraTests(unittest.TestCase):
+    def test_new_article_growing_is_early(self):
+        w = [0] * 48 + growing(1000, 0.07, 20)
+        m = curve(daily_from_weekly(w))
+        self.assertTrue(m.get("new_article"))
+        self.assertEqual(m["stage"], "early", m)
+
+    def test_sitewide_swing_removed(self):
+        # Topic rises exactly with all of Wikipedia (e.g. school term): not a trend.
+        base = [1e6 * (1.03 ** (i // 7)) if i >= 52 * 7 else 1e6 for i in range(68 * 7)]
+        topic = [b / 200 for b in base]
+        self.assertNotIn(curve(topic, base)["stage"], ("early", "takeoff"))
+        self.assertIn(curve(topic)["stage"], ("early", "takeoff", "seasonal", "mainstream"))
+
+    def test_broad_and_academic(self):
+        self.assertLess(classify("Dog", "Domesticated species of canid", "standard", 200_000)[1], 0.2)
+        self.assertEqual(classify("Ancient China", "Overview of and topical guide to ancient China")[0], "academic")
+        self.assertEqual(classify("Harvard University", "Private university in Cambridge")[0], "place-org")

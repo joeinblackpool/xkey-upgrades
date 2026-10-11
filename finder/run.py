@@ -66,13 +66,13 @@ def gather(pool, today, seeds, log):
         except RuntimeError as e:
             log(f"trends {geo}: {e}")
     try:
-        for t in sources.wiki_top(date.today() - timedelta(days=1)):
+        for t in sources.wiki_top():
             add(pool, t, "wiki-top", today)
     except RuntimeError as e:
         log(f"wiki top: {e}")
     cats = seeds.get("categories", [])
     if cats:
-        n = seeds.get("per_day", 4)
+        n = seeds.get("per_day", 8)
         start = (date.today().toordinal() * n) % len(cats)
         for cat in (cats + cats)[start:start + n]:
             try:
@@ -85,25 +85,41 @@ def gather(pool, today, seeds, log):
 def due(pool, today, max_check):
     t = date.fromisoformat(today)
     never = [k for k, v in pool.items() if "checked" not in v]
-    stale = sorted((k for k, v in pool.items() if "checked" in v and v.get("kind") in (None, "commercial", "other", "place-org")
+    stale = sorted((k for k, v in pool.items() if "checked" in v and v.get("kind") in ("commercial", "other")
                     and (t - date.fromisoformat(v["checked"])).days >= RECHECK_DAYS),
                    key=lambda k: pool[k]["checked"])
     return (never + stale)[:max_check]
 
 
 def check(pool, titles, today, log):
+    new = [t for t in titles if "kind" not in pool[t]]
+    try:
+        info = sources.wiki_info(new)
+    except RuntimeError as ex:
+        log(f"info: {ex}")
+        info = {}
+    try:
+        baseline = sources.wiki_total_daily(476)
+    except RuntimeError as ex:
+        log(f"baseline: {ex}")
+        baseline = None
     for i, title in enumerate(titles):
         e = pool[title]
         try:
             if "kind" not in e:
-                s = sources.wiki_summary(title)
-                e["description"] = s["description"]
-                e["kind"], e["value"] = classify(title, s["description"], s["type"])
+                s = info.get(title)
+                if not s:
+                    continue
+                if s["missing"]:
+                    e.update(kind="junk", value=0.0, checked=today, score=0.0)
+                    continue
+                e["description"], e["length"] = s["description"], s["length"]
+                e["kind"], e["value"] = classify(title, s["description"], s["type"], s["length"])
             e["checked"] = today
             if e["value"] <= 0:
                 e["score"] = 0.0
                 continue
-            e["curve"] = curve(sources.wiki_daily_views(title, days=476))
+            e["curve"] = curve(sources.wiki_daily_views(title, days=476), baseline)
             e["score"] = score(e["curve"], e["value"])
         except Exception as ex:  # one bad topic must not stop the run
             log(f"{title}: {ex}")

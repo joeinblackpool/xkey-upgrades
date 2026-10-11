@@ -13,7 +13,7 @@ TINY = 700          # below ~100/day: too noisy to read a trend
 EARLY_MAX = 70_000  # below ~10k/day: still early
 MAINSTREAM = 350_000
 
-MIN_GROWTH = 0.015  # 1.5% a week = ~2.2x a year
+MIN_GROWTH = 0.02   # 2% a week (after removing site-wide swings) = ~2.8x a year
 
 
 def weekly(daily):
@@ -39,11 +39,27 @@ def _mean(xs):
     return sum(xs) / len(xs) if xs else 0.0
 
 
-def curve(daily):
-    """Curve metrics from up to two years of daily views (oldest first)."""
+def normalise(daily, baseline):
+    """Remove site-wide swings (school terms, holidays, outages) by scaling to total Wikipedia traffic."""
+    if not baseline or len(baseline) != len(daily):
+        return daily
+    avg = sum(baseline) / len(baseline)
+    return [d * avg / b if b else d for d, b in zip(daily, baseline)]
+
+
+def curve(daily, baseline=None):
+    """Curve metrics from up to ~68 weeks of daily views (oldest first).
+
+    New articles (14-29 weeks of history) are judged on what exists; being new and growing is
+    itself an early signal, so they are flagged."""
+    daily = normalise(daily, baseline)
+    first = next((i for i, d in enumerate(daily) if d > 0), len(daily))
+    daily = daily[first:]
     w = weekly(daily)
-    if len(w) < 30 or sum(w[-16:]) == 0:
+    if len(w) < 14 or sum(w[-12:]) == 0:
         return {"stage": "no-data"}
+    if len(w) < 30:
+        w = w[1:]  # first week of a new article is usually partial
     last16 = w[-16:]
     growth, r2 = _fit(last16)
     g_late, _ = _fit(w[-8:])
@@ -61,7 +77,10 @@ def curve(daily):
         "accel": round(g_late - g_early, 4),
         "spike": round(spike, 2),
         "x_12w": round(recent / (_mean(w[-16:-12]) or 1), 2),
+        "weeks_of_data": len(w),
     }
+    if len(w) < 30:
+        m["new_article"] = True
     # Same 16 weeks last year: if it rose just as much then, it is seasonal, not a new trend.
     seasonal = None
     if len(w) >= 68:
@@ -102,6 +121,10 @@ MEDIA_EVENT = re.compile(r"\b(film|movie|television|tv series|episode|season \d|
                          r"shooting|murder|death of|disappearance|war|battle|match|final|tournament|"
                          r"championship|cup|grand prix|olympic|festival|award|ceremony|football club|"
                          r"\bfc\b|team|league|wikipedia|list of)\b", re.I)
+ACADEMIC = re.compile(r"\b(philosoph\w*|history of|ancient|empire|dynasty|century|mathemat\w*|theorem|"
+                      r"linguistic\w*|grammar|concept|theory|academic|journal|research literature|"
+                      r"overview|topical guide|religio\w*|mytholog\w*|deity|god|goddess|saint|"
+                      r"legal case|court case|treaty|law of)\b", re.I)
 PLACE_ORG = re.compile(r"\b(city|town|village|county|country|state|province|capital|river|mountain|"
                        r"political party|university|school|newspaper|government|agency|ministry)\b", re.I)
 COMMERCIAL = re.compile(r"\b(product|brand|device|app|application|software|platform|service|tool|"
@@ -115,20 +138,23 @@ COMMERCIAL = re.compile(r"\b(product|brand|device|app|application|software|platf
                         r"subscription|marketplace|retailer|toy|furniture|tea|coffee|wine|beer)\b", re.I)
 
 
-def classify(term, description, page_type=""):
-    """('person'|'media-event'|'place-org'|'commercial'|'other', value multiplier)."""
+def classify(term, description, page_type="", length=0):
+    """(kind, value multiplier). Broad core topics (very long articles, e.g. "Dog") are not niches."""
     text = f"{term} {description}"
+    broad = 0.25 if length > 120_000 else (0.6 if length > 70_000 else 1.0)
     if page_type == "disambiguation" or term.startswith(("Main Page", "Special:", "Wikipedia:", "Portal:")):
         return "junk", 0.0
     if PERSON.search(description):
         return "person", 0.0
     if MEDIA_EVENT.search(text):
         return "media-event", 0.0
-    if COMMERCIAL.search(text):
-        return "commercial", 1.4
+    if ACADEMIC.search(description):
+        return "academic", 0.0
     if PLACE_ORG.search(description):
-        return "place-org", 0.4
-    return "other", 0.8
+        return "place-org", 0.0
+    if COMMERCIAL.search(text):
+        return "commercial", round(1.4 * broad, 2)
+    return "other", round(0.5 * broad, 2)
 
 
 def score(m, value, gap=None, hn=None, calibration=1.0):
@@ -138,7 +164,7 @@ def score(m, value, gap=None, hn=None, calibration=1.0):
     growth = min(m["growth_wk"], 0.12) / 0.12            # 12%/week or more = full marks
     steadiness = m["fit_r2"] * m["up_share"]
     accel = 1 + max(-0.3, min(0.5, m["accel"] * 15))
-    stage = 1.0 if m["stage"] == "early" else 0.55
+    stage = (1.0 if m["stage"] == "early" else 0.55) * (1.15 if m.get("new_article") else 1.0)
     # Smaller is better until it is too small to matter: peak around 3k-20k views a week.
     v = m["weekly_views"]
     size = 1.0 if 3_000 <= v <= 20_000 else (0.7 if v < 3_000 else max(0.5, 1 - (v - 20_000) / 150_000))

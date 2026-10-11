@@ -48,23 +48,65 @@ def google_trends(geo):
     return parse_trends_rss(get_text(TRENDS_RSS, {"geo": geo}))
 
 
-def wiki_top(day, skip=40, limit=1000):
-    """Most-read English Wikipedia articles on a day, minus the top `skip`."""
-    d = day.strftime("%Y/%m/%d")
-    data = get_json(f"{WIKI_REST}/top/en.wikipedia/all-access/{d}")
-    arts = data["items"][0]["articles"]
-    return [a["article"] for a in arts if a["rank"] > skip][:limit]
+def wiki_top(skip=40, limit=1000):
+    """Most-read English Wikipedia articles on the latest published day, minus the top `skip`."""
+    last = None
+    for back in (1, 2, 3):
+        d = (date.today() - timedelta(days=back)).strftime("%Y/%m/%d")
+        try:
+            data = get_json(f"{WIKI_REST}/top/en.wikipedia/all-access/{d}")
+        except RuntimeError as e:
+            last = e
+            continue
+        arts = data["items"][0]["articles"]
+        return [a["article"] for a in arts if a["rank"] > skip][:limit]
+    raise RuntimeError(f"no top list in the last 3 days: {last}")
 
 
-def wiki_links(title, limit=200):
-    """Articles linked from a seed article (namespace 0 only)."""
-    data = get_json(WIKI_API, {"action": "query", "prop": "links", "titles": title, "plnamespace": 0,
-                               "pllimit": min(limit, 500), "format": "json", "redirects": 1})
-    pages = data.get("query", {}).get("pages", {})
-    out = []
-    for p in pages.values():
-        out += [l["title"] for l in p.get("links", [])]
+def wiki_links(title, limit=1500):
+    """Articles linked from a seed article (namespace 0 only), following continuation."""
+    out, cont = [], {}
+    while len(out) < limit:
+        data = get_json(WIKI_API, {"action": "query", "prop": "links", "titles": title, "plnamespace": 0,
+                                   "pllimit": 500, "format": "json", "redirects": 1, **cont})
+        for p in data.get("query", {}).get("pages", {}).values():
+            out += [l["title"] for l in p.get("links", [])]
+        if "continue" not in data:
+            break
+        cont = data["continue"]
+        _pause()
     return out[:limit]
+
+
+def wiki_info(titles):
+    """Description, article length and disambiguation flag for up to 50 titles per request."""
+    out = {}
+    for i in range(0, len(titles), 50):
+        chunk = titles[i:i + 50]
+        data = get_json(WIKI_API, {"action": "query", "prop": "info|description|pageprops",
+                                   "ppprop": "disambiguation", "titles": "|".join(chunk),
+                                   "format": "json", "redirects": 1})
+        q = data.get("query", {})
+        back = {}
+        for m in q.get("normalized", []) + q.get("redirects", []):
+            back[m["to"]] = back.get(m["from"], m["from"])
+        for p in q.get("pages", {}).values():
+            orig = back.get(p.get("title"), p.get("title"))
+            out[orig] = {"description": p.get("description", ""), "length": p.get("length", 0),
+                         "missing": "missing" in p,
+                         "type": "disambiguation" if "disambiguation" in p.get("pageprops", {}) else "standard",
+                         "canonical": p.get("title")}
+        _pause()
+    return out
+
+
+def wiki_total_daily(days=476, end=None):
+    """All human views of English Wikipedia per day: the baseline that removes site-wide swings."""
+    end = end or (date.today() - timedelta(days=1))
+    start = end - timedelta(days=days - 1)
+    data = get_json(f"{WIKI_REST}/aggregate/en.wikipedia/all-access/user/daily/{start:%Y%m%d}00/{end:%Y%m%d}00")
+    by_day = {i["timestamp"][:8]: i["views"] for i in data.get("items", [])}
+    return [by_day.get((start + timedelta(days=i)).strftime("%Y%m%d"), 0) for i in range(days)]
 
 
 def wiki_resolve(term):
