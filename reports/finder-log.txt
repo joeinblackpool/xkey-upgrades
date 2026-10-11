@@ -1,39 +1,20 @@
-pool 32832, checking 32832
-info probe: {'(NH4)2HPO4': {'description': 'Chemical compound', 'length': 7918, 'missing': False, 'type': 'standard', 'canonical': 'Diammonium phosphate'}, '$100 laptop': {'description': 'Laptop computer', 'length': 58847, 'missing': False, 'type': 'standard', 'canonical': 'OLPC XO'}, "'Phags-pa script": {'description': 'Mongolian writing system', 'length': 45833, 'missing': False, 'type': 'standard', 'canonical': 'ʼPhags-pa script'}}
-views 400/7617
-views 800/7617
-views 1200/7617
-views 1600/7617
-views 2000/7617
-views 2400/7617
-views 2800/7617
-views 3200/7617
-views 3600/7617
-views 4000/7617
-views 4400/7617
-views 4800/7617
-views 5200/7617
-views 5600/7617
-views 6000/7617
-views 6400/7617
-views 6800/7617
-views 7200/7617
-views 7600/7617
-views 7617/7617
-kinds Counter({'other': 16261, 'commercial': 5206, 'consumer': 2611, 'person': 2211, 'academic': 1960, 'media-event': 1912, 'place-org': 1132, None: 1105, 'junk': 434})
-stages Counter({'tiny': 3021, 'spike': 3015, 'flat': 1221, 'declining': 169, 'seasonal': 137, 'no-data': 28, 'noisy': 10, 'takeoff': 8, 'early': 8})
- 99.9  early       3375/wk  x2.61  Jirai-kei and ryōsan-gata fashion  [candidate]
- 94.9  early      51003/wk  x5.48  UBlock Origin  [candidate]
- 35.3  early       2050/wk  x3.01  Café de olla  [candidate]
- 21.6  early       4436/wk  x2.64  Fricassee  [candidate]
- 20.2  early        812/wk  x1.88  Nasty Gal  [candidate]
- 20.0  early        964/wk  x1.62  Nihilistic penguin  [candidate]
- 19.2  takeoff     3300/wk  x2.19  Becoming Chinese  [candidate]
+pool 33170, checking 1443
+info probe: {'100 metres': {'description': 'Sprint race', 'length': 146447, 'missing': False, 'type': 'standard', 'canonical': '100 metres'}, '18XX': {'description': 'Board games based on 19th century railroads', 'length': 47216, 'missing': False, 'type': 'standard', 'canonical': '18XX'}, '2,4-Dinitrophenol': {'description': 'Chemical compound', 'length': 38849, 'missing': False, 'type': 'standard', 'canonical': '2,4-Dinitrophenol'}}
+views 322/322
+kinds Counter({'other': 16829, 'commercial': 5422, 'consumer': 2737, 'person': 2449, 'academic': 2022, 'media-event': 2017, 'place-org': 1160, 'junk': 435, None: 99})
+stages Counter({'tiny': 3139, 'spike': 3090, 'flat': 1320, 'declining': 182, 'seasonal': 148, 'no-data': 31, 'noisy': 10, 'takeoff': 10, 'early': 9})
+ 99.9  early       3375/wk  x2.61  Jirai-kei and ryōsan-gata fashion  [testing]
+ 20.0  early        964/wk  x1.62  Nihilistic penguin  [testing]
+ 19.2  takeoff     3300/wk  x2.19  Becoming Chinese  [testing]
+ 94.9  early      51003/wk  x5.48  UBlock Origin  [rejected]
+ 35.3  early       2050/wk  x3.01  Café de olla  [rejected]
+ 30.1  early       4052/wk  x2.75  Home appliance  [candidate]
+ 22.7  takeoff     5535/wk  x2.16  Caffè mocha  [candidate]
+ 21.6  early       4436/wk  x2.64  Fricassee  [rejected]
+ 20.2  early        812/wk  x1.88  Nasty Gal  [rejected]
  13.2  takeoff      956/wk  x3.18  Hair twists  [candidate]
  12.7  takeoff     2540/wk  x2.25  Borg (drink)  [candidate]
   7.1  early        913/wk  x1.4   Aspidistra elatior  [candidate]
   7.1  takeoff      887/wk  x2.09  Autonomous robot  [candidate]
   6.8  takeoff      777/wk  x1.99  2027 African Games  [candidate]
   4.4  takeoff     2101/wk  x1.8   Poi (Hawaiian food)  [candidate]
-  4.3  takeoff      994/wk  x1.81  Baby bottle  [candidate]
-  4.3  early       1239/wk  x1.56  Dog crossbreed  [candidate]
