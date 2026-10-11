@@ -16,7 +16,7 @@ Attach `joeinblackpool/xkey-upgrades` with push access, clone it, `git pull`. Re
 3. Never write for `dropped` niches.
 
 Skip a candidate (set `status: rejected` and a one-line `reason`) if it is:
-a person, a brand you would only be repeating press releases about, a film/TV/game title, a news event,
+a person, a film/TV/game title, a news event,
 adult, gambling, weapons, illegal drugs, a get-rich-quick scheme, something where the only honest page
 would be thin, or medical/financial advice you cannot source from official bodies (NHS, NICE, CDC, FDA,
 FCA, gov.uk, IRS, SEC, peer-reviewed reviews).
@@ -36,9 +36,13 @@ Files: `content/<niche-slug>/index.md` (hub) and `content/<niche-slug>/<page-slu
 
 - **Hub** (900-1500 words): what it is, why interest is rising (with evidence), who it is for, costs,
   risks/downsides, how to get started, and links to the articles. Set `short:` to a 1-3 word name.
-- **Articles** (700-1500 words each): one clear search intent each, e.g. "X vs Y", "how much does X cost
-  in the UK and US", "is X safe", "how to choose a X", "X for beginners". Answer the question in the first
-  paragraph, then go deeper. Use tables for comparisons.
+- **Articles** (700-1500 words each): one clear search intent each. For a product craze (a toy, drink,
+  snack, gadget, fashion item, beauty product) the money questions are: "what is X and why is everyone
+  buying it", "where to buy X in the UK / US", "X price guide (RRP vs resale)", "how to spot a fake X",
+  "X vs alternatives", "is X worth it / is X safe". For a youth trend or hobby: "what does X mean",
+  "X for beginners", "what you need to start X". Answer the question in the first paragraph, then go
+  deeper. Use tables for comparisons. Prices must come from retailer or official pages you opened, with
+  the date checked.
 - Titles under 60 characters, unique across the site, no site name. Descriptions under 155 characters.
 - Plain, specific, honest writing: no filler, no hype, no "in today's fast-paced world". Say what is
   uncertain. Include downsides.

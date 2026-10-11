@@ -71,13 +71,19 @@ def gather(pool, today, seeds, log):
             add(pool, t, "wiki-top", today)
     except RuntimeError as e:
         log(f"wiki top: {e}")
+    for t_seed in seeds.get("trend_seeds", []):   # fads, new products, memes: every day
+        try:
+            for t in sources.expand_seed(t_seed, 600):
+                add(pool, t, f"trend:{t_seed}", today)
+        except RuntimeError as e:
+            log(f"trend seed {t_seed}: {e}")
     cats = seeds.get("categories", [])
     if cats:
         n = len(cats) if os.environ.get("BOOTSTRAP") == "1" else seeds.get("per_day", 8)
         start = (date.today().toordinal() * n) % len(cats)
         for cat in (cats + cats)[start:start + n]:
             try:
-                for t in sources.wiki_links(cat, limit=400 if os.environ.get("BOOTSTRAP") == "1" else 1500):
+                for t in sources.expand_seed(cat, 400 if os.environ.get("BOOTSTRAP") == "1" else 1500):
                     add(pool, t, f"seed:{cat}", today)
             except RuntimeError as e:
                 log(f"seed {cat}: {e}")
@@ -86,7 +92,7 @@ def gather(pool, today, seeds, log):
 def due(pool, today, max_check):
     t = date.fromisoformat(today)
     never = [k for k, v in pool.items() if "checked" not in v]
-    stale = sorted((k for k, v in pool.items() if "checked" in v and v.get("kind") in ("commercial", "other")
+    stale = sorted((k for k, v in pool.items() if "checked" in v and v.get("kind") in ("consumer", "commercial", "other")
                     and (t - date.fromisoformat(v["checked"])).days >= RECHECK_DAYS),
                    key=lambda k: pool[k]["checked"])
     return (never + stale)[:max_check]

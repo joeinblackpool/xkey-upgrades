@@ -137,6 +137,15 @@ ACADEMIC = re.compile(r"\b(philosoph\w*|history of|ancient|empire|dynasty|centur
                       r"legal case|court case|treaty|law of|econom\w*|ideolog\w*|subculture|"
                       r"politic\w*|social\w*|sociolog\w*|psycholog\w* concept|term|entity|system|"
                       r"movement|doctrine|school of thought|genre|art form|literary)\b", re.I)
+# Consumer crazes: what young people buy, wear, drink, collect and share. Highest value.
+CONSUMER = re.compile(r"\b(toy|toys|plush|collectible|figure|figurine|blind box|trading card|sticker|"
+                      r"drink|beverage|energy drink|soda|snack|candy|confectionery|sweet|chocolate|"
+                      r"ice cream|bubble tea|cereal|sauce|flavou?r|fashion|clothing|apparel|sneaker|shoe|"
+                      r"footwear|trainers|handbag|bag|accessor\w*|jewel\w*|watch|tumbler|bottle|cup|"
+                      r"cosmetic\w*|make-?up|skincare|skin care|beauty|lip|nail|hair|fragrance|perfume|"
+                      r"brand|product|gadget|device|headphones|earbuds|phone case|app|social media|"
+                      r"meme|slang|internet trend|viral|challenge|fad|craze|aesthetic|subculture style|"
+                      r"vape|e-cigarette|nicotine pouch|squishy|fidget|slime|keychain|charm|merch\w*)\b", re.I)
 PLACE_ORG = re.compile(r"\b(city|town|village|county|country|state|province|capital|river|mountain|"
                        r"political party|university|school|newspaper|government|agency|ministry)\b", re.I)
 COMMERCIAL = re.compile(r"\b(product|brand|device|app|application|software|platform|service|tool|"
@@ -158,14 +167,19 @@ def classify(term, description, page_type="", length=0):
         return "junk", 0.0
     if PERSON.search(description):
         return "person", 0.0
+    if CONSUMER.search(description) and not re.search(r"\b(film|television|tv series|album|song|episode|novel)\b",
+                                                      description, re.I):
+        return "consumer", round(1.8 * broad, 2)
     if MEDIA_EVENT.search(text):
         return "media-event", 0.0
     if ACADEMIC.search(description):
         return "academic", 0.0
     if PLACE_ORG.search(description):
         return "place-org", 0.0
+    if CONSUMER.search(term):
+        return "consumer", round(1.8 * broad, 2)
     if COMMERCIAL.search(text):
-        return "commercial", round(1.4 * broad, 2)
+        return "commercial", round(1.2 * broad, 2)
     return "other", round(0.3 * broad, 2)
 
 
@@ -176,7 +190,9 @@ def score(m, value, gap=None, hn=None, calibration=1.0):
     growth = min(m["growth_wk"], 0.12) / 0.12            # 12%/week or more = full marks
     steadiness = m["fit_r2"] * m["up_share"]
     accel = 1 + max(-0.3, min(0.5, m["accel"] * 15))
-    stage = (1.0 if m["stage"] == "early" else 0.55) * (1.15 if m.get("new_article") else 1.0)
+    stage = 1.0 if m["stage"] == "early" else 0.55
+    # "From nowhere": a brand-new article, or several times last year's level.
+    nowhere = 1.4 if m.get("new_article") else (1.3 if m.get("x_yoy", 0) >= 5 else 1.0)
     # Smaller is better until it is too small to matter: peak around 3k-20k views a week.
     v = m["weekly_views"]
     size = 1.0 if 3_000 <= v <= 20_000 else (0.7 if v < 3_000 else max(0.5, 1 - (v - 20_000) / 150_000))
@@ -184,5 +200,5 @@ def score(m, value, gap=None, hn=None, calibration=1.0):
     hn_m = 1.0
     if hn and len(hn) >= 4 and sum(hn[:2]) > 0:
         hn_m = 1.15 if sum(hn[-2:]) > 1.5 * sum(hn[:2]) else 1.0
-    raw = growth * steadiness * accel * stage * size * value * gap_m * hn_m * calibration
-    return round(min(100.0, raw * 100 / 1.4), 1)
+    raw = growth * steadiness * accel * stage * nowhere * size * value * gap_m * hn_m * calibration
+    return round(min(100.0, raw * 100 / 1.8), 1)

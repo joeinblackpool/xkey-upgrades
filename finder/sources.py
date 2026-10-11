@@ -78,6 +78,27 @@ def wiki_links(title, limit=1500):
     return out[:limit]
 
 
+def wiki_category_members(category, limit=500):
+    """Articles most recently added to a category (newest first) - catches new products and fads."""
+    out, cont = [], {}
+    while len(out) < limit:
+        data = get_json(WIKI_API, {"action": "query", "list": "categorymembers", "cmtitle": category,
+                                   "cmnamespace": 0, "cmlimit": 500, "cmsort": "timestamp", "cmdir": "desc",
+                                   "format": "json", **cont})
+        out += [m["title"] for m in data.get("query", {}).get("categorymembers", [])]
+        if "continue" not in data:
+            break
+        cont = data["continue"]
+        _pause()
+    return out[:limit]
+
+
+def expand_seed(seed, limit):
+    if seed.startswith("Category:"):
+        return wiki_category_members(seed, limit)
+    return wiki_links(seed, limit)
+
+
 def wiki_info(titles, log=print):
     """Description, article length and disambiguation flag, 50 titles per request."""
     out = {}

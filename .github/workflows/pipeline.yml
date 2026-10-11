@@ -55,7 +55,9 @@ jobs:
         env:
           BOOTSTRAP: ${{ inputs.bootstrap && '1' || '0' }}
           MAX_CHECK: ${{ inputs.bootstrap && '40000' || '1500' }}
-        run: python -m finder.run --state state --reports reports
+        run: |
+          python -m finder.run --state state --reports reports
+          python -m finder.backtest > reports/backtest.txt || true
 
       - name: Build site
         run: python builder/build.py
