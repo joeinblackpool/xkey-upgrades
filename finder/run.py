@@ -19,6 +19,8 @@ from .score import classify, curve, score
 
 HERE = os.path.dirname(__file__)
 RECHECK_DAYS = 7
+MIN_VALUE_FOR_VIEWS = 0.5    # only consumer/commercial topics get their curve read (the costly part)
+TIME_BUDGET_S = int(os.environ.get("TIME_BUDGET_S", 45 * 60))
 FORGET_DAYS = 180
 
 
@@ -125,7 +127,7 @@ def check(pool, titles, today, log, checkpoint=None):
                 e["description"], e["length"] = s["description"], s["length"]
                 e["kind"], e["value"] = classify(title, s["description"], s["type"], s["length"])
             e["checked"] = today
-            if e["value"] <= 0:
+            if e["value"] < MIN_VALUE_FOR_VIEWS:
                 e["score"] = 0.0
                 continue
             need_views.append(title)
@@ -139,15 +141,24 @@ def check(pool, titles, today, log, checkpoint=None):
             log(f"{title}: {ex}")
             return title, []
 
+    import time as _t
+    start = _t.time()
+    # Consumer topics first, so a cut-short run still covers what matters most.
+    need_views.sort(key=lambda t: -pool[t]["value"])
     with ThreadPoolExecutor(max_workers=8) as ex:
-        for i, (title, daily) in enumerate(ex.map(one, need_views)):
-            e = pool[title]
-            e["curve"] = curve(daily, baseline)
-            e["score"] = score(e["curve"], e["value"])
-            if i and i % 500 == 0:
-                log(f"views {i}/{len(need_views)}")
-                if checkpoint:
-                    checkpoint()
+        for b in range(0, len(need_views), 400):
+            if _t.time() - start > TIME_BUDGET_S:
+                for t in need_views[b:]:
+                    pool[t].pop("checked", None)   # try again next run
+                log(f"time budget used; {len(need_views) - b} topics left for next run")
+                break
+            for title, daily in ex.map(one, need_views[b:b + 400]):
+                e = pool[title]
+                e["curve"] = curve(daily, baseline)
+                e["score"] = score(e["curve"], e["value"])
+            log(f"views {min(b + 400, len(need_views))}/{len(need_views)}")
+            if checkpoint:
+                checkpoint()
 
 
 def enrich(pool, ranked, log, brave_top=25, hn_top=40):

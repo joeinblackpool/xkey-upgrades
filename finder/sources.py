@@ -105,9 +105,9 @@ def wiki_info(titles, log=print):
     for i in range(0, len(titles), 50):
         chunk = titles[i:i + 50]
         try:
-            data = get_json(WIKI_API, {"action": "query", "prop": "info|description|pageprops",
-                                       "ppprop": "disambiguation", "titles": "|".join(chunk),
-                                       "format": "json", "redirects": 1, "formatversion": 1})
+            data = get_json(WIKI_API, post={"action": "query", "prop": "info|description|pageprops",
+                                            "ppprop": "disambiguation", "titles": "|".join(chunk),
+                                            "format": "json", "redirects": 1, "formatversion": 1})
         except RuntimeError as e:
             log(f"info chunk {i}: {e}")
             continue
