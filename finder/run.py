@@ -7,6 +7,7 @@ so something first noticed as a tiny blip gets picked up when its curve starts t
 Writes state/niches.json (the ranked list, keeping each niche's status) and a dated CSV report.
 """
 import argparse
+from concurrent.futures import ThreadPoolExecutor
 import csv
 import json
 import os
@@ -76,7 +77,7 @@ def gather(pool, today, seeds, log):
         start = (date.today().toordinal() * n) % len(cats)
         for cat in (cats + cats)[start:start + n]:
             try:
-                for t in sources.wiki_links(cat):
+                for t in sources.wiki_links(cat, limit=400 if os.environ.get("BOOTSTRAP") == "1" else 1500):
                     add(pool, t, f"seed:{cat}", today)
             except RuntimeError as e:
                 log(f"seed {cat}: {e}")
@@ -91,7 +92,7 @@ def due(pool, today, max_check):
     return (never + stale)[:max_check]
 
 
-def check(pool, titles, today, log):
+def check(pool, titles, today, log, checkpoint=None):
     new = [t for t in titles if "kind" not in pool[t]]
     try:
         info = sources.wiki_info(new)
@@ -103,7 +104,9 @@ def check(pool, titles, today, log):
     except RuntimeError as ex:
         log(f"baseline: {ex}")
         baseline = None
-    for i, title in enumerate(titles):
+    # Classify first (cheap, batched), then fetch view histories 8 at a time.
+    need_views = []
+    for title in titles:
         e = pool[title]
         try:
             if "kind" not in e:
@@ -119,12 +122,26 @@ def check(pool, titles, today, log):
             if e["value"] <= 0:
                 e["score"] = 0.0
                 continue
-            e["curve"] = curve(sources.wiki_daily_views(title, days=476), baseline)
-            e["score"] = score(e["curve"], e["value"])
+            need_views.append(title)
         except Exception as ex:  # one bad topic must not stop the run
             log(f"{title}: {ex}")
-        if i and i % 100 == 0:
-            log(f"checked {i}/{len(titles)}")
+
+    def one(title):
+        try:
+            return title, sources.wiki_daily_views(title, days=476)
+        except Exception as ex:
+            log(f"{title}: {ex}")
+            return title, []
+
+    with ThreadPoolExecutor(max_workers=8) as ex:
+        for i, (title, daily) in enumerate(ex.map(one, need_views)):
+            e = pool[title]
+            e["curve"] = curve(daily, baseline)
+            e["score"] = score(e["curve"], e["value"])
+            if i and i % 500 == 0:
+                log(f"views {i}/{len(need_views)}")
+                if checkpoint:
+                    checkpoint()
 
 
 def enrich(pool, ranked, log, brave_top=25, hn_top=40):
@@ -198,7 +215,7 @@ def main(argv=None):
     gather(pool, today, seeds, log)
     todo = due(pool, today, a.max_check)
     log(f"pool {len(pool)}, checking {len(todo)}")
-    check(pool, todo, today, log)
+    check(pool, todo, today, log, lambda: save(os.path.join(a.state, "candidates.json"), pool))
     ranked = rank(pool, a.top)
     enrich(pool, ranked, log)
     ranked = rank(pool, a.top)
