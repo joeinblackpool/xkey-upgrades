@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Expo expo-localization@58.0.4: breaking changes and upgrade checklist</title>
+<meta name="description" content="0 breaking or behaviour-changing items when upgrading Expo from expo-hinge@58.0.1 to expo-localization@58.0.4, taken from the official release notes, as a checklist you can work through.">
+<link rel="canonical" href="https://upgrades.xkey.co.uk/expo-expo-localization-58-0-4-upgrade/">
+<style>
+:root{--bg:#fff;--fg:#18181b;--muted:#52525b;--card:#f4f4f5;--line:#e4e4e7;--accent:#2563eb}
+@media (prefers-color-scheme:dark){:root{--bg:#09090b;--fg:#fafafa;--muted:#a1a1aa;--card:#18181b;--line:#27272a;--accent:#60a5fa}}
+body{background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,sans-serif;margin:0;padding:0 16px}
+main{max-width:760px;margin:2rem auto}a{color:var(--accent)}
+.meta{color:var(--muted);font-size:.9rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:1rem 1.25rem;margin:1.25rem 0}
+.check li{list-style:none;margin:.4rem 0}.check{padding-left:0}
+.check label{display:flex;gap:.6rem;align-items:flex-start;cursor:pointer}
+.check input{margin-top:.35rem}.done{text-decoration:line-through;color:var(--muted)}
+progress{width:100%}pre{overflow-x:auto;background:var(--card);padding:.75rem;border-radius:6px}
+button{font:inherit;padding:.4rem .8rem;border-radius:6px;border:1px solid var(--line);background:var(--bg);color:var(--fg);cursor:pointer}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Expo expo-localization@58.0.4: breaking changes and upgrade checklist",
+  "description": "0 breaking or behaviour-changing items when upgrading Expo from expo-hinge@58.0.1 to expo-localization@58.0.4, taken from the official release notes, as a checklist you can work through.",
+  "url": "https://upgrades.xkey.co.uk/expo-expo-localization-58-0-4-upgrade/",
+  "datePublished": "2026-10-09T17:22:06Z",
+  "dateModified": "2026-10-11T00:10:06Z",
+  "author": {
+    "@type": "Organization",
+    "name": "Upgrade Notes"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Upgrade Notes"
+  },
+  "about": {
+    "@type": "SoftwareApplication",
+    "name": "Expo",
+    "softwareVersion": "expo-localization@58.0.4"
+  },
+  "isBasedOn": "https://github.com/expo/expo/releases/tag/expo-localization%4058.0.4"
+}
+</script>
+</head>
+<body>
+<main>
+<p class="meta"><a href="https://upgrades.xkey.co.uk/">Upgrade Notes</a></p>
+<h1>Expo expo-localization@58.0.4: breaking changes and upgrade checklist</h1>
+<p class="meta">Released 2026-10-09 · Source: <a href="https://github.com/expo/expo/releases/tag/expo-localization%4058.0.4" rel="nofollow">official Expo release notes</a></p>
+<p>Upgrading Expo from expo-hinge@58.0.1 to expo-localization@58.0.4? This page pulls out the 0 items in the release notes that can break existing code or change behaviour, so you can check each one against your project.</p>
+
+<section>
+<h2>Full release notes</h2>
+<h5>Patch Changes</h5>
+<ul>
+<li>Fix Android resource qualifiers for Hebrew, Indonesian and Yiddish locales, which Android only resolves under their legacy codes (<code>iw</code>, <code>in</code>, <code>ji</code>), and keep the <code>zh-rCN</code>, <code>zh-rTW</code> and <code>zh-rHK</code> library translations when <code>supportedLocales</code> lists <code>zh-Hans</code> or <code>zh-Hant</code>. (<a href="https://github.com/expo/expo/commit/0bf54244ba22f2953bd6e187e39b8d7206f10eb4" rel="nofollow"><code>0bf5424</code></a> by <a href="https://github.com/expo-bot" rel="nofollow">@expo-bot</a>)</li>
+<li>[iOS] Fix <code>uses24hourClock</code> reporting a 24-hour clock for locales whose 12-hour time pattern marks the period with <code>B</code> instead of <code>a</code>, such as <code>zh-Hant-TW</code> and <code>hi-IN</code>. (<a href="https://github.com/expo/expo/pull/51244" rel="nofollow">#51244</a> by <a href="https://github.com/MoogyG" rel="nofollow">@MoogyG</a>)</li>
+</ul>
+</section>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Expo expo-modules-core@58.0.15: breaking changes and upgrade checklist</title>
+<meta name="description" content="2 breaking or behaviour-changing items when upgrading Expo from expo-modules-autolinking@58.0.11 to expo-modules-core@58.0.15, taken from the official release notes, as a checklist you can work through.">
+<link rel="canonical" href="https://upgrades.xkey.co.uk/expo-expo-modules-core-58-0-15-upgrade/">
+<style>
+:root{--bg:#fff;--fg:#18181b;--muted:#52525b;--card:#f4f4f5;--line:#e4e4e7;--accent:#2563eb}
+@media (prefers-color-scheme:dark){:root{--bg:#09090b;--fg:#fafafa;--muted:#a1a1aa;--card:#18181b;--line:#27272a;--accent:#60a5fa}}
+body{background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,sans-serif;margin:0;padding:0 16px}
+main{max-width:760px;margin:2rem auto}a{color:var(--accent)}
+.meta{color:var(--muted);font-size:.9rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:1rem 1.25rem;margin:1.25rem 0}
+.check li{list-style:none;margin:.4rem 0}.check{padding-left:0}
+.check label{display:flex;gap:.6rem;align-items:flex-start;cursor:pointer}
+.check input{margin-top:.35rem}.done{text-decoration:line-through;color:var(--muted)}
+progress{width:100%}pre{overflow-x:auto;background:var(--card);padding:.75rem;border-radius:6px}
+button{font:inherit;padding:.4rem .8rem;border-radius:6px;border:1px solid var(--line);background:var(--bg);color:var(--fg);cursor:pointer}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Expo expo-modules-core@58.0.15: breaking changes and upgrade checklist",
+  "description": "2 breaking or behaviour-changing items when upgrading Expo from expo-modules-autolinking@58.0.11 to expo-modules-core@58.0.15, taken from the official release notes, as a checklist you can work through.",
+  "url": "https://upgrades.xkey.co.uk/expo-expo-modules-core-58-0-15-upgrade/",
+  "datePublished": "2026-10-09T17:32:22Z",
+  "dateModified": "2026-10-11T00:10:06Z",
+  "author": {
+    "@type": "Organization",
+    "name": "Upgrade Notes"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Upgrade Notes"
+  },
+  "about": {
+    "@type": "SoftwareApplication",
+    "name": "Expo",
+    "softwareVersion": "expo-modules-core@58.0.15"
+  },
+  "isBasedOn": "https://github.com/expo/expo/releases/tag/expo-modules-core%4058.0.15"
+}
+</script>
+</head>
+<body>
+<main>
+<p class="meta"><a href="https://upgrades.xkey.co.uk/">Upgrade Notes</a></p>
+<h1>Expo expo-modules-core@58.0.15: breaking changes and upgrade checklist</h1>
+<p class="meta">Released 2026-10-09 · Source: <a href="https://github.com/expo/expo/releases/tag/expo-modules-core%4058.0.15" rel="nofollow">official Expo release notes</a></p>
+<p>Upgrading Expo from expo-modules-autolinking@58.0.11 to expo-modules-core@58.0.15? This page pulls out the 2 items in the release notes that can break existing code or change behaviour, so you can check each one against your project.</p>
+
+<section class="card">
+  <h2>Upgrade checklist</h2>
+  <p class="meta">Tick items off as you handle them. Progress is saved in this browser.</p>
+  <progress id="progress" value="0" max="1"></progress> <span id="progress-label" class="meta"></span>
+  <ul class="check"><li><label><input type="checkbox"><span>[Android] Fix record arguments without <code>@OptimizedRecord</code> (such as <code>ImagePickerOptions</code> in older <code>expo-image-picker</code> versions) failing to convert in minified release builds with <code>The 1st argument cannot be cast to type ...</code> caused by a <code>NullPointerException</code>. Keep the <code>@Field</code> annotation class from being renamed by R8. (<a href="https://github.com/expo/expo/pull/51206" rel="nofollow">#51206</a> by <a href="https://github.com/SoSerious194" rel="nofollow">@SoSerious194</a>)</span></label></li>
+<li><label><input type="checkbox"><span>[Android] Fix release builds crashing at launch when the app uses an Expo Modules API 2.0 module, such as <code>expo-crypto</code>. R8 removed classes and members that the v2 runtime reaches through reflection and JNI. (<a href="https://github.com/expo/expo/pull/51204" rel="nofollow">#51204</a> by <a href="https://github.com/Kudo" rel="nofollow">@Kudo</a>)</span></label></li></ul>
+  <button id="copy" type="button">Copy as Markdown task list</button>
+</section>
+<section>
+<h2>Full release notes</h2>
+<h5>Patch Changes</h5>
+<ul>
+<li>[Android] Fix record arguments without <code>@OptimizedRecord</code> (such as <code>ImagePickerOptions</code> in older <code>expo-image-picker</code> versions) failing to convert in minified release builds with <code>The 1st argument cannot be cast to type ...</code> caused by a <code>NullPointerException</code>. Keep the <code>@Field</code> annotation class from being renamed by R8. (<a href="https://github.com/expo/expo/pull/51206" rel="nofollow">#51206</a> by <a href="https://github.com/SoSerious194" rel="nofollow">@SoSerious194</a>)</li>
+<li>[Android] Fix release builds crashing at launch when the app uses an Expo Modules API 2.0 module, such as <code>expo-crypto</code>. R8 removed classes and members that the v2 runtime reaches through reflection and JNI. (<a href="https://github.com/expo/expo/pull/51204" rel="nofollow">#51204</a> by <a href="https://github.com/Kudo" rel="nofollow">@Kudo</a>)</li>
+<li>[Android] Fixed Expo modules not receiving <code>OnCreate</code> when JavaScript reaches the JSI <code>NativeModulesProxy</code> before the legacy one, for example with lazy imports, which made modules like <code>expo-web-browser</code> fail on first use. Its constants are read lazily again, as before #46964. (<a href="https://github.com/expo/expo/pull/51310" rel="nofollow">#51310</a> by <a href="https://github.com/alanjhughes" rel="nofollow">@alanjhughes</a>)</li>
+<li>[iOS] Fixed JavaScript errors created from native <code>Exception</code>s using the exception's debug description as their <code>message</code>, which prefixed it with the Swift type name and appended the native <code>file:line</code> (e.g. <code>MyException: reason (at MyModule.swift:42)</code>). The message is the exception's <code>description</code> again, as before the JSI rewrite and as on Android. <code>Exception.message</code> can now be overridden by subclasses; subclasses that already declare a <code>message</code> property need to mark it as <code>override</code>. (<a href="https://github.com/expo/expo/pull/51210" rel="nofollow">#51210</a> by <a href="https://github.com/gabrieldonadel" rel="nofollow">@gabrieldonadel</a>)</li>
+<li>[Android] Fix views sized by Jetpack Compose, such as <code>RNHostView</code> in a <code>ModalBottomSheet</code>, that kept their old size until the keyboard animation ended when the keyboard was dismissed with the predictive back gesture. (<a href="https://github.com/expo/expo/pull/51083" rel="nofollow">#51083</a> by <a href="https://github.com/intergalacticspacehighway" rel="nofollow">@intergalacticspacehighway</a>)</li>
+<li>[iOS] Throw when JavaScript constructs a shared object class that has no way to build its native instance, instead of returning an object that fails at its first member access. (<a href="https://github.com/expo/expo/pull/51171" rel="nofollow">#51171</a> by <a href="https://github.com/tsapeta" rel="nofollow">@tsapeta</a>)</li>
+<li>[Android] Warn instead of failing silently when <code>installModules()</code> gives up waiting for an active <code>ReactInstance</code>. Previously JSI interop was installed into a context with no active instance and the method still returned <code>true</code>, so the first visible symptom was <code>globalThis.expo</code> being undefined in JS. (<a href="https://github.com/expo/expo/pull/49801" rel="nofollow">#49801</a> by <a href="https://github.com/JeffreyKlug" rel="nofollow">@JeffreyKlug</a>)</li>
+<li>Updated dependencies. (<a href="https://github.com/expo/expo/pull/51129" rel="nofollow">#51129</a>, <a href="https://github.com/expo/expo/pull/51234" rel="nofollow">#51234</a>)</li>
+<li>expo-modules-jsi@58.0.10</li>
+</ul>
+</section>
+</main>
+<script>
+(function(){
+  var key='checklist:'+location.pathname, boxes=[].slice.call(document.querySelectorAll('.check input'));
+  var bar=document.getElementById('progress'), saved={};
+  try{saved=JSON.parse(localStorage.getItem(key)||'{}')}catch(e){}
+  function update(){
+    var done=0; boxes.forEach(function(b,i){ if(b.checked)done++; b.parentNode.classList.toggle('done',b.checked); saved[i]=b.checked; });
+    bar.value=done; bar.max=boxes.length;
+    document.getElementById('progress-label').textContent=done+' of '+boxes.length+' handled';
+    try{localStorage.setItem(key,JSON.stringify(saved))}catch(e){}
+  }
+  boxes.forEach(function(b,i){ b.checked=!!saved[i]; b.addEventListener('change',update); });
+  document.getElementById('copy').addEventListener('click',function(){
+    var md=boxes.map(function(b){return '- ['+(b.checked?'x':' ')+'] '+b.parentNode.textContent.trim()}).join('\n');
+    navigator.clipboard.writeText(md).then(function(){document.getElementById('copy').textContent='Copied'});
+  });
+  update();
+})();
+</script>
+</body>
+</html>

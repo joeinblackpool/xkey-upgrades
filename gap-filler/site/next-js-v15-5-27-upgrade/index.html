@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Next.js v15.5.27: breaking changes and upgrade checklist</title>
+<meta name="description" content="0 breaking or behaviour-changing items when upgrading Next.js from v16.3.7 to v15.5.27, taken from the official release notes, as a checklist you can work through.">
+<link rel="canonical" href="https://upgrades.xkey.co.uk/next-js-v15-5-27-upgrade/">
+<style>
+:root{--bg:#fff;--fg:#18181b;--muted:#52525b;--card:#f4f4f5;--line:#e4e4e7;--accent:#2563eb}
+@media (prefers-color-scheme:dark){:root{--bg:#09090b;--fg:#fafafa;--muted:#a1a1aa;--card:#18181b;--line:#27272a;--accent:#60a5fa}}
+body{background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,sans-serif;margin:0;padding:0 16px}
+main{max-width:760px;margin:2rem auto}a{color:var(--accent)}
+.meta{color:var(--muted);font-size:.9rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:1rem 1.25rem;margin:1.25rem 0}
+.check li{list-style:none;margin:.4rem 0}.check{padding-left:0}
+.check label{display:flex;gap:.6rem;align-items:flex-start;cursor:pointer}
+.check input{margin-top:.35rem}.done{text-decoration:line-through;color:var(--muted)}
+progress{width:100%}pre{overflow-x:auto;background:var(--card);padding:.75rem;border-radius:6px}
+button{font:inherit;padding:.4rem .8rem;border-radius:6px;border:1px solid var(--line);background:var(--bg);color:var(--fg);cursor:pointer}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Next.js v15.5.27: breaking changes and upgrade checklist",
+  "description": "0 breaking or behaviour-changing items when upgrading Next.js from v16.3.7 to v15.5.27, taken from the official release notes, as a checklist you can work through.",
+  "url": "https://upgrades.xkey.co.uk/next-js-v15-5-27-upgrade/",
+  "datePublished": "2026-09-30T16:13:42Z",
+  "dateModified": "2026-10-11T00:10:06Z",
+  "author": {
+    "@type": "Organization",
+    "name": "Upgrade Notes"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Upgrade Notes"
+  },
+  "about": {
+    "@type": "SoftwareApplication",
+    "name": "Next.js",
+    "softwareVersion": "v15.5.27"
+  },
+  "isBasedOn": "https://github.com/vercel/next.js/releases/tag/v15.5.27"
+}
+</script>
+</head>
+<body>
+<main>
+<p class="meta"><a href="https://upgrades.xkey.co.uk/">Upgrade Notes</a></p>
+<h1>Next.js v15.5.27: breaking changes and upgrade checklist</h1>
+<p class="meta">Released 2026-09-30 · Source: <a href="https://github.com/vercel/next.js/releases/tag/v15.5.27" rel="nofollow">official Next.js release notes</a></p>
+<p>Upgrading Next.js from v16.3.7 to v15.5.27? This page pulls out the 0 items in the release notes that can break existing code or change behaviour, so you can check each one against your project.</p>
+
+<section>
+<h2>Full release notes</h2>
+<p>This release contains security fixes for the following advisories:</p>
+<p>Medium:</p>
+<ul>
+<li><a href="https://github.com/vercel/next.js/security/advisories/GHSA-f87g-xv8r-7p7x" rel="nofollow">Information disclosure in Next.js App Router metadata image routes via dynamicParams bypass</a></li>
+<li><a href="https://github.com/vercel/next.js/security/advisories/GHSA-4jqv-mc3x-m676" rel="nofollow">Cache poisoning of SSG and ISR pages in self-hosted Next.js applications</a></li>
+<li><a href="https://github.com/vercel/next.js/security/advisories/GHSA-mcj8-r9mp-w47p" rel="nofollow">Cache poisoning in Next.js SSG/ISR rendering leads to cross-user content substitution and persistent denial of service</a></li>
+</ul>
+</section>
+</main>
+
+</body>
+</html>

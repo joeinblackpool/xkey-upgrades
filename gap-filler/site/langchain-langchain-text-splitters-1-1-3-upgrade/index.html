@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LangChain langchain-text-splitters==1.1.3: breaking changes and upgrade checklist</title>
+<meta name="description" content="1 breaking or behaviour-changing items when upgrading LangChain from langchain-openai==1.6.7 to langchain-text-splitters==1.1.3, taken from the official release notes, as a checklist you can work through.">
+<link rel="canonical" href="https://upgrades.xkey.co.uk/langchain-langchain-text-splitters-1-1-3-upgrade/">
+<style>
+:root{--bg:#fff;--fg:#18181b;--muted:#52525b;--card:#f4f4f5;--line:#e4e4e7;--accent:#2563eb}
+@media (prefers-color-scheme:dark){:root{--bg:#09090b;--fg:#fafafa;--muted:#a1a1aa;--card:#18181b;--line:#27272a;--accent:#60a5fa}}
+body{background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,sans-serif;margin:0;padding:0 16px}
+main{max-width:760px;margin:2rem auto}a{color:var(--accent)}
+.meta{color:var(--muted);font-size:.9rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:1rem 1.25rem;margin:1.25rem 0}
+.check li{list-style:none;margin:.4rem 0}.check{padding-left:0}
+.check label{display:flex;gap:.6rem;align-items:flex-start;cursor:pointer}
+.check input{margin-top:.35rem}.done{text-decoration:line-through;color:var(--muted)}
+progress{width:100%}pre{overflow-x:auto;background:var(--card);padding:.75rem;border-radius:6px}
+button{font:inherit;padding:.4rem .8rem;border-radius:6px;border:1px solid var(--line);background:var(--bg);color:var(--fg);cursor:pointer}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "LangChain langchain-text-splitters==1.1.3: breaking changes and upgrade checklist",
+  "description": "1 breaking or behaviour-changing items when upgrading LangChain from langchain-openai==1.6.7 to langchain-text-splitters==1.1.3, taken from the official release notes, as a checklist you can work through.",
+  "url": "https://upgrades.xkey.co.uk/langchain-langchain-text-splitters-1-1-3-upgrade/",
+  "datePublished": "2026-10-02T15:46:49Z",
+  "dateModified": "2026-10-11T00:10:06Z",
+  "author": {
+    "@type": "Organization",
+    "name": "Upgrade Notes"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Upgrade Notes"
+  },
+  "about": {
+    "@type": "SoftwareApplication",
+    "name": "LangChain",
+    "softwareVersion": "langchain-text-splitters==1.1.3"
+  },
+  "isBasedOn": "https://github.com/langchain-ai/langchain/releases/tag/langchain-text-splitters%3D%3D1.1.3"
+}
+</script>
+</head>
+<body>
+<main>
+<p class="meta"><a href="https://upgrades.xkey.co.uk/">Upgrade Notes</a></p>
+<h1>LangChain langchain-text-splitters==1.1.3: breaking changes and upgrade checklist</h1>
+<p class="meta">Released 2026-10-02 · Source: <a href="https://github.com/langchain-ai/langchain/releases/tag/langchain-text-splitters%3D%3D1.1.3" rel="nofollow">official LangChain release notes</a></p>
+<p>Upgrading LangChain from langchain-openai==1.6.7 to langchain-text-splitters==1.1.3? This page pulls out the 1 items in the release notes that can break existing code or change behaviour, so you can check each one against your project.</p>
+
+<section class="card">
+  <h2>Upgrade checklist</h2>
+  <p class="meta">Tick items off as you handle them. Progress is saved in this browser.</p>
+  <progress id="progress" value="0" max="1"></progress> <span id="progress-label" class="meta"></span>
+  <ul class="check"><li><label><input type="checkbox"><span>refactor(langchain-classic): retarget deprecations to <code>create_agent</code>, other chores (#37164)</span></label></li></ul>
+  <button id="copy" type="button">Copy as Markdown task list</button>
+</section>
+<section>
+<h2>Full release notes</h2>
+<p>Changes since langchain-text-splitters==1.1.2</p>
+<p>release(text-splitters): 1.1.3 (#41001)</p>
+<p>chore(deps): bump the minor-and-patch group across 3 directories with 4 updates (#40969)</p>
+<p>chore(deps): bump tornado from 6.5.9 to 6.5.10 in /libs/text-splitters (#40971)</p>
+<p>chore(deps): bump urllib3 from 2.7.0 to 2.8.0 in /libs/text-splitters (#40938)</p>
+<p>chore(deps): bump tornado from 6.5.8 to 6.5.9 in /libs/text-splitters (#40940)</p>
+<p>chore(deps): bump anyio from 4.14.2 to 4.15.1 in /libs/text-splitters (#40645)</p>
+<p>chore(deps): bump anyio from 4.11.0 to 4.14.2 in /libs/text-splitters (#40624)</p>
+<p>chore(deps): bump soupsieve from 2.8.4 to 2.9 in /libs/text-splitters (#40579)</p>
+<p>chore(deps): bump the minor-and-patch group across 3 directories with 5 updates (#40566)</p>
+<p>chore(deps): bump types-requests from 2.33.0.20260712 to 2.33.0.20260906 in /libs/text-splitters (#40568)</p>
+<p>chore(deps): update lxml requirement from &lt;7.0,&gt;=6.1.2 to &gt;=6.1.3,&lt;7.0 in /libs/text-splitters (#40569)</p>
+<p>chore(deps): bump mistune from 3.3.0 to 3.3.3 in /libs/text-splitters (#40148)</p>
+<p>chore(deps): bump the minor-and-patch group across 3 directories with 5 updates (#40085)</p>
+<p>chore(deps): update lxml requirement from &lt;7.0,&gt;=6.1.0 to &gt;=6.1.2,&lt;7.0 in /libs/text-splitters (#40087)</p>
+<p>chore(deps): bump tornado from 6.5.7 to 6.5.8 in /libs/text-splitters (#40112)</p>
+<p>chore: bump the minor-and-patch group across 3 directories with 8 updates (#39863)</p>
+<p>chore: bump the major group across 2 directories with 2 updates (#39864)</p>
+<p>chore: bump types-requests from 2.33.0.20260518 to 2.33.0.20260712 in /libs/text-splitters (#39867)</p>
+<p>fix(text-splitters): raise TypeError for non-dict, non-convertible input to RecursiveJsonSplitter (#39238)</p>
+<p>chore: bump the minor-and-patch group across 3 directories with 7 updates (#39187)</p>
+<p>chore(infra): add missing LICENSE files to publishable packages (#39146)</p>
+<p>chore: bump jupyterlab from 4.5.9 to 4.5.10 in /libs/text-splitters (#39028)</p>
+<p>chore: bump setuptools from 80.9.0 to 83.0.0 in /libs/text-splitters (#39029)</p>
+<p>chore: bump torch from 2.12.1 to 2.13.0 in /libs/text-splitters (#38946)</p>
+<p>chore: bump soupsieve from 2.8 to 2.8.4 in /libs/text-splitters (#38748)</p>
+<p>chore: bump nltk from 3.9.4 to 3.10.0 in /libs/text-splitters (#38747)</p>
+<p>chore: bump mistune from 3.2.1 to 3.3.0 in /libs/text-splitters (#38826)</p>
+<p>chore(deps): refresh lockfiles (#38746)</p>
+<p>fix(text-splitters): restore lazy imports for heavy optional dependencies (#35469)</p>
+<p>feat(text-splitters): replace <code>mypy</code> by <code>ty</code> for type checking (#38658)</p>
+<p>chore: bump the minor-and-patch group across 3 directories with 11 updates (#38587)</p>
+<p>chore: bump pytest from 9.1.0 to 9.1.1 in /libs/text-splitters (#38299)</p>
+<p>chore: bump jupyterlab from 4.5.7 to 4.5.9 in /libs/text-splitters (#38296)</p>
+<p>chore: bump langsmith from 0.8.5 to 0.8.18 in /libs/text-splitters (#38301)</p>
+<p>chore: bump tornado from 6.5.6 to 6.5.7 in /libs/text-splitters (#38175)</p>
+<p>chore: bump bleach from 6.2.0 to 6.4.0 in /libs/text-splitters (#38195)</p>
+<p>chore: bump torch from 2.9.1 to 2.12.1 in /libs/text-splitters (#38231)</p>
+<p>chore: bump pytest from 9.0.3 to 9.1.0 in /libs/text-splitters (#38232)</p>
+<p>chore: bump jupyter-server from 2.18.0 to 2.20.0 in /libs/text-splitters (#38250)</p>
+<p>docs: refresh <code>README</code> installation and resources (#38119)</p>
+<p>chore: bump tornado from 6.5.5 to 6.5.6 in /libs/text-splitters (#38112)</p>
+<p>release(core): 1.4.7 (#38111)</p>
+<p>release(core): 1.4.6 (#38061)</p>
+<p>chore(infra): bump mypy to 2.1 and unify type-check config across the monorepo (#36470)</p>
+<p>fix(langchain): tighten structured output model fallbacks (#38042)</p>
+<p>hotfix(core): bump lockfile(s) (#38032)</p>
+<p>chore(core): fix some <code>any</code> generics (#34545)</p>
+<p>hotfix(openai): min core dep (#37990)</p>
+<p>chore: unify core versions in text-splitters. (#37523)</p>
+<p>chore: bump idna from 3.10 to 3.15 in /libs/text-splitters (#37535)</p>
+<p>chore: bump the minor-and-patch group across 3 directories with 15 updates (#37515)</p>
+<p>ci(infra): harden Dependabot version-bound preservation (#37510)</p>
+<p>chore: bump langsmith from 0.7.31 to 0.8.0 in /libs/text-splitters (#37380)</p>
+<p>chore: bump urllib3 from 2.6.3 to 2.7.0 in /libs/text-splitters (#37326)</p>
+<p>chore: bump mistune from 3.1.4 to 3.2.1 in /libs/text-splitters (#37235)</p>
+<p>chore: bump jupyter-server from 2.17.0 to 2.18.0 in /libs/text-splitters (#37202)</p>
+<p>refactor(langchain-classic): retarget deprecations to <code>create_agent</code>, other chores (#37164)</p>
+<p>chore: update lxml requirement from &lt;7.0,&gt;=4.9.3 to &gt;=6.1.0,&lt;7.0 in /libs/text-splitters (#37126)</p>
+<p>chore: bump notebook from 7.4.7 to 7.5.6 in /libs/text-splitters (#37105)</p>
+<p>chore(docs): update x handle references (#37081)</p>
+<p>fix(text-splitters): remove invalid and duplicate separators in Kotlin, Rust, and Haskell (#37039)</p>
+<p>fix(text-splitters): remove incorrect C# and Elixir separator keywords (#37037)</p>
+<p>hotfix: bump min core versions (#36996)</p>
+<p>release(openai): 1.2.1 (#36995)</p>
+<p>feat(core): add content-block-centric streaming (v2) (#36834)</p>
+<p>fix(fireworks): honor <code>max_retries</code> (#36973)</p>
+<p>chore: bump nbconvert from 7.17.0 to 7.17.1 in /libs/text-splitters (#36921)</p>
+</section>
+</main>
+<script>
+(function(){
+  var key='checklist:'+location.pathname, boxes=[].slice.call(document.querySelectorAll('.check input'));
+  var bar=document.getElementById('progress'), saved={};
+  try{saved=JSON.parse(localStorage.getItem(key)||'{}')}catch(e){}
+  function update(){
+    var done=0; boxes.forEach(function(b,i){ if(b.checked)done++; b.parentNode.classList.toggle('done',b.checked); saved[i]=b.checked; });
+    bar.value=done; bar.max=boxes.length;
+    document.getElementById('progress-label').textContent=done+' of '+boxes.length+' handled';
+    try{localStorage.setItem(key,JSON.stringify(saved))}catch(e){}
+  }
+  boxes.forEach(function(b,i){ b.checked=!!saved[i]; b.addEventListener('change',update); });
+  document.getElementById('copy').addEventListener('click',function(){
+    var md=boxes.map(function(b){return '- ['+(b.checked?'x':' ')+'] '+b.parentNode.textContent.trim()}).join('\n');
+    navigator.clipboard.writeText(md).then(function(){document.getElementById('copy').textContent='Copied'});
+  });
+  update();
+})();
+</script>
+</body>
+</html>

@@ -1,4 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url><loc>https://upgrades.xkey.co.uk/</loc></url>
+<url><loc>https://upgrades.xkey.co.uk/expo-expo-template-tabs-58-0-16-upgrade/</loc><lastmod>2026-10-09</lastmod></url>
+<url><loc>https://upgrades.xkey.co.uk/expo-expo-template-default-58-0-16-upgrade/</loc><lastmod>2026-10-09</lastmod></url>
+<url><loc>https://upgrades.xkey.co.uk/expo-expo-58-0-7-upgrade/</loc><lastmod>2026-10-09</lastmod></url>
+<url><loc>https://upgrades.xkey.co.uk/expo-expo-router-58-0-17-upgrade/</loc><lastmod>2026-10-09</lastmod></url>
+<url><loc>https://upgrades.xkey.co.uk/expo-expo-modules-autolinking-58-0-11-upgrade/</loc><lastmod>2026-10-09</lastmod></url>
+<url><loc>https://upgrades.xkey.co.uk/expo-expo-widgets-58-0-15-upgrade/</loc><lastmod>2026-10-09</lastmod></url>
+<url><loc>https://upgrades.xkey.co.uk/expo-expo-modules-core-58-0-15-upgrade/</loc><lastmod>2026-10-09</lastmod></url>
+<url><loc>https://upgrades.xkey.co.uk/expo-jest-expo-58-0-9-upgrade/</loc><lastmod>2026-10-09</lastmod></url>
+<url><loc>https://upgrades.xkey.co.uk/expo-expo-video-58-0-9-upgrade/</loc><lastmod>2026-10-09</lastmod></url>
+<url><loc>https://upgrades.xkey.co.uk/expo-expo-sqlite-58-0-11-upgrade/</loc><lastmod>2026-10-09</lastmod></url>
+<url><loc>https://upgrades.xkey.co.uk/expo-expo-sensors-58-0-3-upgrade/</loc><lastmod>2026-10-09</lastmod></url>
+<url><loc>https://upgrades.xkey.co.uk/expo-expo-screen-orientation-58-0-3-upgrade/</loc><lastmod>2026-10-09</lastmod></url>
+<url><loc>https://upgrades.xkey.co.uk/expo-expo-modules-test-core-58-0-4-upgrade/</loc><lastmod>2026-10-09</lastmod></url>
+<url><loc>https://upgrades.xkey.co.uk/expo-expo-modules-jsi-58-0-10-upgrade/</loc><lastmod>2026-10-09</lastmod></url>
+<url><loc>https://upgrades.xkey.co.uk/expo-expo-module-template-58-0-6-upgrade/</loc><lastmod>2026-10-09</lastmod></url>
+<url><loc>https://upgrades.xkey.co.uk/expo-expo-location-58-0-13-upgrade/</loc><lastmod>2026-10-09</lastmod></url>
+<url><loc>https://upgrades.xkey.co.uk/expo-expo-localization-58-0-4-upgrade/</loc><lastmod>2026-10-09</lastmod></url>
+<url><loc>https://upgrades.xkey.co.uk/expo-expo-hinge-58-0-1-upgrade/</loc><lastmod>2026-10-09</lastmod></url>
+<url><loc>https://upgrades.xkey.co.uk/langchain-langchain-1-4-4-upgrade/</loc><lastmod>2026-10-08</lastmod></url>
+<url><loc>https://upgrades.xkey.co.uk/pydantic-v2-14-0-upgrade/</loc><lastmod>2026-10-08</lastmod></url>
+<url><loc>https://upgrades.xkey.co.uk/langchain-langchain-openai-1-7-0-upgrade/</loc><lastmod>2026-10-08</lastmod></url>
+<url><loc>https://upgrades.xkey.co.uk/vite-v8-3-4-upgrade/</loc><lastmod>2026-10-08</lastmod></url>
+<url><loc>https://upgrades.xkey.co.uk/langchain-langchain-fireworks-1-7-1-upgrade/</loc><lastmod>2026-10-07</lastmod></url>
+<url><loc>https://upgrades.xkey.co.uk/terraform-aws-v6-68-0-upgrade/</loc><lastmod>2026-10-07</lastmod></url>
+<url><loc>https://upgrades.xkey.co.uk/langchain-langchain-huggingface-1-2-3-upgrade/</loc><lastmod>2026-10-07</lastmod></url>
+<url><loc>https://upgrades.xkey.co.uk/next-js-v16-4-0-upgrade/</loc><lastmod>2026-10-07</lastmod></url>
+<url><loc>https://upgrades.xkey.co.uk/langchain-langchain-text-splitters-1-1-3-upgrade/</loc><lastmod>2026-10-02</lastmod></url>
+<url><loc>https://upgrades.xkey.co.uk/next-js-v15-5-27-upgrade/</loc><lastmod>2026-09-30</lastmod></url>
+<url><loc>https://upgrades.xkey.co.uk/supabase-js-v2-117-0-upgrade/</loc><lastmod>2026-09-22</lastmod></url>
+<url><loc>https://upgrades.xkey.co.uk/langchain-langchain-deepseek-1-1-1-upgrade/</loc><lastmod>2026-09-22</lastmod></url>
+<url><loc>https://upgrades.xkey.co.uk/langchain-langchain-openrouter-0-2-9-upgrade/</loc><lastmod>2026-09-22</lastmod></url>
+<url><loc>https://upgrades.xkey.co.uk/langchain-langchain-typesafe-0-0-1a3-upgrade/</loc><lastmod>2026-09-20</lastmod></url>
 </urlset>

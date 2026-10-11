@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pydantic v2.14.0: breaking changes and upgrade checklist</title>
+<meta name="description" content="1 breaking or behaviour-changing items when upgrading Pydantic from v2.13.5 to v2.14.0, taken from the official release notes, as a checklist you can work through.">
+<link rel="canonical" href="https://upgrades.xkey.co.uk/pydantic-v2-14-0-upgrade/">
+<style>
+:root{--bg:#fff;--fg:#18181b;--muted:#52525b;--card:#f4f4f5;--line:#e4e4e7;--accent:#2563eb}
+@media (prefers-color-scheme:dark){:root{--bg:#09090b;--fg:#fafafa;--muted:#a1a1aa;--card:#18181b;--line:#27272a;--accent:#60a5fa}}
+body{background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,sans-serif;margin:0;padding:0 16px}
+main{max-width:760px;margin:2rem auto}a{color:var(--accent)}
+.meta{color:var(--muted);font-size:.9rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:1rem 1.25rem;margin:1.25rem 0}
+.check li{list-style:none;margin:.4rem 0}.check{padding-left:0}
+.check label{display:flex;gap:.6rem;align-items:flex-start;cursor:pointer}
+.check input{margin-top:.35rem}.done{text-decoration:line-through;color:var(--muted)}
+progress{width:100%}pre{overflow-x:auto;background:var(--card);padding:.75rem;border-radius:6px}
+button{font:inherit;padding:.4rem .8rem;border-radius:6px;border:1px solid var(--line);background:var(--bg);color:var(--fg);cursor:pointer}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Pydantic v2.14.0: breaking changes and upgrade checklist",
+  "description": "1 breaking or behaviour-changing items when upgrading Pydantic from v2.13.5 to v2.14.0, taken from the official release notes, as a checklist you can work through.",
+  "url": "https://upgrades.xkey.co.uk/pydantic-v2-14-0-upgrade/",
+  "datePublished": "2026-10-08T16:12:06Z",
+  "dateModified": "2026-10-11T00:10:06Z",
+  "author": {
+    "@type": "Organization",
+    "name": "Upgrade Notes"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Upgrade Notes"
+  },
+  "about": {
+    "@type": "SoftwareApplication",
+    "name": "Pydantic",
+    "softwareVersion": "v2.14.0"
+  },
+  "isBasedOn": "https://github.com/pydantic/pydantic/releases/tag/v2.14.0"
+}
+</script>
+</head>
+<body>
+<main>
+<p class="meta"><a href="https://upgrades.xkey.co.uk/">Upgrade Notes</a></p>
+<h1>Pydantic v2.14.0: breaking changes and upgrade checklist</h1>
+<p class="meta">Released 2026-10-08 · Source: <a href="https://github.com/pydantic/pydantic/releases/tag/v2.14.0" rel="nofollow">official Pydantic release notes</a></p>
+<p>Upgrading Pydantic from v2.13.5 to v2.14.0? This page pulls out the 1 items in the release notes that can break existing code or change behaviour, so you can check each one against your project.</p>
+
+<section class="card">
+  <h2>Upgrade checklist</h2>
+  <p class="meta">Tick items off as you handle them. Progress is saved in this browser.</p>
+  <progress id="progress" value="0" max="1"></progress> <span id="progress-label" class="meta"></span>
+  <ul class="check"><li><label><input type="checkbox"><span>Several minor changes (considered non-breaking changes according to our <a href="https://pydantic.dev/docs/validation/2.14/get-started/version-policy/#pydantic-v2" rel="nofollow">versioning policy</a>) are also included in this release. Make sure to look into them before upgrading.</span></label></li></ul>
+  <button id="copy" type="button">Copy as Markdown task list</button>
+</section>
+<section>
+<h2>Full release notes</h2>
+<h5>What's Changed</h5>
+<p>The highlights of the v2.14 release are available in the <a href="https://pydantic.dev/articles/pydantic-v2-14-release" rel="nofollow">blog post</a>.</p>
+<p>Several minor changes (considered non-breaking changes according to our <a href="https://pydantic.dev/docs/validation/2.14/get-started/version-policy/#pydantic-v2" rel="nofollow">versioning policy</a>) are also included in this release. Make sure to look into them before upgrading.</p>
+<p>This release drops support for Python 3.9 and adds support for Python 3.15.</p>
+<h6>New Features</h6>
+<ul>
+<li>Add support for <code>multiple_of</code> constraint in <code>fraction</code> and <code>timedelta</code> core schemas by @Viicos in <a href="https://github.com/pydantic/pydantic/pull/13873" rel="nofollow">#13873</a></li>
+<li>Add <code>__namespace__</code> parameter to <code>create_model()</code> by @Viicos in <a href="https://github.com/pydantic/pydantic/pull/13895" rel="nofollow">#13895</a></li>
+</ul>
+<h6>Changes</h6>
+<ul>
+<li>Add an <code>ordered-dict</code> core schema by @Viicos in <a href="https://github.com/pydantic/pydantic/pull/13796" rel="nofollow">#13796</a></li>
+<li>Add a <code>counter</code> core schema by @Viicos in <a href="https://github.com/pydantic/pydantic/pull/13824" rel="nofollow">#13824</a></li>
+<li>Do not mutate <code>model_config</code> attribute by @Viicos in <a href="https://github.com/pydantic/pydantic/pull/13825" rel="nofollow">#13825</a></li>
+<li>Reject newlines in <code>NameEmail</code> validation by @Viicos in <a href="https://github.com/pydantic/pydantic/pull/13897" rel="nofollow">#13897</a></li>
+</ul>
+<h6>Fixes</h6>
+<ul>
+<li>Call enum constructors in both validation modes by @Viicos in <a href="https://github.com/pydantic/pydantic/pull/13792" rel="nofollow">#13792</a></li>
+<li>Fix documentation examples not raising and remove unused <code>string_sub_type</code> unused error code by @Viicos in <a href="https://github.com/pydantic/pydantic/pull/13821" rel="nofollow">#13821</a></li>
+<li>Catch <code>OverflowError</code> during <code>ByteSize</code> validation by @Viicos in <a href="https://github.com/pydantic/pydantic/pull/13850" rel="nofollow">#13850</a></li>
+<li>Require <code>multiple_of</code> constraints to be positive by @Viicos in <a href="https://github.com/pydantic/pydantic/pull/13862" rel="nofollow">#13862</a></li>
+<li>Always pop field name and model type stacks during schema generation by @saquibjawedbit in <a href="https://github.com/pydantic/pydantic/pull/13859" rel="nofollow">#13859</a></li>
+<li>Handle <code>TypeError</code> gracefully during docstring extraction by @Viicos in <a href="https://github.com/pydantic/pydantic/pull/13874" rel="nofollow">#13874</a></li>
+<li>Fix config propagation of stdlib dataclasses and <code>TypedDict</code>s in JSON Schema by @Viicos in <a href="https://github.com/pydantic/pydantic/pull/13891" rel="nofollow">#13891</a></li>
+<li>Don't apply <code>ser_json_timedelta</code> to all datetime types in serialization inference by @Viicos in <a href="https://github.com/pydantic/pydantic/pull/13892" rel="nofollow">#13892</a></li>
+<li>Encode JSON Schema defaults with a consistent configuration by @Viicos in <a href="https://github.com/pydantic/pydantic/pull/13893" rel="nofollow">#13893</a></li>
+<li>Propagate <code>init</code> and <code>kw_only=False</code> from <code>Field()</code> to stdlib dataclass fields by @Viicos in <a href="https://github.com/pydantic/pydantic/pull/13898" rel="nofollow">#13898</a></li>
+<li>Respect propagated extra config in the JSON Schema of stdlib dataclasses by @Viicos in <a href="https://github.com/pydantic/pydantic/pull/13899" rel="nofollow">#13899</a></li>
+<li>Handle OS errors during <code>ZoneInfo</code> validation by @Viicos in <a href="https://github.com/pydantic/pydantic/pull/13912" rel="nofollow">#13912</a></li>
+<li>Handle exceptions during <code>Decimal</code> validation by @Viicos in <a href="https://github.com/pydantic/pydantic/pull/13940" rel="nofollow">#13940</a></li>
+<li>Rebuild incomplete types during serialization inference by @Viicos in <a href="https://github.com/pydantic/pydantic/pull/13922" rel="nofollow">#13922</a></li>
+<li>Reject large exponents in <code>Fraction</code> validation by @Viicos in <a href="https://github.com/pydantic/pydantic/pull/13944" rel="nofollow">#13944</a></li>
+<li>Avoid validating URL prefix multiple times in multi host URLs by @Viicos in <a href="https://github.com/pydantic/pydantic/pull/13945" rel="nofollow">#13945</a></li>
+</ul>
+<p><strong>Full Changelog</strong>: https://github.com/pydantic/pydantic/compare/v2.13.0...v2.14.0</p>
+</section>
+</main>
+<script>
+(function(){
+  var key='checklist:'+location.pathname, boxes=[].slice.call(document.querySelectorAll('.check input'));
+  var bar=document.getElementById('progress'), saved={};
+  try{saved=JSON.parse(localStorage.getItem(key)||'{}')}catch(e){}
+  function update(){
+    var done=0; boxes.forEach(function(b,i){ if(b.checked)done++; b.parentNode.classList.toggle('done',b.checked); saved[i]=b.checked; });
+    bar.value=done; bar.max=boxes.length;
+    document.getElementById('progress-label').textContent=done+' of '+boxes.length+' handled';
+    try{localStorage.setItem(key,JSON.stringify(saved))}catch(e){}
+  }
+  boxes.forEach(function(b,i){ b.checked=!!saved[i]; b.addEventListener('change',update); });
+  document.getElementById('copy').addEventListener('click',function(){
+    var md=boxes.map(function(b){return '- ['+(b.checked?'x':' ')+'] '+b.parentNode.textContent.trim()}).join('\n');
+    navigator.clipboard.writeText(md).then(function(){document.getElementById('copy').textContent='Copied'});
+  });
+  update();
+})();
+</script>
+</body>
+</html>
