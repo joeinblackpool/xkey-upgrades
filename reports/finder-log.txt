@@ -1,20 +1,20 @@
-pool 33170, checking 1443
-info probe: {'100 metres': {'description': 'Sprint race', 'length': 146447, 'missing': False, 'type': 'standard', 'canonical': '100 metres'}, '18XX': {'description': 'Board games based on 19th century railroads', 'length': 47216, 'missing': False, 'type': 'standard', 'canonical': '18XX'}, '2,4-Dinitrophenol': {'description': 'Chemical compound', 'length': 38849, 'missing': False, 'type': 'standard', 'canonical': '2,4-Dinitrophenol'}}
-views 322/322
-kinds Counter({'other': 16829, 'commercial': 5422, 'consumer': 2737, 'person': 2449, 'academic': 2022, 'media-event': 2017, 'place-org': 1160, 'junk': 435, None: 99})
-stages Counter({'tiny': 3139, 'spike': 3090, 'flat': 1320, 'declining': 182, 'seasonal': 148, 'no-data': 31, 'noisy': 10, 'takeoff': 10, 'early': 9})
+pool 33640, checking 569
+info probe: {'67 kid': {'description': '2025 Internet meme and slang term', 'length': 41209, 'missing': False, 'type': 'standard', 'canonical': '6-7'}, 'Air pollution': {'description': 'Presence of dangerous substances in the air', 'length': 179801, 'missing': False, 'type': 'standard', 'canonical': 'Air pollution'}}
+views 68/68
+kinds Counter({'other': 17045, 'commercial': 5472, 'consumer': 2761, 'person': 2626, 'media-event': 2069, 'academic': 2049, 'place-org': 1170, 'junk': 436, None: 12})
+stages Counter({'tiny': 3158, 'spike': 3113, 'flat': 1341, 'declining': 183, 'seasonal': 152, 'no-data': 31, 'noisy': 10, 'takeoff': 10, 'early': 9})
  99.9  early       3375/wk  x2.61  Jirai-kei and ryōsan-gata fashion  [testing]
  20.0  early        964/wk  x1.62  Nihilistic penguin  [testing]
  19.2  takeoff     3300/wk  x2.19  Becoming Chinese  [testing]
  94.9  early      51003/wk  x5.48  UBlock Origin  [rejected]
  35.3  early       2050/wk  x3.01  Café de olla  [rejected]
- 30.1  early       4052/wk  x2.75  Home appliance  [candidate]
- 22.7  takeoff     5535/wk  x2.16  Caffè mocha  [candidate]
+ 30.1  early       4052/wk  x2.75  Home appliance  [rejected]
+ 22.7  takeoff     5535/wk  x2.16  Caffè mocha  [rejected]
  21.6  early       4436/wk  x2.64  Fricassee  [rejected]
  20.2  early        812/wk  x1.88  Nasty Gal  [rejected]
- 13.2  takeoff      956/wk  x3.18  Hair twists  [candidate]
- 12.7  takeoff     2540/wk  x2.25  Borg (drink)  [candidate]
-  7.1  early        913/wk  x1.4   Aspidistra elatior  [candidate]
-  7.1  takeoff      887/wk  x2.09  Autonomous robot  [candidate]
-  6.8  takeoff      777/wk  x1.99  2027 African Games  [candidate]
-  4.4  takeoff     2101/wk  x1.8   Poi (Hawaiian food)  [candidate]
+ 13.2  takeoff      956/wk  x3.18  Hair twists  [rejected]
+ 12.7  takeoff     2540/wk  x2.25  Borg (drink)  [rejected]
+  7.1  early        913/wk  x1.4   Aspidistra elatior  [rejected]
+  7.1  takeoff      887/wk  x2.09  Autonomous robot  [rejected]
+  6.8  takeoff      777/wk  x1.99  2027 African Games  [rejected]
+  4.4  takeoff     2101/wk  x1.8   Poi (Hawaiian food)  [rejected]
