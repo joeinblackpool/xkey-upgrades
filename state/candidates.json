@@ -19910,6 +19910,22 @@
   ],
   "value": 0.0
  },
+ "Alexander Zverev": {
+  "checked": "2026-10-13",
+  "description": "German tennis player (born 1997)",
+  "first_seen": "2026-10-13",
+  "kind": "person",
+  "last_seen": "2026-10-13",
+  "length": 300210,
+  "score": 0.0,
+  "sources": [
+   "trends-GB"
+  ],
+  "trend_terms": [
+   "alexander zverev"
+  ],
+  "value": 0.0
+ },
  "Alexander de Voogt": {
   "checked": "2026-10-11",
   "description": "Dutch researcher and Professor",
@@ -45160,7 +45176,7 @@
   "description": "Bilateral relations",
   "first_seen": "2026-10-12",
   "kind": "other",
-  "last_seen": "2026-10-12",
+  "last_seen": "2026-10-13",
   "length": 13361,
   "score": 0.0,
   "sources": [
@@ -46690,8 +46706,8 @@
    7,
    3,
    2,
-   3,
-   8
+   5,
+   6
   ],
   "kind": "commercial",
   "last_seen": "2026-10-11",
@@ -63466,6 +63482,22 @@
   ],
   "value": 0.18
  },
+ "Bescot Stadium": {
+  "checked": "2026-10-13",
+  "description": "Football stadium",
+  "first_seen": "2026-10-13",
+  "kind": "other",
+  "last_seen": "2026-10-13",
+  "length": 10610,
+  "score": 0.0,
+  "sources": [
+   "trends-GB"
+  ],
+  "trend_terms": [
+   "poundland news"
+  ],
+  "value": 0.3
+ },
  "Bespoke": {
   "checked": "2026-10-11",
   "description": "Made to order, usually one-of-kind",
@@ -76642,9 +76674,9 @@
   "description": "Mixed drink made in a gallon jug",
   "first_seen": "2026-10-11",
   "hn_monthly": [
-   25,
-   18,
-   21,
+   24,
+   20,
+   19,
    25,
    24,
    31
@@ -93605,6 +93637,22 @@
   "score": 0.0,
   "sources": [
    "wiki-top"
+  ],
+  "value": 0.0
+ },
+ "Cameroon": {
+  "checked": "2026-10-13",
+  "description": "Country in Central Africa",
+  "first_seen": "2026-10-13",
+  "kind": "place-org",
+  "last_seen": "2026-10-13",
+  "length": 134989,
+  "score": 0.0,
+  "sources": [
+   "trends-US"
+  ],
+  "trend_terms": [
+   "cameroon"
   ],
   "value": 0.0
  },
@@ -140518,11 +140566,15 @@
   "description": "Unlawful act punishable by an authority",
   "first_seen": "2026-10-11",
   "kind": "other",
-  "last_seen": "2026-10-12",
+  "last_seen": "2026-10-13",
   "length": 53618,
   "score": 0.0,
   "sources": [
-   "seed:Freelancer"
+   "seed:Freelancer",
+   "trends-GB"
+  ],
+  "trend_terms": [
+   "crime"
   ],
   "value": 0.3
  },
@@ -173963,13 +174015,32 @@
   "value": 1.8
  },
  "Drip coffee": {
+  "checked": "2026-10-13",
+  "curve": {
+   "accel": -0.0375,
+   "fit_r2": 0.01,
+   "growth_wk": 0.0016,
+   "last_year_growth_wk": -0.003,
+   "spike": 1.17,
+   "stage": "flat",
+   "up_share": 0.45,
+   "weekly_views": 1090,
+   "weeks_of_data": 68,
+   "x_12w": 1.02,
+   "x_yoy": 0.77
+  },
+  "description": "Drink made by pouring hot water onto ground coffee beans",
   "first_seen": "2026-10-11",
+  "kind": "consumer",
   "last_seen": "2026-10-11",
+  "length": 38420,
+  "score": 0.0,
   "sources": [
    "seed:Coffee preparation",
    "seed:Coffee machine",
    "seed:Espresso machine"
-  ]
+  ],
+  "value": 1.8
  },
  "Drip irrigation": {
   "checked": "2026-10-11",
@@ -178159,11 +178230,11 @@
   "first_seen": "2026-10-11",
   "hn_monthly": [
    5,
-   4,
    5,
+   4,
    7,
    7,
-   5
+   6
   ],
   "kind": "commercial",
   "last_seen": "2026-10-11",
@@ -267387,6 +267458,22 @@
   ],
   "value": 0.0
  },
+ "Haunted Chocolatier": {
+  "checked": "2026-10-13",
+  "description": "Upcoming video game",
+  "first_seen": "2026-10-13",
+  "kind": "media-event",
+  "last_seen": "2026-10-13",
+  "length": 16100,
+  "score": 0.0,
+  "sources": [
+   "trends-US"
+  ],
+  "trend_terms": [
+   "haunted chocolatier"
+  ],
+  "value": 0.0
+ },
  "Haunted Hotel": {
   "checked": "2026-10-11",
   "description": "American adult animated sitcom",
@@ -279699,11 +279786,15 @@
   "description": "Smart speaker designed by Apple",
   "first_seen": "2026-10-11",
   "kind": "other",
-  "last_seen": "2026-10-11",
+  "last_seen": "2026-10-13",
   "length": 12521,
   "score": 0.0,
   "sources": [
-   "seed:Smart speaker"
+   "seed:Smart speaker",
+   "trends-GB"
+  ],
+  "trend_terms": [
+   "apple homepod mini"
   ],
   "value": 0.3
  },
@@ -290310,11 +290401,17 @@
   "value": 1.2
  },
  "ISRO": {
+  "checked": "2026-10-13",
+  "description": "Indian national space and aeronautics agency",
   "first_seen": "2026-10-13",
+  "kind": "place-org",
   "last_seen": "2026-10-13",
+  "length": 227772,
+  "score": 0.0,
   "sources": [
    "seed:Online course"
-  ]
+  ],
+  "value": 0.0
  },
  "ISSN (identifier)": {
   "checked": "2026-10-11",
@@ -317272,11 +317369,17 @@
   "value": 0.3
  },
  "K-12": {
+  "checked": "2026-10-13",
+  "description": "Kindergarten to 12th grade",
   "first_seen": "2026-10-13",
+  "kind": "other",
   "last_seen": "2026-10-13",
+  "length": 20567,
+  "score": 0.0,
   "sources": [
    "seed:Online course"
-  ]
+  ],
+  "value": 0.3
  },
  "K-12 school": {
   "checked": "2026-10-13",
@@ -320649,6 +320752,22 @@
   ],
   "value": 1.8
  },
+ "Kennedy Space Center": {
+  "checked": "2026-10-13",
+  "description": "NASA launch facility in Florida",
+  "first_seen": "2026-10-13",
+  "kind": "other",
+  "last_seen": "2026-10-13",
+  "length": 78354,
+  "score": 0.0,
+  "sources": [
+   "trends-US"
+  ],
+  "trend_terms": [
+   "kennedy space center"
+  ],
+  "value": 0.18
+ },
  "Kennel club": {
   "checked": "2026-10-11",
   "description": "Organization working with dog breeding",
@@ -320997,6 +321116,22 @@
    "seed:Calligraphy"
   ],
   "value": 0.3
+ },
+ "Kerolin": {
+  "checked": "2026-10-13",
+  "description": "Brazilian footballer (born 1999)",
+  "first_seen": "2026-10-13",
+  "kind": "person",
+  "last_seen": "2026-10-13",
+  "length": 38355,
+  "score": 0.0,
+  "sources": [
+   "trends-US"
+  ],
+  "trend_terms": [
+   "kerolin"
+  ],
+  "value": 0.0
  },
  "Kerosene": {
   "checked": "2026-10-11",
@@ -322574,6 +322709,22 @@
   "score": 0.0,
   "sources": [
    "trend:Category:TikTok"
+  ],
+  "value": 0.0
+ },
+ "Killing of Sandra Birchmore": {
+  "checked": "2026-10-13",
+  "description": "2021 death of American woman in Canton, Massachusetts",
+  "first_seen": "2026-10-13",
+  "kind": "media-event",
+  "last_seen": "2026-10-13",
+  "length": 13590,
+  "score": 0.0,
+  "sources": [
+   "trends-US"
+  ],
+  "trend_terms": [
+   "sandra birchmore"
   ],
   "value": 0.0
  },
@@ -359678,11 +359829,30 @@
   "value": 1.8
  },
  "MOOCs": {
+  "checked": "2026-10-13",
+  "curve": {
+   "accel": -0.0397,
+   "fit_r2": 0.13,
+   "growth_wk": 0.0286,
+   "last_year_growth_wk": 0.0031,
+   "spike": 2.25,
+   "stage": "tiny",
+   "up_share": 0.82,
+   "weekly_views": 12,
+   "weeks_of_data": 68,
+   "x_12w": 1.61,
+   "x_yoy": 0.92
+  },
+  "description": "Education service on the web",
   "first_seen": "2026-10-13",
+  "kind": "commercial",
   "last_seen": "2026-10-13",
+  "length": 115225,
+  "score": 0.0,
   "sources": [
    "seed:Online course"
-  ]
+  ],
+  "value": 0.72
  },
  "MOS Technology 6510": {
   "checked": "2026-10-11",
@@ -363367,11 +363537,30 @@
   "value": 0.3
  },
  "Managed learning environment": {
+  "checked": "2026-10-13",
+  "curve": {
+   "accel": -0.0755,
+   "fit_r2": 0.1,
+   "growth_wk": -0.0333,
+   "last_year_growth_wk": -0.0022,
+   "spike": 2.05,
+   "stage": "spike",
+   "up_share": 0.45,
+   "weekly_views": 2,
+   "weeks_of_data": 68,
+   "x_12w": 0.69,
+   "x_yoy": 0.97
+  },
+  "description": "Educational software application",
   "first_seen": "2026-10-13",
+  "kind": "commercial",
   "last_seen": "2026-10-13",
+  "length": 35398,
+  "score": 0.0,
   "sources": [
    "seed:Online course"
-  ]
+  ],
+  "value": 1.2
  },
  "Management": {
   "checked": "2026-10-11",
@@ -400729,6 +400918,22 @@
   ],
   "value": 0.0
  },
+ "Nick Knowles": {
+  "checked": "2026-10-13",
+  "description": "English television presenter and musical artist (born 1962)",
+  "first_seen": "2026-10-13",
+  "kind": "person",
+  "last_seen": "2026-10-13",
+  "length": 26660,
+  "score": 0.0,
+  "sources": [
+   "trends-GB"
+  ],
+  "trend_terms": [
+   "nick knowles"
+  ],
+  "value": 0.0
+ },
  "Nick Offerman": {
   "checked": "2026-10-11",
   "description": "American actor (born 1970)",
@@ -405681,6 +405886,22 @@
    "seed:Wedding"
   ],
   "value": 0.3
+ },
+ "Nuremberg Airport": {
+  "checked": "2026-10-13",
+  "description": "International airport in Bavaria, Germany",
+  "first_seen": "2026-10-13",
+  "kind": "other",
+  "last_seen": "2026-10-13",
+  "length": 100207,
+  "score": 0.0,
+  "sources": [
+   "trends-GB"
+  ],
+  "trend_terms": [
+   "nuremberg airport"
+  ],
+  "value": 0.18
  },
  "Nurhan Atasoy": {
   "checked": "2026-10-11",
@@ -437004,8 +437225,8 @@
    6,
    15,
    12,
-   13,
-   12
+   14,
+   11
   ],
   "kind": "commercial",
   "last_seen": "2026-10-11",
@@ -437946,11 +438167,17 @@
   "value": 0.3
  },
  "Polygamy": {
+  "checked": "2026-10-13",
+  "description": "Marriage to more than one spouse",
   "first_seen": "2026-10-13",
+  "kind": "other",
   "last_seen": "2026-10-13",
+  "length": 155493,
+  "score": 0.0,
   "sources": [
    "seed:Wedding"
-  ]
+  ],
+  "value": 0.07
  },
  "Polygon (website)": {
   "checked": "2026-10-11",
@@ -442091,11 +442318,17 @@
   "value": 1.2
  },
  "Prajapatya marriage": {
+  "checked": "2026-10-13",
+  "description": "Concept of marriage in Hindu tradition",
   "first_seen": "2026-10-13",
+  "kind": "academic",
   "last_seen": "2026-10-13",
+  "length": 37984,
+  "score": 0.0,
   "sources": [
    "seed:Wedding"
-  ]
+  ],
+  "value": 0.0
  },
  "Prajñā (Buddhism)": {
   "checked": "2026-10-11",
@@ -442735,6 +442968,22 @@
    "seed:Padel"
   ],
   "value": 0.3
+ },
+ "Premium Bonds": {
+  "checked": "2026-10-13",
+  "description": "UK government NS&I lottery bond scheme",
+  "first_seen": "2026-10-13",
+  "kind": "place-org",
+  "last_seen": "2026-10-13",
+  "length": 23857,
+  "score": 0.0,
+  "sources": [
+   "trends-GB"
+  ],
+  "trend_terms": [
+   "premium bonds"
+  ],
+  "value": 0.0
  },
  "Premolar": {
   "checked": "2026-10-11",
@@ -462437,11 +462686,15 @@
   "description": "Chemical compound",
   "first_seen": "2026-10-11",
   "kind": "other",
-  "last_seen": "2026-10-11",
+  "last_seen": "2026-10-13",
   "length": 17232,
   "score": 0.0,
   "sources": [
-   "seed:Weight loss drug"
+   "seed:Weight loss drug",
+   "trends-US"
+  ],
+  "trend_terms": [
+   "retatrutide"
   ],
   "value": 0.3
  },
@@ -465609,6 +465862,22 @@
   ],
   "value": 0.0
  },
+ "Robert Jenrick": {
+  "checked": "2026-10-13",
+  "description": "British politician (born 1982)",
+  "first_seen": "2026-10-13",
+  "kind": "person",
+  "last_seen": "2026-10-13",
+  "length": 122035,
+  "score": 0.0,
+  "sources": [
+   "trends-GB"
+  ],
+  "trend_terms": [
+   "robert jenrick"
+  ],
+  "value": 0.0
+ },
  "Robert Kiyosaki": {
   "checked": "2026-10-11",
   "description": "American finance author and investor (born 1947)",
@@ -467478,11 +467747,17 @@
   "value": 0.0
  },
  "Roman Catholic": {
+  "checked": "2026-10-13",
+  "description": "Christian church based in Rome",
   "first_seen": "2026-10-13",
+  "kind": "other",
   "last_seen": "2026-10-13",
+  "length": 238746,
+  "score": 0.0,
   "sources": [
    "seed:Wedding"
-  ]
+  ],
+  "value": 0.07
  },
  "Roman Catholic Church": {
   "checked": "2026-10-13",
@@ -467688,11 +467963,17 @@
   "value": 0.0
  },
  "Romance": {
+  "checked": "2026-10-13",
+  "description": "Love focused on feelings",
   "first_seen": "2026-10-13",
+  "kind": "other",
   "last_seen": "2026-10-13",
+  "length": 161756,
+  "score": 0.0,
   "sources": [
    "seed:Wedding"
-  ]
+  ],
+  "value": 0.07
  },
  "Romance (love)": {
   "checked": "2026-10-13",
@@ -468142,12 +468423,18 @@
   "value": 0.0
  },
  "Rooftop solar power": {
+  "checked": "2026-10-13",
+  "description": "Type of photovoltaic system",
   "first_seen": "2026-10-11",
+  "kind": "academic",
   "last_seen": "2026-10-11",
+  "length": 36605,
+  "score": 0.0,
   "sources": [
    "seed:Solar panel",
    "seed:Home battery"
-  ]
+  ],
+  "value": 0.0
  },
  "Rooftop water tower": {
   "checked": "2026-10-11",
@@ -470687,6 +470974,22 @@
   ],
   "value": 0.0
  },
+ "Ruth Chepng'etich": {
+  "checked": "2026-10-13",
+  "description": "Kenyan track and field athlete",
+  "first_seen": "2026-10-13",
+  "kind": "person",
+  "last_seen": "2026-10-13",
+  "length": 19811,
+  "score": 0.0,
+  "sources": [
+   "trends-GB"
+  ],
+  "trend_terms": [
+   "ruth chepng etich"
+  ],
+  "value": 0.0
+ },
  "Ryan Coleman-Williams": {
   "checked": "2026-10-12",
   "description": "American football player (born 2007)",
@@ -471646,11 +471949,17 @@
   "value": 0.3
  },
  "Saber arch": {
+  "checked": "2026-10-13",
+  "description": "Wedding tradition involving swords",
   "first_seen": "2026-10-13",
+  "kind": "other",
   "last_seen": "2026-10-13",
+  "length": 6239,
+  "score": 0.0,
   "sources": [
    "seed:Wedding"
-  ]
+  ],
+  "value": 0.3
  },
  "Sabretache": {
   "checked": "2026-10-11",
@@ -474987,11 +475296,17 @@
   "value": 1.2
  },
  "Saptapadi": {
+  "checked": "2026-10-13",
+  "description": "Hindu wedding rite",
   "first_seen": "2026-10-13",
+  "kind": "other",
   "last_seen": "2026-10-13",
+  "length": 9922,
+  "score": 0.0,
   "sources": [
    "seed:Wedding"
-  ]
+  ],
+  "value": 0.3
  },
  "Sara Eisen": {
   "checked": "2026-10-11",
@@ -481177,11 +481492,17 @@
   "value": 0.18
  },
  "Sensitive periods": {
+  "checked": "2026-10-13",
+  "description": "Maturational stage in the lifespan of an organism",
   "first_seen": "2026-10-13",
+  "kind": "other",
   "last_seen": "2026-10-13",
+  "length": 73068,
+  "score": 0.0,
   "sources": [
    "seed:Language learning"
-  ]
+  ],
+  "value": 0.18
  },
  "Sensor": {
   "checked": "2026-10-11",
@@ -507210,11 +507531,17 @@
   "value": 0.0
  },
  "Stanford University": {
+  "checked": "2026-10-13",
+  "description": "Private university in California, US",
   "first_seen": "2026-10-13",
+  "kind": "place-org",
   "last_seen": "2026-10-13",
+  "length": 235846,
+  "score": 0.0,
   "sources": [
    "seed:Online course"
-  ]
+  ],
+  "value": 0.0
  },
  "Stanford marshmallow experiment": {
   "checked": "2026-10-11",
@@ -513302,11 +513629,17 @@
   "value": 0.3
  },
  "Suit": {
+  "checked": "2026-10-13",
+  "description": "Informal Western dress code",
   "first_seen": "2026-10-13",
+  "kind": "other",
   "last_seen": "2026-10-13",
+  "length": 64495,
+  "score": 0.0,
   "sources": [
    "seed:Wedding"
-  ]
+  ],
+  "value": 0.3
  },
  "Suit (clothing)": {
   "checked": "2026-10-13",
@@ -522223,11 +522556,17 @@
   "value": 0.0
  },
  "Technology education": {
+  "checked": "2026-10-13",
+  "description": "Education in processes and use of technology",
   "first_seen": "2026-10-13",
+  "kind": "other",
   "last_seen": "2026-10-13",
+  "length": 13440,
+  "score": 0.0,
   "sources": [
    "seed:Online course"
-  ]
+  ],
+  "value": 0.3
  },
  "Technology forecasting": {
   "checked": "2026-10-11",
@@ -528319,11 +528658,17 @@
   "value": 0.3
  },
  "Theoretical linguistics": {
+  "checked": "2026-10-13",
+  "description": "Branch of linguistics which inquires into the nature of language",
   "first_seen": "2026-10-13",
+  "kind": "academic",
   "last_seen": "2026-10-13",
+  "length": 8062,
+  "score": 0.0,
   "sources": [
    "seed:Language learning"
-  ]
+  ],
+  "value": 0.0
  },
  "Theory of generations": {
   "checked": "2026-10-11",
@@ -529670,6 +530015,22 @@
   "score": 0.0,
   "sources": [
    "seed:Camping"
+  ],
+  "value": 0.0
+ },
+ "Thomas Frank (football manager)": {
+  "checked": "2026-10-13",
+  "description": "Danish football manager (born 1973)",
+  "first_seen": "2026-10-13",
+  "kind": "person",
+  "last_seen": "2026-10-13",
+  "length": 38538,
+  "score": 0.0,
+  "sources": [
+   "trends-GB"
+  ],
+  "trend_terms": [
+   "thomas frank"
   ],
   "value": 0.0
  },
@@ -540784,12 +541145,12 @@
   "description": "Web browser content blocking extension",
   "first_seen": "2026-10-11",
   "hn_monthly": [
-   122,
-   147,
+   121,
+   148,
    96,
-   159,
-   222,
-   97
+   158,
+   223,
+   96
   ],
   "kind": "commercial",
   "last_seen": "2026-10-11",
@@ -542696,6 +543057,22 @@
    "seed:Mechanical keyboard"
   ],
   "value": 0.3
+ },
+ "Unidentified flying object": {
+  "checked": "2026-10-13",
+  "description": "Apparent unusual observation in the sky",
+  "first_seen": "2026-10-13",
+  "kind": "other",
+  "last_seen": "2026-10-13",
+  "length": 215944,
+  "score": 0.0,
+  "sources": [
+   "trends-US"
+  ],
+  "trend_terms": [
+   "ufo"
+  ],
+  "value": 0.07
  },
  "Uniform Mechanical Code": {
   "checked": "2026-10-11",
@@ -549793,11 +550170,17 @@
   "value": 0.18
  },
  "Videotelephony": {
+  "checked": "2026-10-13",
+  "description": "Real-time video communication",
   "first_seen": "2026-10-13",
+  "kind": "other",
   "last_seen": "2026-10-13",
+  "length": 119506,
+  "score": 0.0,
   "sources": [
    "seed:Online course"
-  ]
+  ],
+  "value": 0.18
  },
  "Vidyut Jammwal": {
   "checked": "2026-10-11",
@@ -551470,11 +551853,17 @@
   "value": 0.0
  },
  "Vivaha": {
+  "checked": "2026-10-13",
+  "description": "Wedding ceremony in Hinduism",
   "first_seen": "2026-10-13",
+  "kind": "media-event",
   "last_seen": "2026-10-13",
+  "length": 80951,
+  "score": 0.0,
   "sources": [
    "seed:Wedding"
-  ]
+  ],
+  "value": 0.0
  },
  "Vivek Athreya": {
   "checked": "2026-10-12",
@@ -556497,12 +556886,12 @@
   "description": "Software used to access websites",
   "first_seen": "2026-10-13",
   "hn_monthly": [
-   221,
+   220,
    210,
-   192,
+   190,
    186,
-   207,
-   188
+   209,
+   187
   ],
   "kind": "commercial",
   "last_seen": "2026-10-13",

@@ -1,15 +1,15 @@
-pool 34566, checking 938
-info probe: {'6-7': {'description': '2025 Internet meme and slang term', 'length': 41315, 'missing': False, 'type': 'standard', 'canonical': '6-7'}, 'Allergy': {'description': 'Immune system response to a substance that most people tolerate well', 'length': 132117, 'missing': False, 'type': 'standard', 'canonical': 'Allergy'}, 'Apple Watch Series 10': {'description': 'Line of smartwatches', 'length': 244856, 'missing': False, 'type': 'standard', 'canonical': 'Apple Watch'}}
-views 58/58
-kinds Counter({'other': 17520, 'commercial': 5512, 'person': 2791, 'consumer': 2781, 'academic': 2159, 'media-event': 2136, 'place-org': 1203, 'junk': 443, None: 21})
-stages Counter({'tiny': 3187, 'spike': 3128, 'flat': 1352, 'declining': 183, 'seasonal': 153, 'no-data': 32, 'noisy': 10, 'takeoff': 10, 'early': 10})
+pool 34580, checking 35
+info probe: {'Drip coffee': {'description': 'Drink made by pouring hot water onto ground coffee beans', 'length': 38420, 'missing': False, 'type': 'standard', 'canonical': 'Drip coffee'}, 'ISRO': {'description': 'Indian national space and aeronautics agency', 'length': 227772, 'missing': False, 'type': 'standard', 'canonical': 'ISRO'}, 'K-12': {'description': 'Kindergarten to 12th grade', 'length': 20567, 'missing': False, 'type': 'standard', 'canonical': 'K–12 education'}}
+views 3/3
+kinds Counter({'other': 17534, 'commercial': 5514, 'person': 2797, 'consumer': 2782, 'academic': 2162, 'media-event': 2139, 'place-org': 1207, 'junk': 443, None: 2})
+stages Counter({'tiny': 3188, 'spike': 3129, 'flat': 1353, 'declining': 183, 'seasonal': 153, 'no-data': 32, 'noisy': 10, 'takeoff': 10, 'early': 10})
  99.9  early       3375/wk  x2.61  Jirai-kei and ryōsan-gata fashion  [testing]
  20.0  early        964/wk  x1.62  Nihilistic penguin  [testing]
  19.2  takeoff     3300/wk  x2.19  Becoming Chinese  [testing]
  94.9  early      51003/wk  x5.48  UBlock Origin  [rejected]
  35.3  early       2050/wk  x3.01  Café de olla  [rejected]
  30.1  early       4052/wk  x2.75  Home appliance  [rejected]
- 22.8  early      37869/wk  x1.83  Web browser  [candidate]
+ 22.8  early      37869/wk  x1.83  Web browser  [rejected]
  22.7  takeoff     5535/wk  x2.16  Caffè mocha  [rejected]
  21.6  early       4436/wk  x2.64  Fricassee  [rejected]
  20.2  early        812/wk  x1.88  Nasty Gal  [rejected]
