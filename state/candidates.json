@@ -39934,7 +39934,11 @@
    "seed:Generative artificial intelligence",
    "seed:Virtual reality headset",
    "seed:Online course",
-   "trend:List of Internet phenomena"
+   "trend:List of Internet phenomena",
+   "trends-US"
+  ],
+  "trend_terms": [
+   "artificial intelligence news"
   ],
   "value": 0.07
  },
@@ -70310,6 +70314,19 @@
   ],
   "value": 0.0
  },
+ "Bismillah, c'est les ténèbres": {
+  "checked": "2026-10-14",
+  "description": "2026 French protest slogan originating from alleged police infiltration",
+  "first_seen": "2026-10-14",
+  "kind": "other",
+  "last_seen": "2026-10-14",
+  "length": 10326,
+  "score": 0.0,
+  "sources": [
+   "trend:Category:Internet memes introduced in 2026"
+  ],
+  "value": 0.3
+ },
  "Bismuth oxychloride": {
   "checked": "2026-10-11",
   "description": "Chemical compound",
@@ -77218,7 +77235,7 @@
    18,
    25,
    24,
-   33
+   34
   ],
   "kind": "consumer",
   "last_seen": "2026-10-14",
@@ -90791,6 +90808,22 @@
   ],
   "value": 0.0
  },
+ "CVS": {
+  "checked": "2026-10-14",
+  "description": "Topics referred to by the same term",
+  "first_seen": "2026-10-14",
+  "kind": "junk",
+  "last_seen": "2026-10-14",
+  "length": 1349,
+  "score": 0.0,
+  "sources": [
+   "trends-US"
+  ],
+  "trend_terms": [
+   "cvs"
+  ],
+  "value": 0.0
+ },
  "CVS/pharmacy": {
   "checked": "2026-10-11",
   "description": "American pharmacy chain",
@@ -101403,6 +101436,22 @@
    "seed:Craft beer"
   ],
   "value": 1.2
+ },
+ "Casper Ruud": {
+  "checked": "2026-10-14",
+  "description": "Norwegian tennis player (born 1998)",
+  "first_seen": "2026-10-14",
+  "kind": "person",
+  "last_seen": "2026-10-14",
+  "length": 72169,
+  "score": 0.0,
+  "sources": [
+   "trends-GB"
+  ],
+  "trend_terms": [
+   "casper ruud"
+  ],
+  "value": 0.0
  },
  "Casper Sleep": {
   "checked": "2026-10-11",
@@ -152099,7 +152148,12 @@
   "score": 0.0,
   "sources": [
    "trend:List of Internet phenomena",
-   "wiki-top"
+   "wiki-top",
+   "trends-GB",
+   "trends-US"
+  ],
+  "trend_terms": [
+   "danny trejo"
   ],
   "value": 0.0
  },
@@ -194927,6 +194981,22 @@
   ],
   "value": 0.0
  },
+ "Emily Hampshire": {
+  "checked": "2026-10-14",
+  "description": "Canadian actress",
+  "first_seen": "2026-10-14",
+  "kind": "person",
+  "last_seen": "2026-10-14",
+  "length": 38829,
+  "score": 0.0,
+  "sources": [
+   "trends-GB"
+  ],
+  "trend_terms": [
+   "emily hampshire"
+  ],
+  "value": 0.0
+ },
  "Emily M. Bender": {
   "checked": "2026-10-11",
   "description": "American linguist",
@@ -195132,11 +195202,15 @@
   "description": "English television presenter and former model (born 1976)",
   "first_seen": "2026-10-11",
   "kind": "person",
-  "last_seen": "2026-10-11",
+  "last_seen": "2026-10-14",
   "length": 43117,
   "score": 0.0,
   "sources": [
-   "wiki-top"
+   "wiki-top",
+   "trends-GB"
+  ],
+  "trend_terms": [
+   "emma willis"
   ],
   "value": 0.0
  },
@@ -233733,6 +233807,33 @@
   ],
   "value": 1.8
  },
+ "Freeze watch": {
+  "checked": "2026-10-14",
+  "curve": {
+   "accel": 0.2773,
+   "fit_r2": 0.01,
+   "growth_wk": 0.0078,
+   "spike": 3.06,
+   "stage": "tiny",
+   "up_share": 0.64,
+   "weekly_views": 22,
+   "weeks_of_data": 67,
+   "x_12w": 1.11
+  },
+  "description": "Notice warning of sub-freezing temperatures within 48 hours",
+  "first_seen": "2026-10-14",
+  "kind": "consumer",
+  "last_seen": "2026-10-14",
+  "length": 2204,
+  "score": 0.0,
+  "sources": [
+   "trends-US"
+  ],
+  "trend_terms": [
+   "freeze watch"
+  ],
+  "value": 1.8
+ },
  "Freeze-drying": {
   "checked": "2026-10-11",
   "description": "Low-temperature dehydration process",
@@ -268560,6 +268661,22 @@
   ],
   "value": 1.2
  },
+ "Harrison Ford": {
+  "checked": "2026-10-14",
+  "description": "American actor (born 1942)",
+  "first_seen": "2026-10-14",
+  "kind": "person",
+  "last_seen": "2026-10-14",
+  "length": 119016,
+  "score": 0.0,
+  "sources": [
+   "trends-US"
+  ],
+  "trend_terms": [
+   "harrison ford"
+  ],
+  "value": 0.0
+ },
  "Harrison's groove": {
   "checked": "2026-10-11",
   "description": "Medical condition",
@@ -280358,11 +280475,17 @@
   "value": 0.0
  },
  "Home School Legal Defense Association": {
+  "checked": "2026-10-14",
+  "description": "American political organization",
   "first_seen": "2026-10-14",
+  "kind": "academic",
   "last_seen": "2026-10-14",
+  "length": 16849,
+  "score": 0.0,
   "sources": [
    "seed:Home schooling"
-  ]
+  ],
+  "value": 0.0
  },
  "Home Work Convention": {
   "checked": "2026-10-11",
@@ -291999,6 +292122,25 @@
    "trend:Gen Z"
   ],
   "value": 0.07
+ },
+ "IPhone Duo": {
+  "checked": "2026-10-14",
+  "curve": {
+   "stage": "no-data"
+  },
+  "description": "2026 foldable smartphone by Apple",
+  "first_seen": "2026-10-14",
+  "kind": "commercial",
+  "last_seen": "2026-10-14",
+  "length": 38033,
+  "score": 0.0,
+  "sources": [
+   "trends-GB"
+  ],
+  "trend_terms": [
+   "iphone duo"
+  ],
+  "value": 1.2
  },
  "IPod Nano": {
   "checked": "2026-10-11",
@@ -313894,6 +314036,22 @@
   "sources": [
    "seed:Plant-based diet",
    "seed:Fermentation in food processing"
+  ],
+  "value": 0.0
+ },
+ "Jessica Tisch": {
+  "checked": "2026-10-14",
+  "description": "New York City Police Commissioner since 2024",
+  "first_seen": "2026-10-14",
+  "kind": "place-org",
+  "last_seen": "2026-10-14",
+  "length": 9596,
+  "score": 0.0,
+  "sources": [
+   "trends-US"
+  ],
+  "trend_terms": [
+   "jessica tisch"
   ],
   "value": 0.0
  },
@@ -335885,6 +336043,22 @@
    "seed:Air fryer"
   ],
   "value": 1.2
+ },
+ "Laura Brandon": {
+  "checked": "2026-10-14",
+  "description": "Canadian art historian (born 1951)",
+  "first_seen": "2026-10-14",
+  "kind": "person",
+  "last_seen": "2026-10-14",
+  "length": 6008,
+  "score": 0.0,
+  "sources": [
+   "trends-GB"
+  ],
+  "trend_terms": [
+   "laura brand"
+  ],
+  "value": 0.0
  },
  "Laura Mercier Cosmetics": {
   "checked": "2026-10-11",
@@ -366517,11 +366691,17 @@
   "value": 0.3
  },
  "Mammary lobule": {
+  "checked": "2026-10-14",
+  "description": "Small cavity or sac found in the mammary gland",
   "first_seen": "2026-10-14",
+  "kind": "other",
   "last_seen": "2026-10-14",
+  "length": 2515,
+  "score": 0.0,
   "sources": [
    "seed:Breastfeeding"
-  ]
+  ],
+  "value": 0.3
  },
  "Mammillaria": {
   "checked": "2026-10-11",
@@ -382995,11 +383175,30 @@
   "value": 0.3
  },
  "Milk delivery": {
+  "checked": "2026-10-14",
+  "curve": {
+   "accel": 0.0276,
+   "fit_r2": 0.82,
+   "growth_wk": -0.0301,
+   "last_year_growth_wk": 0.0287,
+   "spike": 1.39,
+   "stage": "spike",
+   "up_share": 0.18,
+   "weekly_views": 539,
+   "weeks_of_data": 68,
+   "x_12w": 0.7,
+   "x_yoy": 0.49
+  },
+  "description": "Delivery service dedicated to supplying milk",
   "first_seen": "2026-10-14",
+  "kind": "commercial",
   "last_seen": "2026-10-14",
+  "length": 14555,
+  "score": 0.0,
   "sources": [
    "seed:Breastfeeding"
-  ]
+  ],
+  "value": 1.2
  },
  "Milk diet": {
   "checked": "2026-10-11",
@@ -428708,11 +428907,17 @@
   "value": 0.3
  },
  "Pasteurization": {
+  "checked": "2026-10-14",
+  "description": "Process of preserving foods with heat",
   "first_seen": "2026-10-14",
+  "kind": "other",
   "last_seen": "2026-10-14",
+  "length": 48660,
+  "score": 0.0,
   "sources": [
    "seed:Breastfeeding"
-  ]
+  ],
+  "value": 0.3
  },
  "Pasteurized milk": {
   "checked": "2026-10-14",
@@ -464779,11 +464984,17 @@
   "value": 0.3
  },
  "Reimbursement": {
+  "checked": "2026-10-14",
+  "description": "Act of compensating individuals for an out-of-pocket expense",
   "first_seen": "2026-10-14",
+  "kind": "other",
   "last_seen": "2026-10-14",
+  "length": 9451,
+  "score": 0.0,
   "sources": [
    "seed:Telehealth"
-  ]
+  ],
+  "value": 0.3
  },
  "Reiner Knizia": {
   "checked": "2026-10-11",
@@ -470579,11 +470790,30 @@
   "value": 0.0
  },
  "Rich Internet Application": {
+  "checked": "2026-10-14",
+  "curve": {
+   "accel": 0.0342,
+   "fit_r2": 0.26,
+   "growth_wk": 0.0169,
+   "last_year_growth_wk": 0.0088,
+   "spike": 1.32,
+   "stage": "tiny",
+   "up_share": 0.64,
+   "weekly_views": 109,
+   "weeks_of_data": 68,
+   "x_12w": 1.22,
+   "x_yoy": 0.91
+  },
+  "description": "Web application technology",
   "first_seen": "2026-10-14",
+  "kind": "commercial",
   "last_seen": "2026-10-14",
+  "length": 15964,
+  "score": 0.0,
   "sources": [
    "seed:Telehealth"
-  ]
+  ],
+  "value": 1.2
  },
  "Rich Minion": {
   "checked": "2026-10-11",
@@ -476410,6 +476640,22 @@
    "seed:Lego"
   ],
   "value": 0.0
+ },
+ "Royal Albert Hall": {
+  "checked": "2026-10-14",
+  "description": "Concert hall in South Kensington, London, England",
+  "first_seen": "2026-10-14",
+  "kind": "other",
+  "last_seen": "2026-10-14",
+  "length": 86037,
+  "score": 0.0,
+  "sources": [
+   "trends-GB"
+  ],
+  "trend_terms": [
+   "royal albert hall"
+  ],
+  "value": 0.18
  },
  "Royal Collection": {
   "checked": "2026-10-11",
@@ -516138,6 +516384,22 @@
   ],
   "value": 0.18
  },
+ "Starlink": {
+  "checked": "2026-10-14",
+  "description": "SpaceX satellite Internet constellation",
+  "first_seen": "2026-10-14",
+  "kind": "other",
+  "last_seen": "2026-10-14",
+  "length": 299209,
+  "score": 0.0,
+  "sources": [
+   "trends-GB"
+  ],
+  "trend_terms": [
+   "starlink"
+  ],
+  "value": 0.07
+ },
  "Starr Roxanne Hiltz": {
   "checked": "2026-10-13",
   "description": "American academic",
@@ -519371,11 +519633,30 @@
   "value": 0.3
  },
  "Strawberry milk": {
+  "checked": "2026-10-14",
+  "curve": {
+   "accel": -0.0245,
+   "fit_r2": 0.05,
+   "growth_wk": 0.0093,
+   "last_year_growth_wk": -0.0008,
+   "spike": 1.23,
+   "stage": "tiny",
+   "up_share": 0.55,
+   "weekly_views": 35,
+   "weeks_of_data": 68,
+   "x_12w": 1.05,
+   "x_yoy": 1.09
+  },
+  "description": "Sweetened dairy drink",
   "first_seen": "2026-10-14",
+  "kind": "consumer",
   "last_seen": "2026-10-14",
+  "length": 7257,
+  "score": 0.0,
   "sources": [
    "seed:Breastfeeding"
-  ]
+  ],
+  "value": 1.8
  },
  "Stream bank": {
   "checked": "2026-10-11",
@@ -532460,11 +532741,17 @@
   "value": 1.8
  },
  "Telepsychiatry": {
+  "checked": "2026-10-14",
+  "description": "Mental-health care by telecommunication",
   "first_seen": "2026-10-14",
+  "kind": "other",
   "last_seen": "2026-10-14",
+  "length": 37422,
+  "score": 0.0,
   "sources": [
    "seed:Telehealth"
-  ]
+  ],
+  "value": 0.3
  },
  "Telepsychology": {
   "checked": "2026-10-14",
@@ -536233,6 +536520,22 @@
    "seed:Consumer electronics"
   ],
   "value": 0.3
+ },
+ "The Hunger Games": {
+  "checked": "2026-10-14",
+  "description": "Young adult book series by Suzanne Collins",
+  "first_seen": "2026-10-14",
+  "kind": "media-event",
+  "last_seen": "2026-10-14",
+  "length": 52876,
+  "score": 0.0,
+  "sources": [
+   "trends-US"
+  ],
+  "trend_terms": [
+   "the hunger games"
+  ],
+  "value": 0.0
  },
  "The Hunger Games: Sunrise on the Reaping": {
   "checked": "2026-10-11",
@@ -551308,11 +551611,11 @@
   "first_seen": "2026-10-11",
   "hn_monthly": [
    119,
-   148,
+   149,
    96,
-   192,
-   201,
-   98
+   199,
+   194,
+   99
   ],
   "kind": "commercial",
   "last_seen": "2026-10-14",
@@ -552712,11 +553015,17 @@
   "value": 0.3
  },
  "Uncoupler": {
+  "checked": "2026-10-14",
+  "description": "Type of biological molecule",
   "first_seen": "2026-10-14",
+  "kind": "other",
   "last_seen": "2026-10-14",
+  "length": 5613,
+  "score": 0.0,
   "sources": [
    "seed:Weight loss drug"
-  ]
+  ],
+  "value": 0.3
  },
  "Uncoupling agent": {
   "checked": "2026-10-14",
@@ -567955,9 +568264,9 @@
    215,
    216,
    188,
-   186,
-   209,
-   199
+   188,
+   207,
+   203
   ],
   "kind": "commercial",
   "last_seen": "2026-10-13",

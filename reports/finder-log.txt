@@ -1,8 +1,8 @@
-pool 35358, checking 780
-info probe: {'Australia–Bangladesh relations': {'description': 'Bilateral relations', 'length': 6714, 'missing': False, 'type': 'standard', 'canonical': 'Australia–Bangladesh relations'}, 'Learning management system': {'description': 'Educational software application', 'length': 35398, 'missing': False, 'type': 'standard', 'canonical': 'Learning management system'}, 'Massive open online course': {'description': 'Education service on the web', 'length': 115225, 'missing': False, 'type': 'standard', 'canonical': 'Massive open online course'}}
-views 88/88
-kinds Counter({'other': 17877, 'commercial': 5581, 'person': 2994, 'consumer': 2804, 'academic': 2209, 'media-event': 2201, 'place-org': 1236, 'junk': 446, None: 10})
-stages Counter({'tiny': 3226, 'spike': 3152, 'flat': 1371, 'declining': 186, 'seasonal': 157, 'no-data': 34, 'noisy': 10, 'takeoff': 10, 'early': 10})
+pool 35370, checking 22
+info probe: {'Home School Legal Defense Association': {'description': 'American political organization', 'length': 16849, 'missing': False, 'type': 'standard', 'canonical': 'Home School Legal Defense Association'}, 'Mammary lobule': {'description': 'Small cavity or sac found in the mammary gland', 'length': 2515, 'missing': False, 'type': 'standard', 'canonical': 'Mammary alveolus'}}
+views 5/5
+kinds Counter({'other': 17885, 'commercial': 5584, 'person': 2998, 'consumer': 2806, 'academic': 2210, 'media-event': 2202, 'place-org': 1237, 'junk': 447, None: 1})
+stages Counter({'tiny': 3229, 'spike': 3153, 'flat': 1371, 'declining': 186, 'seasonal': 157, 'no-data': 35, 'noisy': 10, 'takeoff': 10, 'early': 10})
  99.9  early       3375/wk  x2.61  Jirai-kei and ryōsan-gata fashion  [testing]
  20.0  early        964/wk  x1.62  Nihilistic penguin  [testing]
  19.2  takeoff     3300/wk  x2.19  Becoming Chinese  [testing]
