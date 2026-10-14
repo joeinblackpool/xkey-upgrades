@@ -1,8 +1,8 @@
-pool 34580, checking 35
-info probe: {'Drip coffee': {'description': 'Drink made by pouring hot water onto ground coffee beans', 'length': 38420, 'missing': False, 'type': 'standard', 'canonical': 'Drip coffee'}, 'ISRO': {'description': 'Indian national space and aeronautics agency', 'length': 227772, 'missing': False, 'type': 'standard', 'canonical': 'ISRO'}, 'K-12': {'description': 'Kindergarten to 12th grade', 'length': 20567, 'missing': False, 'type': 'standard', 'canonical': 'K–12 education'}}
-views 3/3
-kinds Counter({'other': 17534, 'commercial': 5514, 'person': 2797, 'consumer': 2782, 'academic': 2162, 'media-event': 2139, 'place-org': 1207, 'junk': 443, None: 2})
-stages Counter({'tiny': 3188, 'spike': 3129, 'flat': 1353, 'declining': 183, 'seasonal': 153, 'no-data': 32, 'noisy': 10, 'takeoff': 10, 'early': 10})
+pool 35358, checking 780
+info probe: {'Australia–Bangladesh relations': {'description': 'Bilateral relations', 'length': 6714, 'missing': False, 'type': 'standard', 'canonical': 'Australia–Bangladesh relations'}, 'Learning management system': {'description': 'Educational software application', 'length': 35398, 'missing': False, 'type': 'standard', 'canonical': 'Learning management system'}, 'Massive open online course': {'description': 'Education service on the web', 'length': 115225, 'missing': False, 'type': 'standard', 'canonical': 'Massive open online course'}}
+views 88/88
+kinds Counter({'other': 17877, 'commercial': 5581, 'person': 2994, 'consumer': 2804, 'academic': 2209, 'media-event': 2201, 'place-org': 1236, 'junk': 446, None: 10})
+stages Counter({'tiny': 3226, 'spike': 3152, 'flat': 1371, 'declining': 186, 'seasonal': 157, 'no-data': 34, 'noisy': 10, 'takeoff': 10, 'early': 10})
  99.9  early       3375/wk  x2.61  Jirai-kei and ryōsan-gata fashion  [testing]
  20.0  early        964/wk  x1.62  Nihilistic penguin  [testing]
  19.2  takeoff     3300/wk  x2.19  Becoming Chinese  [testing]
