@@ -1,2 +1,4 @@
 User-agent: *
-Disallow: /
+Allow: /
+
+Sitemap: https://upgrades.xkey.co.uk/sitemap.xml

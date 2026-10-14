@@ -397,7 +397,7 @@ def main(argv=None):
         ap.error("--base-url or site.json base_url required")
     live = a.live or bool(cfg.get("live"))
     r = build(a.content, a.out, base, live)
-    print(f"built {r['niches']} niches, {r['articles']} articles, {r['urls']} URLs ({'LIVE' if a.live else 'hidden: noindex'})")
+    print(f"built {r['niches']} niches, {r['articles']} articles, {r['urls']} URLs ({'LIVE' if live else 'hidden: noindex'})")
     for e in r["errors"]:
         print("ERROR", e, file=sys.stderr)
     return 1 if r["errors"] else 0
