@@ -52,6 +52,57 @@
    "x_12w": 2.19
   },
   {
+   "slug": "dumpling-squishies",
+   "title": "Dumpling squishies",
+   "description": "2026 squishy toy craze (dumplings, NeeDoh)",
+   "evidence": [
+    "https://www.wafb.com/2026/10/04/squishy-toys-recalled-over-potential-hazards-children-heres-how-get-refund/",
+    "https://siouxfalls.business/jodis-journal-generation-alpha-and-the-summer-of-squishies/",
+    "https://www.cnbc.com/2026/08/27/the-toy-industrys-latest-craze-is-cheap-colorful-and-very-squishy-.html"
+   ],
+   "status": "testing",
+   "testing_since": "2026-10-14",
+   "source": "scout",
+   "stage": "early",
+   "score": 0,
+   "first_ranked": "2026-10-14",
+   "trend_terms": []
+  },
+  {
+   "slug": "stickerbox",
+   "title": "Stickerbox",
+   "description": "Viral AI voice-to-sticker printer for kids",
+   "evidence": [
+    "https://techcrunch.com/2025/11/24/hands-on-with-stickerbox-the-ai-powered-sticker-maker-for-kids/",
+    "https://www.tomsguide.com/ai/this-viral-ai-toy-that-gets-kids-off-screens-is-finally-20-percent-off-for-prime-day",
+    "https://www.today.com/shop/hottest-toys-2026-rcna602966"
+   ],
+   "status": "testing",
+   "testing_since": "2026-10-14",
+   "source": "scout",
+   "stage": "early",
+   "score": 0,
+   "first_ranked": "2026-10-14",
+   "trend_terms": []
+  },
+  {
+   "slug": "peekimo",
+   "title": "Peekimo",
+   "description": "Spin Master wearable interactive pet toy, autumn 2026",
+   "evidence": [
+    "https://hip2save.com/?p=12028090",
+    "https://peopleofplay.com/blog/game-review-peekimo",
+    "https://www.today.com/shop/hottest-toys-2026-rcna602966"
+   ],
+   "status": "testing",
+   "testing_since": "2026-10-14",
+   "source": "scout",
+   "stage": "early",
+   "score": 0,
+   "first_ranked": "2026-10-14",
+   "trend_terms": []
+  },
+  {
    "description": "Web browser content blocking extension",
    "first_ranked": "2026-10-11",
    "growth_wk": 0.159,

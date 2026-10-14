@@ -13,7 +13,20 @@ Attach `joeinblackpool/xkey-upgrades` with push access, clone it, `git pull`. Re
 2. **New tests**: if fewer than 8 niches are `testing`, pick the highest-scoring `candidate` with
    `stage: early` (or `takeoff` if no early ones) that passes the checks below. Write a hub + 3 articles.
    Then set `status: testing` and `testing_since: <today>` for it in `state/niches.json`.
-3. Never write for `dropped` niches.
+3. **Scout when the finder comes up short.** The finder only sees topics that already have a Wikipedia
+   article, so most new crazes reach it late or never. If step 2 leaves fewer than 8 niches `testing`
+   and there is page budget left, find early consumer crazes yourself with web search: new toys and
+   collectables, drinks, snacks, fashion items, beauty products, gadgets and youth trends that are
+   rising now (news "craze"/"sold out"/"viral" coverage from the last 1-3 months, retailer hot-toy and
+   best-seller lists, TikTok Shop coverage, recalls and safety warnings, UK and US). A scouted niche
+   must have dated evidence from at least two independent sources that interest started within roughly
+   the last 12 months and is still rising, must not be seasonal or yearly-recurring, must pass the skip
+   checks below, and must not duplicate an existing niche. Write a hub + 3 articles for each (up to the
+   page budget), then add an entry to `state/niches.json` with `slug`, `title`, `description`,
+   `status: testing`, `testing_since: <today>`, `source: scout`, `stage: early`, `score: 0` and an
+   `evidence` list of the dated source URLs. The finder keeps `testing` entries, so they go through the
+   same 28/56-day review as finder niches.
+4. Never write for `dropped` niches.
 
 Skip a candidate (set `status: rejected` and a one-line `reason`) if it is:
 a person, a film/TV/game title, a news event,
