@@ -390,6 +390,28 @@
    "weekly_views": 893,
    "wikipedia": "https://en.wikipedia.org/wiki/E-scooter",
    "x_12w": 1.34
+  },
+  {
+   "slug": "clickeez",
+   "title": "Clickeez",
+   "description": "Goliath clicky keyboard-key collectable fidget toys, launched July 2025, viral 2026",
+   "evidence": [
+    "https://toybook.com/goliath-clickeez-launch-news/",
+    "https://www.entrepreneur.com/building-a-business/he-created-clickeez-toys-sold-10-million-expects-to-sell-over-100-million",
+    "https://www.which.co.uk/news/article/toy-trends-for-2026-allFx4G2N0mT",
+    "https://jingsourcing.com/fb-keyboard-toy/"
+   ],
+   "status": "testing",
+   "testing_since": "2026-10-16",
+   "source": "scout",
+   "stage": "early",
+   "score": 0,
+   "first_ranked": "2026-10-16",
+   "trend_terms": [
+    "clickeez",
+    "clickeez keyboard",
+    "clickeez series 3"
+   ]
   }
  ],
  "updated": "2026-10-14"
