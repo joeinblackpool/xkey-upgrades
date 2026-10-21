@@ -412,6 +412,30 @@
     "clickeez keyboard",
     "clickeez series 3"
    ]
+  },
+  {
+   "slug": "lego-smart-play",
+   "title": "LEGO SMART Play",
+   "description": "LEGO's Smart Brick electronic play system, unveiled at CES January 2026; Star Wars sets March 2026, Pokémon sets August 2026, more themes rumoured for 2027",
+   "evidence": [
+    "https://jaysbrickblog.com/news/lego-unveils-the-smart-brick-and-smart-play-system-march-2026/",
+    "https://capitalfm.africa/lego-unveils-tech-filled-smart-bricks-to-play-experts-unease/",
+    "https://stonewars.com/news/lego-pokemon-smart-play-august-pre-order/",
+    "https://www.forbes.com/sites/laurasirikul/2026/09/26/inside-the-lego-pokmon-smart-play-experience-in-los-angeles/",
+    "https://www.risingtrends.co/trends/toy-trends-2026",
+    "https://www.brickfanatics.com/first-details-lego-ninjago-smart-play-sets"
+   ],
+   "status": "testing",
+   "testing_since": "2026-10-21",
+   "source": "scout",
+   "stage": "early",
+   "score": 0,
+   "first_ranked": "2026-10-21",
+   "trend_terms": [
+    "lego smart play",
+    "lego smart brick",
+    "lego pokemon smart play"
+   ]
   }
  ],
  "updated": "2026-10-14"
