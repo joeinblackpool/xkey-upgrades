@@ -258,7 +258,9 @@ def main(argv=None):
     save(os.path.join(a.state, "niches.json"), niches)
     write_report(os.path.join(a.reports, f"niches-{today}.csv"), niches["niches"])
     for n in niches["niches"][:15]:
-        log(f"{n['score']:5.1f}  {n['stage']:<8} {n['weekly_views']:>7}/wk  x{n['x_12w']:<5} {n['title']}  [{n['status']}]")
+        # Scouted niches (source: scout) have no Wikipedia curve, so metrics may be missing.
+        log(f"{n.get('score', 0):5.1f}  {n.get('stage', '-'):<8} {n.get('weekly_views', '-'):>7}/wk  "
+            f"x{n.get('x_12w', '-'):<5} {n['title']}  [{n['status']}]")
     return 0
 
 
