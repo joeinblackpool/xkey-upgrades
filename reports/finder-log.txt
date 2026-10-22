@@ -1,8 +1,8 @@
-pool 36868, checking 1500
-info probe: {'Christian Horner': {'description': 'British motorsport executive (born 1973)', 'length': 34451, 'missing': False, 'type': 'standard', 'canonical': 'Christian Horner'}, 'Mammary alveolus': {'description': 'Small cavity or sac found in the mammary gland', 'length': 5989, 'missing': False, 'type': 'standard', 'canonical': 'Mammary alveolus'}, 'Natalie Nunn': {'description': 'American reality television personality (born 1984)', 'length': 38455, 'missing': False, 'type': 'standard', 'canonical': 'Natalie Nunn'}}
-views 45/45
-kinds Counter({'other': 18438, 'commercial': 5620, 'person': 3416, 'consumer': 2816, 'academic': 2458, 'media-event': 2360, 'place-org': 1264, 'junk': 459, None: 37})
-stages Counter({'tiny': 3241, 'spike': 3170, 'flat': 1383, 'declining': 188, 'seasonal': 158, 'no-data': 35, 'noisy': 10, 'takeoff': 10, 'early': 10})
+pool 36879, checking 1500
+info probe: {'Gupta Empire': {'description': 'Ancient Indian empire (c. 3rd century CE – 575 CE)', 'length': 90121, 'missing': False, 'type': 'standard', 'canonical': 'Gupta Empire'}, 'Haribhadra': {'description': 'Jain leader, philosopher and author (c. 459–529)', 'length': 12112, 'missing': False, 'type': 'standard', 'canonical': 'Haribhadra'}, 'Gorakshanath': {'description': '11th-century siddha yogi and saint', 'length': 26200, 'missing': False, 'type': 'standard', 'canonical': 'Gorakhnath'}}
+views 386/386
+kinds Counter({'other': 18457, 'commercial': 5620, 'person': 3424, 'consumer': 2816, 'academic': 2471, 'media-event': 2363, 'place-org': 1266, 'junk': 459, None: 3})
+stages Counter({'tiny': 3260, 'spike': 3142, 'flat': 1391, 'declining': 188, 'seasonal': 161, 'no-data': 34, 'early': 12, 'takeoff': 9, 'noisy': 8})
  99.9  early       3375/wk  x2.61  Jirai-kei and ryōsan-gata fashion  [testing]
  20.0  early        964/wk  x1.62  Nihilistic penguin  [testing]
  19.2  takeoff     3300/wk  x2.19  Becoming Chinese  [testing]
