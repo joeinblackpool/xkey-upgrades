@@ -1,11 +1,16 @@
-pool 35370, checking 22
-info probe: {'Home School Legal Defense Association': {'description': 'American political organization', 'length': 16849, 'missing': False, 'type': 'standard', 'canonical': 'Home School Legal Defense Association'}, 'Mammary lobule': {'description': 'Small cavity or sac found in the mammary gland', 'length': 2515, 'missing': False, 'type': 'standard', 'canonical': 'Mammary alveolus'}}
-views 5/5
-kinds Counter({'other': 17885, 'commercial': 5584, 'person': 2998, 'consumer': 2806, 'academic': 2210, 'media-event': 2202, 'place-org': 1237, 'junk': 447, None: 1})
-stages Counter({'tiny': 3229, 'spike': 3153, 'flat': 1371, 'declining': 186, 'seasonal': 157, 'no-data': 35, 'noisy': 10, 'takeoff': 10, 'early': 10})
+pool 36868, checking 1500
+info probe: {'Christian Horner': {'description': 'British motorsport executive (born 1973)', 'length': 34451, 'missing': False, 'type': 'standard', 'canonical': 'Christian Horner'}, 'Mammary alveolus': {'description': 'Small cavity or sac found in the mammary gland', 'length': 5989, 'missing': False, 'type': 'standard', 'canonical': 'Mammary alveolus'}, 'Natalie Nunn': {'description': 'American reality television personality (born 1984)', 'length': 38455, 'missing': False, 'type': 'standard', 'canonical': 'Natalie Nunn'}}
+views 45/45
+kinds Counter({'other': 18438, 'commercial': 5620, 'person': 3416, 'consumer': 2816, 'academic': 2458, 'media-event': 2360, 'place-org': 1264, 'junk': 459, None: 37})
+stages Counter({'tiny': 3241, 'spike': 3170, 'flat': 1383, 'declining': 188, 'seasonal': 158, 'no-data': 35, 'noisy': 10, 'takeoff': 10, 'early': 10})
  99.9  early       3375/wk  x2.61  Jirai-kei and ryōsan-gata fashion  [testing]
  20.0  early        964/wk  x1.62  Nihilistic penguin  [testing]
  19.2  takeoff     3300/wk  x2.19  Becoming Chinese  [testing]
+  0.0  early          -/wk  x-     Dumpling squishies  [testing]
+  0.0  early          -/wk  x-     Stickerbox  [testing]
+  0.0  early          -/wk  x-     Peekimo  [testing]
+  0.0  early          -/wk  x-     Clickeez  [testing]
+  0.0  early          -/wk  x-     LEGO SMART Play  [testing]
  94.9  early      51003/wk  x5.48  UBlock Origin  [rejected]
  35.3  early       2050/wk  x3.01  Café de olla  [rejected]
  30.1  early       4052/wk  x2.75  Home appliance  [rejected]
@@ -13,8 +18,3 @@ stages Counter({'tiny': 3229, 'spike': 3153, 'flat': 1371, 'declining': 186, 'se
  22.7  takeoff     5535/wk  x2.16  Caffè mocha  [rejected]
  21.6  early       4436/wk  x2.64  Fricassee  [rejected]
  20.2  early        812/wk  x1.88  Nasty Gal  [rejected]
- 13.2  takeoff      956/wk  x3.18  Hair twists  [rejected]
- 12.7  takeoff     2540/wk  x2.25  Borg (drink)  [rejected]
-  7.1  early        913/wk  x1.4   Aspidistra elatior  [rejected]
-  7.1  takeoff      887/wk  x2.09  Autonomous robot  [rejected]
-  6.8  takeoff      777/wk  x1.99  2027 African Games  [rejected]
