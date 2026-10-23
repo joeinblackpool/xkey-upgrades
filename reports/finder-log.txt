@@ -1,8 +1,8 @@
-pool 36879, checking 1500
-info probe: {'Gupta Empire': {'description': 'Ancient Indian empire (c. 3rd century CE – 575 CE)', 'length': 90121, 'missing': False, 'type': 'standard', 'canonical': 'Gupta Empire'}, 'Haribhadra': {'description': 'Jain leader, philosopher and author (c. 459–529)', 'length': 12112, 'missing': False, 'type': 'standard', 'canonical': 'Haribhadra'}, 'Gorakshanath': {'description': '11th-century siddha yogi and saint', 'length': 26200, 'missing': False, 'type': 'standard', 'canonical': 'Gorakhnath'}}
-views 386/386
-kinds Counter({'other': 18457, 'commercial': 5620, 'person': 3424, 'consumer': 2816, 'academic': 2471, 'media-event': 2363, 'place-org': 1266, 'junk': 459, None: 3})
-stages Counter({'tiny': 3260, 'spike': 3142, 'flat': 1391, 'declining': 188, 'seasonal': 161, 'no-data': 34, 'early': 12, 'takeoff': 9, 'noisy': 8})
+pool 37212, checking 1500
+info probe: {'Kundalini yoga': {'description': 'Schools of yoga', 'length': 22720, 'missing': False, 'type': 'standard', 'canonical': 'Kundalini yoga'}, 'Samadhi': {'description': 'State of meditative consciousness', 'length': 75187, 'missing': False, 'type': 'standard', 'canonical': 'Samadhi'}, 'Tapas (Indian religions)': {'description': 'Variety of spiritual meditation practices in Indian religions', 'length': 39211, 'missing': False, 'type': 'standard', 'canonical': 'Tapas (Indian religions)'}}
+views 336/336
+kinds Counter({'other': 18552, 'commercial': 5631, 'person': 3567, 'consumer': 2819, 'academic': 2483, 'media-event': 2409, 'place-org': 1284, 'junk': 461, None: 6})
+stages Counter({'tiny': 3288, 'spike': 3107, 'flat': 1394, 'declining': 195, 'seasonal': 169, 'no-data': 34, 'early': 14, 'noisy': 9, 'takeoff': 8})
  99.9  early       3375/wk  x2.61  Jirai-kei and ryōsan-gata fashion  [testing]
  20.0  early        964/wk  x1.62  Nihilistic penguin  [testing]
  19.2  takeoff     3300/wk  x2.19  Becoming Chinese  [testing]
@@ -14,7 +14,7 @@ stages Counter({'tiny': 3260, 'spike': 3142, 'flat': 1391, 'declining': 188, 'se
  94.9  early      51003/wk  x5.48  UBlock Origin  [rejected]
  35.3  early       2050/wk  x3.01  Café de olla  [rejected]
  30.1  early       4052/wk  x2.75  Home appliance  [rejected]
+ 23.9  early        909/wk  x2.07  Autonomous robot  [rejected]
  22.8  early      37869/wk  x1.83  Web browser  [rejected]
  22.7  takeoff     5535/wk  x2.16  Caffè mocha  [rejected]
  21.6  early       4436/wk  x2.64  Fricassee  [rejected]
- 20.2  early        812/wk  x1.88  Nasty Gal  [rejected]
