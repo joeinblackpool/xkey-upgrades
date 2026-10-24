@@ -1,11 +1,12 @@
-pool 37212, checking 1500
-info probe: {'Kundalini yoga': {'description': 'Schools of yoga', 'length': 22720, 'missing': False, 'type': 'standard', 'canonical': 'Kundalini yoga'}, 'Samadhi': {'description': 'State of meditative consciousness', 'length': 75187, 'missing': False, 'type': 'standard', 'canonical': 'Samadhi'}, 'Tapas (Indian religions)': {'description': 'Variety of spiritual meditation practices in Indian religions', 'length': 39211, 'missing': False, 'type': 'standard', 'canonical': 'Tapas (Indian religions)'}}
-views 336/336
-kinds Counter({'other': 18552, 'commercial': 5631, 'person': 3567, 'consumer': 2819, 'academic': 2483, 'media-event': 2409, 'place-org': 1284, 'junk': 461, None: 6})
-stages Counter({'tiny': 3288, 'spike': 3107, 'flat': 1394, 'declining': 195, 'seasonal': 169, 'no-data': 34, 'early': 14, 'noisy': 9, 'takeoff': 8})
+pool 37996, checking 1500
+info probe: {'Temazcal': {'description': 'Mesoamerican sweat lodge', 'length': 3465, 'missing': False, 'type': 'standard', 'canonical': 'Temazcal'}, 'United States Army': {'description': 'Land service branch of the U.S. military', 'length': 205319, 'missing': False, 'type': 'standard', 'canonical': 'United States Army'}, 'Social nudity in Seattle': {'description': 'Social nudity in the United States', 'length': 21878, 'missing': False, 'type': 'standard', 'canonical': 'Naturism in the United States'}}
+views 400/542
+views 542/542
+kinds Counter({'other': 18785, 'commercial': 5912, 'person': 3710, 'consumer': 2848, 'academic': 2506, 'media-event': 2465, 'place-org': 1303, 'junk': 463, None: 4})
+stages Counter({'tiny': 3484, 'spike': 3132, 'flat': 1455, 'declining': 198, 'seasonal': 181, 'no-data': 36, 'early': 16, 'noisy': 10, 'takeoff': 7})
  99.9  early       3375/wk  x2.61  Jirai-kei and ryōsan-gata fashion  [testing]
+ 25.5  early       3582/wk  x2.61  Becoming Chinese  [testing]
  20.0  early        964/wk  x1.62  Nihilistic penguin  [testing]
- 19.2  takeoff     3300/wk  x2.19  Becoming Chinese  [testing]
   0.0  early          -/wk  x-     Dumpling squishies  [testing]
   0.0  early          -/wk  x-     Stickerbox  [testing]
   0.0  early          -/wk  x-     Peekimo  [testing]
@@ -13,8 +14,8 @@ stages Counter({'tiny': 3288, 'spike': 3107, 'flat': 1394, 'declining': 195, 'se
   0.0  early          -/wk  x-     LEGO SMART Play  [testing]
  94.9  early      51003/wk  x5.48  UBlock Origin  [rejected]
  35.3  early       2050/wk  x3.01  Café de olla  [rejected]
+ 33.9  early       5537/wk  x1.6   Black Forest gateau  [candidate]
  30.1  early       4052/wk  x2.75  Home appliance  [rejected]
  23.9  early        909/wk  x2.07  Autonomous robot  [rejected]
  22.8  early      37869/wk  x1.83  Web browser  [rejected]
  22.7  takeoff     5535/wk  x2.16  Caffè mocha  [rejected]
- 21.6  early       4436/wk  x2.64  Fricassee  [rejected]
