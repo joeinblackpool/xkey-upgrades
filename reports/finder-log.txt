@@ -1,9 +1,9 @@
-pool 37996, checking 1500
-info probe: {'Temazcal': {'description': 'Mesoamerican sweat lodge', 'length': 3465, 'missing': False, 'type': 'standard', 'canonical': 'Temazcal'}, 'United States Army': {'description': 'Land service branch of the U.S. military', 'length': 205319, 'missing': False, 'type': 'standard', 'canonical': 'United States Army'}, 'Social nudity in Seattle': {'description': 'Social nudity in the United States', 'length': 21878, 'missing': False, 'type': 'standard', 'canonical': 'Naturism in the United States'}}
-views 400/542
-views 542/542
-kinds Counter({'other': 18785, 'commercial': 5912, 'person': 3710, 'consumer': 2848, 'academic': 2506, 'media-event': 2465, 'place-org': 1303, 'junk': 463, None: 4})
-stages Counter({'tiny': 3484, 'spike': 3132, 'flat': 1455, 'declining': 198, 'seasonal': 181, 'no-data': 36, 'early': 16, 'noisy': 10, 'takeoff': 7})
+pool 38376, checking 1500
+info probe: {'Korean cuisine': {'description': '', 'length': 108428, 'missing': False, 'type': 'standard', 'canonical': 'Korean cuisine'}, 'Vegetarian and non-vegetarian marks': {'description': 'Set of symbols', 'length': 16817, 'missing': False, 'type': 'standard', 'canonical': 'Vegetarian and vegan symbolism'}}
+views 400/446
+views 446/446
+kinds Counter({'other': 18916, 'commercial': 5941, 'person': 3839, 'consumer': 2886, 'academic': 2515, 'media-event': 2493, 'place-org': 1313, 'junk': 467, None: 6})
+stages Counter({'tiny': 3542, 'spike': 3109, 'flat': 1480, 'declining': 200, 'seasonal': 187, 'no-data': 37, 'early': 15, 'noisy': 10, 'takeoff': 5})
  99.9  early       3375/wk  x2.61  Jirai-kei and ryōsan-gata fashion  [testing]
  25.5  early       3582/wk  x2.61  Becoming Chinese  [testing]
  20.0  early        964/wk  x1.62  Nihilistic penguin  [testing]
