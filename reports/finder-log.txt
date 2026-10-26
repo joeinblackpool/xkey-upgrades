@@ -1,9 +1,8 @@
-pool 38376, checking 1500
-info probe: {'Korean cuisine': {'description': '', 'length': 108428, 'missing': False, 'type': 'standard', 'canonical': 'Korean cuisine'}, 'Vegetarian and non-vegetarian marks': {'description': 'Set of symbols', 'length': 16817, 'missing': False, 'type': 'standard', 'canonical': 'Vegetarian and vegan symbolism'}}
-views 400/446
-views 446/446
-kinds Counter({'other': 18916, 'commercial': 5941, 'person': 3839, 'consumer': 2886, 'academic': 2515, 'media-event': 2493, 'place-org': 1313, 'junk': 467, None: 6})
-stages Counter({'tiny': 3542, 'spike': 3109, 'flat': 1480, 'declining': 200, 'seasonal': 187, 'no-data': 37, 'early': 15, 'noisy': 10, 'takeoff': 5})
+pool 38709, checking 1500
+info probe: {'Moustache': {'description': 'Strip of facial hair across the upper lip', 'length': 48654, 'missing': False, 'type': 'standard', 'canonical': 'Moustache'}, 'Sony SmartWatch': {'description': 'Line of smartwatches by Sony', 'length': 9464, 'missing': False, 'type': 'standard', 'canonical': 'Sony SmartWatch'}, 'TAG Heuer Connected': {'description': 'Swiss luxury watchmaker', 'length': 50998, 'missing': False, 'type': 'standard', 'canonical': 'TAG Heuer'}}
+views 382/382
+kinds Counter({'other': 19003, 'commercial': 5992, 'person': 3958, 'consumer': 2895, 'academic': 2534, 'media-event': 2533, 'place-org': 1316, 'junk': 477, None: 1})
+stages Counter({'tiny': 3605, 'spike': 3079, 'flat': 1493, 'declining': 203, 'seasonal': 193, 'no-data': 37, 'early': 16, 'noisy': 11, 'takeoff': 6})
  99.9  early       3375/wk  x2.61  Jirai-kei and ryōsan-gata fashion  [testing]
  25.5  early       3582/wk  x2.61  Becoming Chinese  [testing]
  20.0  early        964/wk  x1.62  Nihilistic penguin  [testing]
@@ -13,9 +12,9 @@ stages Counter({'tiny': 3542, 'spike': 3109, 'flat': 1480, 'declining': 200, 'se
   0.0  early          -/wk  x-     Clickeez  [testing]
   0.0  early          -/wk  x-     LEGO SMART Play  [testing]
  94.9  early      51003/wk  x5.48  UBlock Origin  [rejected]
+ 54.8  early        964/wk  x2.78  Clean girl aesthetic  [candidate]
  35.3  early       2050/wk  x3.01  Café de olla  [rejected]
+ 34.6  early       4052/wk  x2.75  Home appliance  [rejected]
  33.9  early       5537/wk  x1.6   Black Forest gateau  [candidate]
- 30.1  early       4052/wk  x2.75  Home appliance  [rejected]
  23.9  early        909/wk  x2.07  Autonomous robot  [rejected]
  22.8  early      37869/wk  x1.83  Web browser  [rejected]
- 22.7  takeoff     5535/wk  x2.16  Caffè mocha  [rejected]
