@@ -1,8 +1,9 @@
-pool 38709, checking 1500
-info probe: {'Moustache': {'description': 'Strip of facial hair across the upper lip', 'length': 48654, 'missing': False, 'type': 'standard', 'canonical': 'Moustache'}, 'Sony SmartWatch': {'description': 'Line of smartwatches by Sony', 'length': 9464, 'missing': False, 'type': 'standard', 'canonical': 'Sony SmartWatch'}, 'TAG Heuer Connected': {'description': 'Swiss luxury watchmaker', 'length': 50998, 'missing': False, 'type': 'standard', 'canonical': 'TAG Heuer'}}
-views 382/382
-kinds Counter({'other': 19003, 'commercial': 5992, 'person': 3958, 'consumer': 2895, 'academic': 2534, 'media-event': 2533, 'place-org': 1316, 'junk': 477, None: 1})
-stages Counter({'tiny': 3605, 'spike': 3079, 'flat': 1493, 'declining': 203, 'seasonal': 193, 'no-data': 37, 'early': 16, 'noisy': 11, 'takeoff': 6})
+pool 39381, checking 1500
+info probe: {'Cutie mark': {'description': "Symbol in My Little Pony representing a pony's special talent", 'length': 19729, 'missing': False, 'type': 'standard', 'canonical': 'Cutie mark'}, 'RAF Fairford': {'description': 'Royal Air Force station in Gloucestershire, United Kingdom', 'length': 43237, 'missing': False, 'type': 'standard', 'canonical': 'RAF Fairford'}, 'Vegetarian and vegan symbolism': {'description': 'Set of symbols', 'length': 16817, 'missing': False, 'type': 'standard', 'canonical': 'Vegetarian and vegan symbolism'}}
+views 400/403
+views 403/403
+kinds Counter({'other': 19307, 'commercial': 6097, 'person': 4088, 'consumer': 2908, 'media-event': 2582, 'academic': 2581, 'place-org': 1327, 'junk': 484, None: 7})
+stages Counter({'tiny': 3700, 'spike': 3079, 'flat': 1502, 'declining': 207, 'seasonal': 199, 'no-data': 37, 'early': 17, 'noisy': 11, 'takeoff': 6})
  99.9  early       3375/wk  x2.61  Jirai-kei and ryōsan-gata fashion  [testing]
  25.5  early       3582/wk  x2.61  Becoming Chinese  [testing]
  20.0  early        964/wk  x1.62  Nihilistic penguin  [testing]
@@ -16,5 +17,5 @@ stages Counter({'tiny': 3605, 'spike': 3079, 'flat': 1493, 'declining': 203, 'se
  35.3  early       2050/wk  x3.01  Café de olla  [rejected]
  34.6  early       4052/wk  x2.75  Home appliance  [rejected]
  33.9  early       5537/wk  x1.6   Black Forest gateau  [candidate]
+ 33.9  early       1132/wk  x4.43  Cosmetic industry  [candidate]
  23.9  early        909/wk  x2.07  Autonomous robot  [rejected]
- 22.8  early      37869/wk  x1.83  Web browser  [rejected]
