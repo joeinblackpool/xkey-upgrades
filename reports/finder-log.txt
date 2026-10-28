@@ -1,9 +1,8 @@
-pool 39381, checking 1500
-info probe: {'Cutie mark': {'description': "Symbol in My Little Pony representing a pony's special talent", 'length': 19729, 'missing': False, 'type': 'standard', 'canonical': 'Cutie mark'}, 'RAF Fairford': {'description': 'Royal Air Force station in Gloucestershire, United Kingdom', 'length': 43237, 'missing': False, 'type': 'standard', 'canonical': 'RAF Fairford'}, 'Vegetarian and vegan symbolism': {'description': 'Set of symbols', 'length': 16817, 'missing': False, 'type': 'standard', 'canonical': 'Vegetarian and vegan symbolism'}}
-views 400/403
-views 403/403
-kinds Counter({'other': 19307, 'commercial': 6097, 'person': 4088, 'consumer': 2908, 'media-event': 2582, 'academic': 2581, 'place-org': 1327, 'junk': 484, None: 7})
-stages Counter({'tiny': 3700, 'spike': 3079, 'flat': 1502, 'declining': 207, 'seasonal': 199, 'no-data': 37, 'early': 17, 'noisy': 11, 'takeoff': 6})
+pool 39604, checking 1500
+info probe: {'Pore space in soil': {'description': 'Volume occupied by liquid and gas phases in a soil', 'length': 27359, 'missing': False, 'type': 'standard', 'canonical': 'Pore space in soil'}, 'Reuse of human excreta': {'description': 'Safe, beneficial use of human excreta mainly in agriculture (after treatment)', 'length': 70590, 'missing': False, 'type': 'standard', 'canonical': 'Reuse of human excreta'}, 'Perennials': {'description': 'Plant that lives for more than two years', 'length': 23499, 'missing': False, 'type': 'standard', 'canonical': 'Perennial'}}
+views 379/379
+kinds Counter({'other': 19343, 'commercial': 6105, 'person': 4217, 'consumer': 2910, 'media-event': 2620, 'academic': 2591, 'place-org': 1332, 'junk': 485, None: 1})
+stages Counter({'tiny': 3713, 'spike': 3066, 'flat': 1506, 'declining': 208, 'seasonal': 204, 'no-data': 36, 'early': 18, 'noisy': 11, 'takeoff': 6})
  99.9  early       3375/wk  x2.61  Jirai-kei and ryōsan-gata fashion  [testing]
  25.5  early       3582/wk  x2.61  Becoming Chinese  [testing]
  20.0  early        964/wk  x1.62  Nihilistic penguin  [testing]
@@ -13,9 +12,9 @@ stages Counter({'tiny': 3700, 'spike': 3079, 'flat': 1502, 'declining': 207, 'se
   0.0  early          -/wk  x-     Clickeez  [testing]
   0.0  early          -/wk  x-     LEGO SMART Play  [testing]
  94.9  early      51003/wk  x5.48  UBlock Origin  [rejected]
- 54.8  early        964/wk  x2.78  Clean girl aesthetic  [candidate]
+ 54.8  early        964/wk  x2.78  Clean girl aesthetic  [rejected]
  35.3  early       2050/wk  x3.01  Café de olla  [rejected]
  34.6  early       4052/wk  x2.75  Home appliance  [rejected]
- 33.9  early       5537/wk  x1.6   Black Forest gateau  [candidate]
- 33.9  early       1132/wk  x4.43  Cosmetic industry  [candidate]
+ 33.9  early       5537/wk  x1.6   Black Forest gateau  [rejected]
+ 33.9  early       1132/wk  x4.43  Cosmetic industry  [rejected]
  23.9  early        909/wk  x2.07  Autonomous robot  [rejected]
