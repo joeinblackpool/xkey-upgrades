@@ -1,8 +1,8 @@
-pool 39604, checking 1500
-info probe: {'Pore space in soil': {'description': 'Volume occupied by liquid and gas phases in a soil', 'length': 27359, 'missing': False, 'type': 'standard', 'canonical': 'Pore space in soil'}, 'Reuse of human excreta': {'description': 'Safe, beneficial use of human excreta mainly in agriculture (after treatment)', 'length': 70590, 'missing': False, 'type': 'standard', 'canonical': 'Reuse of human excreta'}, 'Perennials': {'description': 'Plant that lives for more than two years', 'length': 23499, 'missing': False, 'type': 'standard', 'canonical': 'Perennial'}}
-views 379/379
-kinds Counter({'other': 19343, 'commercial': 6105, 'person': 4217, 'consumer': 2910, 'media-event': 2620, 'academic': 2591, 'place-org': 1332, 'junk': 485, None: 1})
-stages Counter({'tiny': 3713, 'spike': 3066, 'flat': 1506, 'declining': 208, 'seasonal': 204, 'no-data': 36, 'early': 18, 'noisy': 11, 'takeoff': 6})
+pool 39825, checking 1500
+info probe: {'Christine Lagarde': {'description': 'President of the European Central Bank since 2019', 'length': 76290, 'missing': False, 'type': 'standard', 'canonical': 'Christine Lagarde'}, 'Ivan Toney': {'description': 'English footballer (born 1996)', 'length': 59629, 'missing': False, 'type': 'standard', 'canonical': 'Ivan Toney'}, 'Thermophile': {'description': 'Organism that thrives at relatively high temperatures', 'length': 12640, 'missing': False, 'type': 'standard', 'canonical': 'Thermophile'}}
+views 347/347
+kinds Counter({'other': 19401, 'commercial': 6122, 'person': 4320, 'consumer': 2912, 'media-event': 2645, 'academic': 2599, 'place-org': 1340, 'junk': 486})
+stages Counter({'tiny': 3763, 'spike': 3027, 'flat': 1513, 'seasonal': 209, 'declining': 204, 'no-data': 36, 'early': 17, 'noisy': 13, 'takeoff': 5})
  99.9  early       3375/wk  x2.61  Jirai-kei and ryōsan-gata fashion  [testing]
  25.5  early       3582/wk  x2.61  Becoming Chinese  [testing]
  20.0  early        964/wk  x1.62  Nihilistic penguin  [testing]
@@ -14,7 +14,7 @@ stages Counter({'tiny': 3713, 'spike': 3066, 'flat': 1506, 'declining': 208, 'se
  94.9  early      51003/wk  x5.48  UBlock Origin  [rejected]
  54.8  early        964/wk  x2.78  Clean girl aesthetic  [rejected]
  35.3  early       2050/wk  x3.01  Café de olla  [rejected]
- 34.6  early       4052/wk  x2.75  Home appliance  [rejected]
  33.9  early       5537/wk  x1.6   Black Forest gateau  [rejected]
  33.9  early       1132/wk  x4.43  Cosmetic industry  [rejected]
+ 30.1  early       4052/wk  x2.75  Home appliance  [rejected]
  23.9  early        909/wk  x2.07  Autonomous robot  [rejected]
