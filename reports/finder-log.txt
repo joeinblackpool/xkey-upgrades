@@ -1,8 +1,9 @@
-pool 39825, checking 1500
-info probe: {'Christine Lagarde': {'description': 'President of the European Central Bank since 2019', 'length': 76290, 'missing': False, 'type': 'standard', 'canonical': 'Christine Lagarde'}, 'Ivan Toney': {'description': 'English footballer (born 1996)', 'length': 59629, 'missing': False, 'type': 'standard', 'canonical': 'Ivan Toney'}, 'Thermophile': {'description': 'Organism that thrives at relatively high temperatures', 'length': 12640, 'missing': False, 'type': 'standard', 'canonical': 'Thermophile'}}
-views 347/347
-kinds Counter({'other': 19401, 'commercial': 6122, 'person': 4320, 'consumer': 2912, 'media-event': 2645, 'academic': 2599, 'place-org': 1340, 'junk': 486})
-stages Counter({'tiny': 3763, 'spike': 3027, 'flat': 1513, 'seasonal': 209, 'declining': 204, 'no-data': 36, 'early': 17, 'noisy': 13, 'takeoff': 5})
+pool 40531, checking 1500
+info probe: {'Coreopsis gladiata': {'description': 'Species of flowering plant', 'length': 2196, 'missing': False, 'type': 'standard', 'canonical': 'Coreopsis gladiata'}, 'L.A. Confidential': {'description': 'Novel by James Ellroy', 'length': 10727, 'missing': False, 'type': 'standard', 'canonical': 'L.A. Confidential'}, 'Marina Sirtis': {'description': 'British actress (born 1955)', 'length': 36449, 'missing': False, 'type': 'standard', 'canonical': 'Marina Sirtis'}}
+views 400/401
+views 401/401
+kinds Counter({'other': 19732, 'commercial': 6252, 'person': 4419, 'consumer': 2936, 'media-event': 2696, 'academic': 2621, 'place-org': 1371, 'junk': 489, None: 15})
+stages Counter({'tiny': 3846, 'spike': 3075, 'flat': 1531, 'seasonal': 214, 'declining': 204, 'no-data': 36, 'early': 18, 'noisy': 11, 'takeoff': 5})
  99.9  early       3375/wk  x2.61  Jirai-kei and ryōsan-gata fashion  [testing]
  25.5  early       3582/wk  x2.61  Becoming Chinese  [testing]
  20.0  early        964/wk  x1.62  Nihilistic penguin  [testing]
@@ -17,4 +18,4 @@ stages Counter({'tiny': 3763, 'spike': 3027, 'flat': 1513, 'seasonal': 209, 'dec
  33.9  early       5537/wk  x1.6   Black Forest gateau  [rejected]
  33.9  early       1132/wk  x4.43  Cosmetic industry  [rejected]
  30.1  early       4052/wk  x2.75  Home appliance  [rejected]
- 23.9  early        909/wk  x2.07  Autonomous robot  [rejected]
+ 27.6  early       9018/wk  x1.62  ElevenLabs  [candidate]
