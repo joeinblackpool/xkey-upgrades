@@ -1,9 +1,9 @@
-pool 40531, checking 1500
-info probe: {'Coreopsis gladiata': {'description': 'Species of flowering plant', 'length': 2196, 'missing': False, 'type': 'standard', 'canonical': 'Coreopsis gladiata'}, 'L.A. Confidential': {'description': 'Novel by James Ellroy', 'length': 10727, 'missing': False, 'type': 'standard', 'canonical': 'L.A. Confidential'}, 'Marina Sirtis': {'description': 'British actress (born 1955)', 'length': 36449, 'missing': False, 'type': 'standard', 'canonical': 'Marina Sirtis'}}
-views 400/401
-views 401/401
-kinds Counter({'other': 19732, 'commercial': 6252, 'person': 4419, 'consumer': 2936, 'media-event': 2696, 'academic': 2621, 'place-org': 1371, 'junk': 489, None: 15})
-stages Counter({'tiny': 3846, 'spike': 3075, 'flat': 1531, 'seasonal': 214, 'declining': 204, 'no-data': 36, 'early': 18, 'noisy': 11, 'takeoff': 5})
+pool 40972, checking 1500
+info probe: {'Gauge (textile crafts)': {'description': 'Unit of measure for knitting stitches', 'length': 8657, 'missing': False, 'type': 'standard', 'canonical': 'Gauge (textile crafts)'}, 'Nakshi kantha': {'description': 'Type of Bengali embroidered quilt', 'length': 24550, 'missing': False, 'type': 'standard', 'canonical': 'Nakshi kantha'}, 'Garter stitch': {'description': 'Group of knit fabrics based on common stitching techniques', 'length': 7625, 'missing': False, 'type': 'standard', 'canonical': 'Basic knitted fabrics'}}
+views 400/417
+views 417/417
+kinds Counter({'other': 19951, 'commercial': 6275, 'person': 4539, 'consumer': 2946, 'media-event': 2741, 'academic': 2646, 'place-org': 1376, 'junk': 494, None: 4})
+stages Counter({'tiny': 3879, 'spike': 3054, 'flat': 1542, 'seasonal': 218, 'declining': 210, 'no-data': 36, 'early': 18, 'noisy': 11, 'takeoff': 5})
  99.9  early       3375/wk  x2.61  Jirai-kei and ryōsan-gata fashion  [testing]
  25.5  early       3582/wk  x2.61  Becoming Chinese  [testing]
  20.0  early        964/wk  x1.62  Nihilistic penguin  [testing]
@@ -18,4 +18,4 @@ stages Counter({'tiny': 3846, 'spike': 3075, 'flat': 1531, 'seasonal': 214, 'dec
  33.9  early       5537/wk  x1.6   Black Forest gateau  [rejected]
  33.9  early       1132/wk  x4.43  Cosmetic industry  [rejected]
  30.1  early       4052/wk  x2.75  Home appliance  [rejected]
- 27.6  early       9018/wk  x1.62  ElevenLabs  [candidate]
+ 27.6  early       9018/wk  x1.62  ElevenLabs  [rejected]
