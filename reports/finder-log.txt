@@ -1,8 +1,9 @@
-pool 41457, checking 1500
-info probe: {'Arthur Fery': {'description': 'British tennis player (born 2002)', 'length': 48202, 'missing': False, 'type': 'standard', 'canonical': 'Arthur Fery'}, 'Heathrow Airport': {'description': 'Main airport serving London, England', 'length': 252525, 'missing': False, 'type': 'standard', 'canonical': 'Heathrow Airport'}, 'Roma': {'description': 'Topics referred to by the same term', 'length': 6713, 'missing': False, 'type': 'disambiguation', 'canonical': 'Roma'}}
-views 394/394
-kinds Counter({'other': 20053, 'commercial': 6279, 'person': 4785, 'consumer': 2955, 'media-event': 2849, 'academic': 2653, 'place-org': 1386, 'junk': 497})
-stages Counter({'tiny': 3912, 'spike': 3014, 'flat': 1559, 'seasonal': 222, 'declining': 207, 'no-data': 36, 'early': 17, 'noisy': 11, 'takeoff': 8})
+pool 41661, checking 1500
+info probe: {'Helen Skelton': {'description': 'English TV presenter (born 1983)', 'length': 32062, 'missing': False, 'type': 'standard', 'canonical': 'Helen Skelton'}, 'Joe Duncan (baseball)': {'description': 'American baseball player', 'length': 1778, 'missing': False, 'type': 'standard', 'canonical': 'Joe Duncan (baseball)'}, 'Louise Haigh': {'description': 'British politician (born 1987)', 'length': 50651, 'missing': False, 'type': 'standard', 'canonical': 'Louise Haigh'}}
+views 400/416
+views 416/416
+kinds Counter({'other': 20089, 'commercial': 6281, 'person': 4894, 'consumer': 2956, 'media-event': 2897, 'academic': 2657, 'place-org': 1389, 'junk': 497, None: 1})
+stages Counter({'tiny': 3921, 'spike': 2997, 'flat': 1565, 'seasonal': 229, 'declining': 205, 'no-data': 35, 'early': 17, 'noisy': 12, 'takeoff': 8})
  99.9  early       3375/wk  x2.61  Jirai-kei and ryōsan-gata fashion  [testing]
  25.5  early       3582/wk  x2.61  Becoming Chinese  [testing]
  20.0  early        964/wk  x1.62  Nihilistic penguin  [testing]
@@ -16,5 +17,5 @@ stages Counter({'tiny': 3912, 'spike': 3014, 'flat': 1559, 'seasonal': 222, 'dec
  35.3  early       2050/wk  x3.01  Café de olla  [rejected]
  33.9  early       5537/wk  x1.6   Black Forest gateau  [rejected]
  33.9  early       1132/wk  x4.43  Cosmetic industry  [rejected]
- 31.4  early        775/wk  x3.96  Just Eat Takeaway  [candidate]
+ 31.4  early        775/wk  x3.96  Just Eat Takeaway  [rejected]
  27.6  early       9018/wk  x1.62  ElevenLabs  [rejected]
