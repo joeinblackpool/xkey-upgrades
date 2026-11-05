@@ -1,9 +1,8 @@
-pool 41661, checking 1500
-info probe: {'Helen Skelton': {'description': 'English TV presenter (born 1983)', 'length': 32062, 'missing': False, 'type': 'standard', 'canonical': 'Helen Skelton'}, 'Joe Duncan (baseball)': {'description': 'American baseball player', 'length': 1778, 'missing': False, 'type': 'standard', 'canonical': 'Joe Duncan (baseball)'}, 'Louise Haigh': {'description': 'British politician (born 1987)', 'length': 50651, 'missing': False, 'type': 'standard', 'canonical': 'Louise Haigh'}}
-views 400/416
-views 416/416
-kinds Counter({'other': 20089, 'commercial': 6281, 'person': 4894, 'consumer': 2956, 'media-event': 2897, 'academic': 2657, 'place-org': 1389, 'junk': 497, None: 1})
-stages Counter({'tiny': 3921, 'spike': 2997, 'flat': 1565, 'seasonal': 229, 'declining': 205, 'no-data': 35, 'early': 17, 'noisy': 12, 'takeoff': 8})
+pool 42139, checking 1500
+info probe: {'Karl Robinson': {'description': 'English football manager (born 1980)', 'length': 26066, 'missing': False, 'type': 'standard', 'canonical': 'Karl Robinson'}, 'M27': {'description': 'Topics referred to by the same term', 'length': 1176, 'missing': False, 'type': 'disambiguation', 'canonical': 'M27'}, 'The Elder Scrolls VI: Sentinel': {'description': 'Upcoming video game', 'length': 28109, 'missing': False, 'type': 'standard', 'canonical': 'The Elder Scrolls VI: Sentinel'}}
+views 337/337
+kinds Counter({'other': 20177, 'commercial': 6284, 'person': 5099, 'media-event': 3039, 'consumer': 2958, 'academic': 2672, 'place-org': 1410, 'junk': 500})
+stages Counter({'tiny': 3931, 'spike': 2991, 'flat': 1570, 'seasonal': 227, 'declining': 205, 'no-data': 35, 'early': 17, 'noisy': 10, 'takeoff': 8})
  99.9  early       3375/wk  x2.61  Jirai-kei and ryōsan-gata fashion  [testing]
  25.5  early       3582/wk  x2.61  Becoming Chinese  [testing]
  20.0  early        964/wk  x1.62  Nihilistic penguin  [testing]
