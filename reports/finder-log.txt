@@ -1,8 +1,9 @@
-pool 42393, checking 1500
-info probe: {'England rugby union try record progression': {'description': '', 'length': 25312, 'missing': False, 'type': 'standard', 'canonical': 'England rugby union try record progression'}, 'Jack Bailey (Maryland politician)': {'description': 'American politician (born 1965)', 'length': 25855, 'missing': False, 'type': 'standard', 'canonical': 'Jack Bailey (Maryland politician)'}, 'Vanessa Feltz': {'description': 'English broadcaster and journalist (born 1962)', 'length': 39794, 'missing': False, 'type': 'standard', 'canonical': 'Vanessa Feltz'}}
-views 379/379
-kinds Counter({'other': 20246, 'commercial': 6313, 'person': 5203, 'media-event': 3070, 'consumer': 2963, 'academic': 2677, 'place-org': 1419, 'junk': 502})
-stages Counter({'tiny': 3935, 'spike': 3018, 'flat': 1572, 'seasonal': 226, 'declining': 208, 'no-data': 34, 'early': 17, 'noisy': 10, 'takeoff': 8})
+pool 42626, checking 1500
+info probe: {'Aaron Lennon': {'description': 'English footballer (born 1987)', 'length': 46059, 'missing': False, 'type': 'standard', 'canonical': 'Aaron Lennon'}, 'Boat': {'description': 'Small watercraft', 'length': 18148, 'missing': False, 'type': 'standard', 'canonical': 'Boat'}, 'Laurence Llewelyn-Bowen': {'description': 'English interior designer and television personality', 'length': 25989, 'missing': False, 'type': 'standard', 'canonical': 'Laurence Llewelyn-Bowen'}}
+views 400/413
+views 413/413
+kinds Counter({'other': 20310, 'commercial': 6330, 'person': 5308, 'media-event': 3098, 'consumer': 2964, 'academic': 2687, 'place-org': 1426, 'junk': 503})
+stages Counter({'tiny': 3941, 'spike': 3027, 'flat': 1581, 'seasonal': 225, 'declining': 203, 'no-data': 34, 'early': 18, 'noisy': 10, 'takeoff': 7})
  99.9  early       3375/wk  x2.61  Jirai-kei and ryōsan-gata fashion  [testing]
  25.5  early       3582/wk  x2.61  Becoming Chinese  [testing]
  23.6  early       1044/wk  x1.77  Nihilistic penguin  [testing]
