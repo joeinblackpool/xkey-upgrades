@@ -1,9 +1,8 @@
-pool 43074, checking 1500
-info probe: {'Australia–United Kingdom relations': {'description': 'Bilateral relations', 'length': 30287, 'missing': False, 'type': 'standard', 'canonical': 'Australia–United Kingdom relations'}, 'Queen Elizabeth': {'description': 'Topics referred to by the same term', 'length': 7787, 'missing': False, 'type': 'disambiguation', 'canonical': 'Queen Elizabeth'}, 'Tony Blair': {'description': 'Prime Minister of the United Kingdom from 1997 to 2007', 'length': 239732, 'missing': False, 'type': 'standard', 'canonical': 'Tony Blair'}}
-views 400/452
-views 452/452
-kinds Counter({'other': 20524, 'commercial': 6399, 'person': 5406, 'media-event': 3112, 'consumer': 2966, 'academic': 2716, 'place-org': 1432, 'junk': 508, None: 11})
-stages Counter({'tiny': 3909, 'spike': 3126, 'flat': 1572, 'seasonal': 225, 'declining': 208, 'no-data': 36, 'early': 20, 'noisy': 10, 'takeoff': 7})
+pool 44552, checking 1500
+info probe: {'Kimi (AI)': {'description': 'Artificial intelligence chatbot by Moonshot AI', 'length': 24521, 'missing': False, 'type': 'standard', 'canonical': 'Kimi (AI)'}, 'Large language model': {'description': 'Type of machine learning model', 'length': 145257, 'missing': False, 'type': 'standard', 'canonical': 'Large language model'}, 'Image classification': {'description': 'Computerized information extraction from images', 'length': 70842, 'missing': False, 'type': 'standard', 'canonical': 'Computer vision'}}
+views 215/215
+kinds Counter({'other': 21163, 'commercial': 6565, 'person': 5565, 'media-event': 3222, 'consumer': 3020, 'academic': 2852, 'place-org': 1468, 'junk': 673, None: 24})
+stages Counter({'tiny': 3965, 'spike': 3243, 'flat': 1595, 'seasonal': 228, 'declining': 216, 'no-data': 39, 'early': 20, 'noisy': 10, 'takeoff': 7})
  99.9  early       3375/wk  x2.61  Jirai-kei and ryōsan-gata fashion  [testing]
  25.5  early       3582/wk  x2.61  Becoming Chinese  [testing]
  23.6  early       1044/wk  x1.77  Nihilistic penguin  [testing]
