@@ -1,8 +1,9 @@
-pool 44552, checking 1500
-info probe: {'Kimi (AI)': {'description': 'Artificial intelligence chatbot by Moonshot AI', 'length': 24521, 'missing': False, 'type': 'standard', 'canonical': 'Kimi (AI)'}, 'Large language model': {'description': 'Type of machine learning model', 'length': 145257, 'missing': False, 'type': 'standard', 'canonical': 'Large language model'}, 'Image classification': {'description': 'Computerized information extraction from images', 'length': 70842, 'missing': False, 'type': 'standard', 'canonical': 'Computer vision'}}
-views 215/215
-kinds Counter({'other': 21163, 'commercial': 6565, 'person': 5565, 'media-event': 3222, 'consumer': 3020, 'academic': 2852, 'place-org': 1468, 'junk': 673, None: 24})
-stages Counter({'tiny': 3965, 'spike': 3243, 'flat': 1595, 'seasonal': 228, 'declining': 216, 'no-data': 39, 'early': 20, 'noisy': 10, 'takeoff': 7})
+pool 44792, checking 1500
+info probe: {'KeyForge': {'description': 'Card game', 'length': 11963, 'missing': False, 'type': 'standard', 'canonical': 'KeyForge'}, 'List of countries by renewable electricity production': {'description': '', 'length': 49759, 'missing': False, 'type': 'standard', 'canonical': 'List of countries by renewable electricity production'}, 'Lists of offshore wind farms by water area': {'description': '', 'length': 2339, 'missing': False, 'type': 'standard', 'canonical': 'Lists of wind farms'}}
+views 400/481
+views 481/481
+kinds Counter({'other': 21236, 'commercial': 6587, 'person': 5674, 'media-event': 3263, 'consumer': 3022, 'academic': 2856, 'place-org': 1472, 'junk': 676, None: 6})
+stages Counter({'tiny': 3977, 'spike': 3257, 'flat': 1598, 'seasonal': 226, 'declining': 217, 'no-data': 34, 'early': 20, 'noisy': 10, 'takeoff': 7})
  99.9  early       3375/wk  x2.61  Jirai-kei and ryōsan-gata fashion  [testing]
  25.5  early       3582/wk  x2.61  Becoming Chinese  [testing]
  23.6  early       1044/wk  x1.77  Nihilistic penguin  [testing]
