@@ -1,9 +1,9 @@
-pool 44792, checking 1500
-info probe: {'KeyForge': {'description': 'Card game', 'length': 11963, 'missing': False, 'type': 'standard', 'canonical': 'KeyForge'}, 'List of countries by renewable electricity production': {'description': '', 'length': 49759, 'missing': False, 'type': 'standard', 'canonical': 'List of countries by renewable electricity production'}, 'Lists of offshore wind farms by water area': {'description': '', 'length': 2339, 'missing': False, 'type': 'standard', 'canonical': 'Lists of wind farms'}}
-views 400/481
-views 481/481
-kinds Counter({'other': 21236, 'commercial': 6587, 'person': 5674, 'media-event': 3263, 'consumer': 3022, 'academic': 2856, 'place-org': 1472, 'junk': 676, None: 6})
-stages Counter({'tiny': 3977, 'spike': 3257, 'flat': 1598, 'seasonal': 226, 'declining': 217, 'no-data': 34, 'early': 20, 'noisy': 10, 'takeoff': 7})
+pool 45184, checking 1500
+info probe: {'DC Studios': {'description': 'American entertainment company', 'length': 92336, 'missing': False, 'type': 'standard', 'canonical': 'DC Studios'}, 'HM Prison Wandsworth': {'description': "Men's prison in London, England", 'length': 30151, 'missing': False, 'type': 'standard', 'canonical': 'HM Prison Wandsworth'}, 'Lists of wind farms': {'description': '', 'length': 2339, 'missing': False, 'type': 'standard', 'canonical': 'Lists of wind farms'}}
+views 400/482
+views 482/482
+kinds Counter({'other': 21380, 'commercial': 6628, 'person': 5798, 'media-event': 3301, 'consumer': 3032, 'academic': 2875, 'place-org': 1483, 'junk': 680, None: 7})
+stages Counter({'tiny': 3998, 'spike': 3276, 'flat': 1610, 'seasonal': 221, 'declining': 218, 'no-data': 37, 'early': 20, 'noisy': 10, 'takeoff': 7})
  99.9  early       3375/wk  x2.61  Jirai-kei and ryōsan-gata fashion  [testing]
  25.5  early       3582/wk  x2.61  Becoming Chinese  [testing]
  23.6  early       1044/wk  x1.77  Nihilistic penguin  [testing]
