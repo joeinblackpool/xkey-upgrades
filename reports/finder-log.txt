@@ -1,9 +1,8 @@
-pool 45351, checking 1500
-info probe: {"Kevin O'Connell": {'description': 'American football player and coach (born 1985)', 'length': 57426, 'missing': False, 'type': 'standard', 'canonical': "Kevin O'Connell"}, 'Lists of wind farms': {'description': '', 'length': 2339, 'missing': False, 'type': 'standard', 'canonical': 'Lists of wind farms'}, 'Jensen Huang affair and spying scandal': {'description': 'Espionage plot involving China', 'length': 19158, 'missing': False, 'type': 'standard', 'canonical': 'Jensen Huang spying scandal'}}
-views 400/428
-views 428/428
-kinds Counter({'other': 21413, 'commercial': 6633, 'person': 5898, 'media-event': 3327, 'consumer': 3032, 'academic': 2880, 'place-org': 1487, 'junk': 681})
-stages Counter({'tiny': 4000, 'spike': 3266, 'flat': 1611, 'seasonal': 226, 'declining': 225, 'no-data': 36, 'early': 21, 'noisy': 9, 'takeoff': 8})
+pool 45525, checking 1500
+info probe: {'Grave': {'description': 'Burial location of a dead body', 'length': 9056, 'missing': False, 'type': 'standard', 'canonical': 'Grave'}, 'Hamlet Hail to the Thief': {'description': '2025 Hamlet production with Radiohead', 'length': 8390, 'missing': False, 'type': 'standard', 'canonical': 'Hamlet Hail to the Thief'}, 'Llangollen Canal': {'description': 'Canal in Wales and Shropshire, England', 'length': 53667, 'missing': False, 'type': 'standard', 'canonical': 'Llangollen Canal'}}
+views 325/325
+kinds Counter({'other': 21447, 'commercial': 6633, 'person': 6002, 'media-event': 3361, 'consumer': 3032, 'academic': 2881, 'place-org': 1488, 'junk': 681})
+stages Counter({'tiny': 4004, 'spike': 3255, 'flat': 1613, 'declining': 231, 'seasonal': 223, 'no-data': 36, 'early': 22, 'noisy': 9, 'takeoff': 9})
  99.9  early       3375/wk  x2.61  Jirai-kei and ryōsan-gata fashion  [testing]
  25.5  early       3582/wk  x2.61  Becoming Chinese  [testing]
  23.6  early       1044/wk  x1.77  Nihilistic penguin  [testing]
