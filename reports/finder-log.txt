@@ -1,8 +1,8 @@
-pool 45525, checking 1500
-info probe: {'Grave': {'description': 'Burial location of a dead body', 'length': 9056, 'missing': False, 'type': 'standard', 'canonical': 'Grave'}, 'Hamlet Hail to the Thief': {'description': '2025 Hamlet production with Radiohead', 'length': 8390, 'missing': False, 'type': 'standard', 'canonical': 'Hamlet Hail to the Thief'}, 'Llangollen Canal': {'description': 'Canal in Wales and Shropshire, England', 'length': 53667, 'missing': False, 'type': 'standard', 'canonical': 'Llangollen Canal'}}
-views 325/325
-kinds Counter({'other': 21447, 'commercial': 6633, 'person': 6002, 'media-event': 3361, 'consumer': 3032, 'academic': 2881, 'place-org': 1488, 'junk': 681})
-stages Counter({'tiny': 4004, 'spike': 3255, 'flat': 1613, 'declining': 231, 'seasonal': 223, 'no-data': 36, 'early': 22, 'noisy': 9, 'takeoff': 9})
+pool 45694, checking 1500
+info probe: {'Beretta 93R': {'description': 'Machine pistol', 'length': 8702, 'missing': False, 'type': 'standard', 'canonical': 'Beretta 93R'}, 'Bronek Masojada': {'description': 'British businessman', 'length': 11048, 'missing': False, 'type': 'standard', 'canonical': 'Bronek Masojada'}, 'Mayor of London': {'description': 'Head of the government of Greater London', 'length': 35320, 'missing': False, 'type': 'standard', 'canonical': 'Mayor of London'}}
+views 296/296
+kinds Counter({'other': 21473, 'commercial': 6637, 'person': 6099, 'media-event': 3392, 'consumer': 3032, 'academic': 2885, 'place-org': 1494, 'junk': 681, None: 1})
+stages Counter({'tiny': 3971, 'spike': 3295, 'flat': 1610, 'declining': 237, 'seasonal': 217, 'no-data': 36, 'early': 21, 'noisy': 10, 'takeoff': 9})
  99.9  early       3375/wk  x2.61  Jirai-kei and ryōsan-gata fashion  [testing]
  25.5  early       3582/wk  x2.61  Becoming Chinese  [testing]
  23.6  early       1044/wk  x1.77  Nihilistic penguin  [testing]
